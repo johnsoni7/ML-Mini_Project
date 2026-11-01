@@ -7,7 +7,7 @@ This guide explains how Signo works using its real code, so you can explain and 
 ```mermaid
 flowchart TD
     subgraph Training["Training (Python, done once)"]
-        A["ASL Citizen videos<br/>50 signs, 1,535 clips"] --> B["MediaPipe Holistic<br/>finds body and hand points"]
+        A["ASL Citizen videos<br/>selected signs only"] --> B["MediaPipe Holistic<br/>finds body and hand points"]
         B --> C["Feature extraction<br/>100 numbers per frame"]
         C --> D["Trim and resample<br/>30 frames x 100 numbers"]
         D --> E["BiLSTM training<br/>train and validation clips"]
@@ -134,11 +134,13 @@ Think of a student preparing for an exam:
 
 | Set | Analogy | Used for | Clips | Signers |
 |---|---|---|---:|---:|
-| Training | Textbook | Weights learn from these | 731 selected | 35 |
-| Validation | Practice exam | Deciding when to stop and which version to keep | 188 selected | 6 |
-| Test | Final exam | One honest score at the very end | 616 selected | 11 |
+| Training | Textbook | Weights learn from these | 729 | 29 |
+| Validation | Practice exam | Deciding when to stop and which version to keep | 186 | 5 |
+| Test | Final exam | One honest score at the very end | 614 | 11 |
 
 **The bug we fixed.** The original `train.py` mixed validation and test into one set, then used that set both to decide when to stop and to report the final score. That's like practising on the final exam and then quoting your mark. It makes the score look better than it should. Now `train.py` never scores test clips, and a separate `evaluate.py` does it and logs each attempt.
+
+(These numbers are for the 50-sign model. The whole dataset has 35 / 6 / 11 signers, but not every signer recorded every word.)
 
 **Why signer-independent matters.** The three sets contain completely different people (overlap measured as 0). So the test score answers the question "how well does it work on people it has never seen?", which is what happens when you use it yourself.
 
@@ -197,3 +199,18 @@ All of this happens on your laptop. No video leaves the browser.
 | `index.html` | The whole web app |
 | `app_model/` | The trained model the browser loads |
 | `results/` | The real scores and figures |
+
+## What the real results mean (50-sign model)
+
+| Measure | Validation | Test | Random guessing |
+|---|---:|---:|---:|
+| Top-1 | 82.3% | **76.7%** | 2% |
+| Top-5 | 96.2% | **95.9%** | 10% |
+
+- **Test is lower than validation.** That's normal: the model was chosen using validation, and they're different people. Test is the number to quote.
+- **Top-5 is much higher than top-1.** When the model is wrong, the right sign is usually close behind.
+- **It overfits.** Training accuracy reached about 99% while validation levelled off near 80%. That's why the model from epoch 27 was kept (lowest validation loss, 0.839) rather than the last one, where validation loss had risen to 1.401.
+- **The browser matches Python.** On 50 held-out clips, the browser's prediction agreed with Python's on 48.
+- **Confusions make sense.** The most common errors include stop read as school, and yes read as no. See `results/confusion_matrix.png`.
+
+These numbers come from fluent signers in dataset videos. Your own webcam accuracy may be lower.

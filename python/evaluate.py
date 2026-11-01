@@ -54,7 +54,7 @@ def curve(path, train, val, title, ylabel, best_epoch, percent=False):
     ax.plot(ep, np.array(train) * scale, color=TRAIN_COL, lw=2, label="Training")
     ax.plot(ep, np.array(val) * scale, color=VAL_COL, lw=2, label="Validation")
     ax.axvline(best_epoch, color=MUTED, lw=1, ls="--")
-    ax.annotate(f"model kept: epoch {best_epoch}", (best_epoch, 1), xycoords=("data", "axes fraction"), xytext=(5, -12),
+    ax.annotate(f"model kept: epoch {best_epoch}", (best_epoch, 0), xycoords=("data", "axes fraction"), xytext=(5, 8),
                 textcoords="offset points", color=MUTED, fontsize=9)
     if percent:
         ax.set_ylim(0, 100)

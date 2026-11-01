@@ -63,3 +63,29 @@ MediaPipe is reliable in spawned worker processes on this Mac. No frame stride w
 
 ## 23:23 TF.js conversion test (dummy BiLSTM)
 Official converter worked with no fixes. `model.json` + 1 shard. In tfjs 4.22.0 under Node: input `[null,30,100]`, max absolute difference from Keras 3e-8.
+
+## 23:27-23:43 Full extraction, 50 signs
+1,529 of 1,535 clips extracted, 6 `no_hands`, 0 corrupt or missing, 6 workers, 997.9 s. Usable: 729 / 186 / 614 clips and 29 / 5 / 11 signers (fewer than the whole dataset because not all signers recorded each word).
+
+## 23:44 BiLSTM, 50 signs, seed 0
+Original architecture and settings, no tuning. 64,322 parameters. Stopped at epoch 42, kept epoch 27 (val loss 0.839). 26 s on CPU. Val top-1 82.3%, top-5 96.2%. Declared final, then test evaluated once: **top-1 76.7%, top-5 95.9%**, n=614.
+
+## 23:45-00:19 Browser verification, 50 signs
+- First attempt failed with `loadGraph` of undefined: test called `H.reset()` before `H.initialize()`. Test bug.
+- Second attempt found no hands in 4 of 5 clips. Cause: Playwright's route does not support Range requests, so seeking stuck on the first frame. Test bug, fixed by loading each clip as a blob.
+- Keras vs TF.js on same sequences: 50 of 50 same top-1 and top-3 order, max probability difference 7e-7.
+- Full browser pipeline, 50 clips: 72% top-1, 92% top-5. Python on same clips: 76%. Agreement 48 of 50. Mean absolute feature difference 0.048 shoulder widths. No page errors.
+
+## 23:50 Real webcam (user report)
+User tried the 50-sign model on their own webcam and said some words were recognised correctly. Informal, with no counts. Not a measured accuracy.
+
+## 00:03 User asked for about 1000 words and a bigger video
+- Dataset videos sampled (300): about 95% are 640x480, matching the webcam request. Camera request left unchanged.
+- 1,991 unnumbered glosses have enough data. 1000 chosen by `make_vocab_1000.py`: keep the 50 demo signs, then most common English words (wordfreq). Fixed before training.
+- Full cost would be 30,583 videos, 17 GB, about 5.5 h extraction. **Test split cut to 4 clips per sign**, picked by hash of file name: 22,421 videos, 12.1 GB. All official train and val clips kept. Results must state this.
+- Every-second-frame experiment (50 signs, val only): 79.5% vs 82.3% top-1, 96.2% top-5 both, 11 vs about 3 no-hands failures on train+val, about 1.7x faster. Gap is about 5 clips on a single run, so inconclusive, but no evidence in favour. Kept every frame.
+- UI: video fills the main area, word is a caption on the video, side panel slimmed. Second model slot `app_model_1000/`.
+- Measured extraction speed with 8 workers while other jobs ran: 1.43 clips/s, so finish by about 04:15. Deadline about 07:15.
+
+## Citation to check
+The ASL Citizen citation in the docs was written from memory, not from a downloaded file. Check it against the project page before submission.
