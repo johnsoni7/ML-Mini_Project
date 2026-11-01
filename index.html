@@ -83,6 +83,8 @@ canvas#chart{width:100%;height:150px;border:3px solid var(--ink);border-radius:1
 #confetti{position:fixed;inset:0;pointer-events:none;z-index:40}
 .target{font-size:2.6rem;text-align:center}
 .hint{font-size:.85rem;opacity:.75}
+.bigword.quiet{font-size:1.9rem;line-height:4.4rem;color:#6b6480;-webkit-text-stroke:0;text-shadow:none}
+#modelPick select{font:inherit;border:none;background:transparent;color:inherit;cursor:pointer}
 details summary{cursor:pointer;font-weight:600}
 </style>
 </head>
@@ -90,6 +92,7 @@ details summary{cursor:pointer;font-weight:600}
 <header>
   <div class="logo" aria-label="Signo"><span>S</span><span>i</span><span>g</span><span>n</span><span>o</span></div>
   <span class="chip" id="brainChip">🧠 Brain: empty</span>
+  <label class="chip" id="modelPick" style="display:none">Using: <select id="modelSel" aria-label="Which model recognises signs"></select></label>
   <nav>
     <button class="tab on" data-tab="play">🎥 Play</button>
     <button class="tab" data-tab="teach">🎓 Teach</button>
@@ -140,6 +143,7 @@ details summary{cursor:pointer;font-weight:600}
     <!-- PLAY -->
     <div class="panel card on" id="tab-play">
       <h2>🎥 Show me a sign!</h2>
+      <div id="modelLoading" class="empty" style="display:none"><b>⏳ Loading the sign model...</b></div>
       <div id="noModel" class="empty">
         <b>Signo doesn't know any signs yet!</b>
         <ol><li>Wake Signo with the camera</li><li>Go to <b>Teach</b> and record a few words</li><li>Go to <b>Brain</b> and press <b>Train</b></li></ol>
@@ -152,6 +156,7 @@ details summary{cursor:pointer;font-weight:600}
         <div class="row" style="margin:6px 0 12px">
           <label>Picky level: <input type="range" id="thr" min="40" max="95" value="70"> <b id="thrV">70%</b></label>
         </div>
+        <details id="vocabBox" style="margin:0 0 10px"><summary>📖 Signs I know</summary><div class="hint" id="vocabList" style="margin-top:6px"></div></details>
         <h3 style="margin:8px 0">📝 Sentence</h3>
         <div class="sentence" id="sentence"><span class="hint">Words you sign pop up here</span></div>
         <div class="row" style="margin-top:10px">
@@ -235,7 +240,7 @@ const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAl
 
 const S = { samples: [], words: [], model: null, labels: [], report: null, tab: 'play',
   recording: false, recFrames: null, buffer: [], lastHandT: 0, hist: [], stable: 0, lastTop: null,
-  locked: false, sentence: [], thr: .7, muted: false, training: false, predBusy: false, camOn: false, ch: null };
+  locked: false, shown: null, slots: { dataset: null, custom: null }, source: null, sentence: [], thr: .7, muted: false, training: false, predBusy: false, camOn: false, ch: null };
 
 /* ====== tiny storage layer (IndexedDB with in-memory fallback) ====== */
 const DB = (() => {
@@ -464,6 +469,46 @@ async function record(w) {
   setTimeout(() => mood('idle'), 2500);
 }
 
+/* ====== model slots: the dataset model and the Teach model live side by side, so neither replaces the other ====== */
+const SOURCE_NAME = { dataset: '📚 Dataset model', custom: '🎓 My Teach model' };
+function renderModelPick() {
+  const sel = $('#modelSel'), have = Object.keys(S.slots).filter(k => S.slots[k]);
+  sel.innerHTML = '';
+  for (const k of have) { const o = document.createElement('option'); o.value = k; o.textContent = `${SOURCE_NAME[k]} (${S.slots[k].labels.length} signs)`; sel.appendChild(o); }
+  sel.value = S.source || '';
+  $('#modelPick').style.display = have.length ? '' : 'none';
+}
+function useModel(src) {
+  const slot = S.slots[src] || null;
+  S.source = slot ? src : null; S.model = slot ? slot.model : null; S.labels = slot ? slot.labels : []; S.report = slot ? slot.report : null;
+  S.hist = []; S.stable = 0; S.lastTop = null; S.shown = null;
+  $('#vocabList').textContent = S.labels.join(', ');
+  renderModelPick(); renderReport(); refreshPlay(); updateBrainChip();
+}
+function setCustomModel(model, labels, report) {
+  const old = S.slots.custom; S.slots.custom = { model, labels, report };
+  useModel('custom'); if (old && old.model !== model) old.model.dispose();
+  DB.setMeta('activeModel', 'custom');
+}
+$('#modelSel').onchange = e => { useModel(e.target.value); DB.setMeta('activeModel', S.source); sfx.pop(); say(`Switched to ${SOURCE_NAME[S.source]}.`); };
+async function loadDatasetModel() {
+  if (typeof tf === 'undefined') return;
+  S.modelLoading = true; refreshPlay();
+  try {
+    const r = await fetch('./app_model/labels.json');
+    if (r.status === 404) return;  // no exported model yet: the app still works with Teach
+    if (!r.ok) throw new Error('labels.json: HTTP ' + r.status);
+    const lab = (await r.json()).labels, m = await tf.loadLayersModel('./app_model/model.json'), shp = m.inputs[0].shape;
+    if (shp[1] !== T || shp[2] !== D) throw new Error(`Model expects [${shp.slice(1)}], app uses [${T},${D}]`);
+    if (m.outputs[0].shape[1] !== lab.length) throw new Error('labels.json size does not match the model');
+    const trial = tf.tidy(() => Array.from(m.predict(tf.zeros([1, T, D])).dataSync()));
+    if (trial.length !== lab.length || !trial.every(Number.isFinite)) throw new Error('model gave invalid output');
+    let report = null;
+    try { const rr = await fetch('./app_model/report.json'); if (rr.ok) report = await rr.json(); } catch (e) { }
+    S.slots.dataset = { model: m, labels: lab, report };
+  } catch (e) { console.error(e); toast('Could not load the sign model: ' + e.message); } finally { S.modelLoading = false; }
+}
+
 /* ====== model ====== */
 function buildModel(K) {
   const m = tf.sequential();
@@ -520,7 +565,7 @@ async function train() {
     sup[y]++; pc[order[0]]++; if (order[0] === y) { t1++; tp[y]++; } if (order.slice(0, Math.min(5, K)).includes(y)) t5++;
   });
   S.report = { usedVal, n: evalSet.length, top1: t1 / evalSet.length, top5: t5 / evalSet.length, rows: labels.map((l, k) => ({ label: l, precision: pc[k] ? tp[k] / pc[k] : 0, recall: sup[k] ? tp[k] / sup[k] : 0, support: sup[k] })) };
-  if (S.model) S.model.dispose(); S.model = model; S.labels = labels;
+  setCustomModel(model, labels, S.report);
   try { await model.save('indexeddb://signo-model'); await DB.setMeta('labels', labels); await DB.setMeta('report', S.report); } catch (e) { toast('Could not save brain: ' + e.message); }
   S.training = false; $('#trainBtn').disabled = false; renderReport(); updateBrainChip(); refreshPlay();
   sfx.win(); confetti(120); mood('happy', `Done! I know ${labels.length} words. Top-1 accuracy ${(S.report.top1 * 100).toFixed(0)}% 🎉`);
@@ -532,7 +577,7 @@ function renderReport() {
   const pct = v => (v * 100).toFixed(0) + '%';
   box.innerHTML = `<h3 style="margin:6px 0">📊 Report card</h3>
     <div><div class="stat"><b>${pct(r.top1)}</b>top-1</div><div class="stat"><b>${pct(r.top5)}</b>top-5</div></div>
-    <div class="hint" style="margin-bottom:8px">${r.usedVal ? `Measured on ${r.n} takes Signo never trained on.` : `⚠ Too few takes to hold any back - this score is measured on training takes and is optimistic. Record 5+ per word for an honest score.`}</div>
+    <div class="hint" style="margin-bottom:8px">${r.note ? r.note : r.usedVal ? `Measured on ${r.n} takes Signo never trained on.` : `⚠ Too few takes to hold any back - this score is measured on training takes and is optimistic. Record 5+ per word for an honest score.`}</div>
     <table><tr><th>Word</th><th>Precision</th><th>Recall</th><th>#</th></tr>${r.rows.map(x => `<tr><td></td><td><span class="pbar" style="width:${x.precision * 60}px"></span> ${pct(x.precision)}</td><td><span class="pbar" style="width:${x.recall * 60}px;background:var(--blue)"></span> ${pct(x.recall)}</td><td>${x.support}</td></tr>`).join('')}</table>`;
   [...box.querySelectorAll('tr')].slice(1).forEach((tr, i) => tr.firstChild.textContent = r.rows[i].label);
 }
@@ -540,18 +585,18 @@ function updateBrainChip() {
   const k = S.labels.length, n = S.samples.length;
   $('#brainChip').textContent = k ? `🧠 ${k} words known · ${n} takes` : `🧠 Brain: empty · ${n} takes`;
 }
-function refreshPlay() { const has = !!S.model; $('#noModel').style.display = has ? 'none' : ''; $('#playLive').style.display = has ? '' : 'none'; }
+function refreshPlay() { const has = !!S.model, wait = !has && S.modelLoading; $('#modelLoading').style.display = wait ? '' : 'none'; $('#noModel').style.display = has || wait ? 'none' : ''; $('#playLive').style.display = has ? '' : 'none'; }
 
 /* ====== live recognition ====== */
-function showPred(label, conf, top) {
-  $('#predWord').textContent = label || '...'; $('#confFill').style.width = ((conf || 0) * 100) + '%';
+function showPred(label, conf, top, status) {
+  const w = $('#predWord'); w.textContent = label || status || '...'; w.classList.toggle('quiet', !label && !!status); $('#confFill').style.width = ((conf || 0) * 100) + '%';
   const t3 = $('#top3'); t3.innerHTML = '';
   (top || []).forEach(([l, p]) => { const d = document.createElement('div'); d.innerHTML = `<b></b><div class="meter"><i style="width:${p * 100}%"></i></div><span>${(p * 100).toFixed(0)}%</span>`; d.firstChild.textContent = l; t3.appendChild(d); });
 }
 async function predictTick() {
   if (!S.model || !S.camOn || S.predBusy || S.recording || S.training) return;
   const now = performance.now();
-  if (now - S.lastHandT > 600) { S.hist = []; S.stable = 0; S.lastTop = null; if (now - S.lastHandT > 800) S.locked = false; showPred(null, 0, []); if (S.tab === 'play' && $('#buddy').dataset.mood !== 'sleep') mood('idle'); return; }
+  if (now - S.lastHandT > 600) { S.hist = []; S.stable = 0; S.lastTop = null; S.shown = null; if (now - S.lastHandT > 800) S.locked = false; showPred(null, 0, [], '🙌 No hands in view'); if (S.tab === 'play' && $('#buddy').dataset.mood !== 'sleep') mood('idle'); return; }
   const tr = trim(S.buffer.filter(x => now - x.t < 2200)); if (!tr) return;
   S.predBusy = true;
   try {
@@ -561,11 +606,15 @@ async function predictTick() {
     const order = avg.map((p, k) => [S.labels[k], p]).sort((a, b) => b[1] - a[1]);
     const [lab, conf] = order[0];
     const isNothing = lab === NOTHING;
-    showPred(isNothing ? '...' : lab, isNothing ? 0 : conf, order.slice(0, 3));
     if (!isNothing && conf >= S.thr) {
       S.stable = lab === S.lastTop ? S.stable + 1 : 1; S.lastTop = lab;
+      if (S.stable >= 2) S.shown = { lab, conf, t: now };
       if (S.stable >= 2 && (!S.locked || lab !== S.committed)) { S.locked = true; S.committed = lab; commit(lab, conf); }
     } else { S.stable = 0; S.lastTop = null; }
+    // A word appears only once it has stayed on top and above the threshold, and is held briefly so it cannot flicker.
+    if (isNothing) S.shown = null;
+    if (S.shown && now - S.shown.t < 900) showPred(S.shown.lab, S.shown.conf, order.slice(0, 3));
+    else showPred(null, isNothing ? 0 : conf, order.slice(0, 3), isNothing ? '...' : '🤔 Not sure yet');
   } catch (e) { console.error(e); }
   S.predBusy = false;
 }
@@ -659,7 +708,7 @@ $('#impModel').onchange = async e => {
     const m = await tf.loadLayersModel(tf.io.browserFiles([mj, ...bins])), lab = JSON.parse(await lj.text()).labels;
     const shp = m.inputs[0].shape; if (shp[1] !== T || shp[2] !== D) throw new Error(`Model expects [${shp.slice(1)}], app uses [${T},${D}]`);
     if (m.outputs[0].shape[1] !== lab.length) throw new Error('labels.json size does not match the model');
-    if (S.model) S.model.dispose(); S.model = m; S.labels = lab; S.report = null;
+    setCustomModel(m, lab, null);
     await m.save('indexeddb://signo-model'); await DB.setMeta('labels', lab); await DB.setMeta('report', null);
     renderReport(); updateBrainChip(); refreshPlay(); sfx.win(); confetti(80); mood('happy', `Loaded a brain with ${lab.length} words!`);
   } catch (err) { console.error(err); toast('Load failed: ' + err.message); }
@@ -667,7 +716,8 @@ $('#impModel').onchange = async e => {
 $('#wipe').onclick = async () => {
   if (!confirm('Delete ALL recordings and the trained brain from this browser?')) return;
   await DB.wipe(); try { await tf.io.removeModel('indexeddb://signo-model'); } catch (e) { }
-  S.samples = []; S.words = []; S.model = null; S.labels = []; S.report = null; renderWords(); renderReport(); refreshPlay(); updateBrainChip(); mood('idle', 'Fresh start!');
+  if (S.slots.custom) S.slots.custom.model.dispose();
+  S.samples = []; S.words = []; S.slots.custom = null; useModel('dataset'); renderWords(); mood('idle', 'Fresh start!');
 };
 
 /* ====== boot ====== */
@@ -677,8 +727,11 @@ $('#wipe').onclick = async () => {
   S.samples = await DB.allSamples(); S.words = (await DB.getMeta('words')) || [];
   for (const s of S.samples) if (!S.words.includes(s.label)) S.words.push(s.label);
   S.report = (await DB.getMeta('report')) || null; const best = await DB.getMeta('best'); if (best) $('#bestScore').textContent = 'Best: ' + best;
-  try { const lab = await DB.getMeta('labels'); if (lab && typeof tf !== 'undefined') { S.model = await tf.loadLayersModel('indexeddb://signo-model'); S.labels = lab; } } catch (e) { S.model = null; S.labels = []; }
-  renderWords(); renderReport(); refreshPlay(); updateBrainChip(); renderSentence();
+  try { const lab = await DB.getMeta('labels'); if (lab && typeof tf !== 'undefined') S.slots.custom = { model: await tf.loadLayersModel('indexeddb://signo-model'), labels: lab, report: S.report }; } catch (e) { S.slots.custom = null; }
+  renderWords(); renderSentence();
+  await loadDatasetModel();
+  const pref = await DB.getMeta('activeModel');
+  useModel(S.slots[pref] ? pref : S.slots.dataset ? 'dataset' : 'custom');
   if (S.model) say('Welcome back! I remember ' + S.labels.length + ' words. Wake me up!');
 })();
 </script>

@@ -26,6 +26,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--run", required=True)
     ap.add_argument("--out", default="app_model")
+    ap.add_argument("--report", default="results/report.json", help="evaluate.py output, shown in the app's Brain tab")
     a = ap.parse_args()
 
     model = tf.keras.models.load_model(os.path.join(a.run, "model.keras"))
@@ -42,6 +43,13 @@ def main():
         os.remove(f)
     tfjs.converters.save_keras_model(model, a.out)
     json.dump({"labels": labels}, open(os.path.join(a.out, "labels.json"), "w"))
+    if os.path.exists(a.report):
+        r = json.load(open(a.report))
+        json.dump({
+            "usedVal": True, "n": r["counts"]["test"], "top1": r["test_top1"], "top5": r["test_top5"],
+            "note": f"Official ASL Citizen test split: {r['counts']['test']} clips from {r['signers']['test']} signers this model never saw.",
+            "rows": [{"label": x["sign"], "precision": x["precision"], "recall": x["recall"], "support": x["test_clips"]} for x in r["per_class"]],
+        }, open(os.path.join(a.out, "report.json"), "w"))
     j = json.load(open(os.path.join(a.out, "model.json")))
     shape = j["modelTopology"]["model_config"]["config"]["layers"][0]["config"]["batch_input_shape"]
     print(f"exported to {a.out}: input {shape}, {len(labels)} labels, files {sorted(os.listdir(a.out))}")

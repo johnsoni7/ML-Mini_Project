@@ -1,0 +1,322 @@
+{
+  "selected_videos": 1535,
+  "status_counts": {
+    "ok": 1529,
+    "no_hands": 6
+  },
+  "successfully_extracted": 1529,
+  "per_split_ok": {
+    "train": 729,
+    "val": 186,
+    "test": 614
+  },
+  "per_class_ok": {
+    "AGAIN": 29,
+    "AIRPLANE": 30,
+    "APPLE": 32,
+    "BIG": 31,
+    "BIRD": 30,
+    "BOOK": 31,
+    "BOY": 32,
+    "CAR": 29,
+    "COFFEE": 30,
+    "COLD": 31,
+    "COME": 29,
+    "DANCE": 32,
+    "FAMILY": 30,
+    "FATHER": 29,
+    "FISH": 31,
+    "FRIEND": 29,
+    "GIRL": 29,
+    "GO": 31,
+    "HAPPY": 31,
+    "HELLO": 32,
+    "HELP": 31,
+    "HOME": 31,
+    "HORSE": 29,
+    "HOT": 31,
+    "HOUSE": 30,
+    "KNOW": 31,
+    "LEARN": 31,
+    "LIKE": 30,
+    "LOVE": 29,
+    "MORE": 31,
+    "MOTHER": 32,
+    "NO": 30,
+    "PLAY": 32,
+    "PLEASE": 31,
+    "SAD": 30,
+    "SCHOOL": 30,
+    "SLEEP": 28,
+    "SMALL": 31,
+    "SORRY": 30,
+    "STOP": 31,
+    "TEACHER": 31,
+    "THANKYOU": 31,
+    "THINK": 31,
+    "UNDERSTAND": 32,
+    "WATER": 30,
+    "WHERE": 31,
+    "WHO": 32,
+    "WHY": 32,
+    "WORK": 32,
+    "YES": 30
+  },
+  "per_class_split_ok": {
+    "AGAIN": {
+      "train": 13,
+      "val": 4,
+      "test": 12
+    },
+    "AIRPLANE": {
+      "train": 12,
+      "val": 5,
+      "test": 13
+    },
+    "APPLE": {
+      "train": 17,
+      "val": 4,
+      "test": 11
+    },
+    "BIG": {
+      "train": 15,
+      "val": 4,
+      "test": 12
+    },
+    "BIRD": {
+      "train": 14,
+      "val": 4,
+      "test": 12
+    },
+    "BOOK": {
+      "train": 15,
+      "val": 4,
+      "test": 12
+    },
+    "BOY": {
+      "train": 14,
+      "val": 6,
+      "test": 12
+    },
+    "CAR": {
+      "train": 15,
+      "val": 3,
+      "test": 11
+    },
+    "COFFEE": {
+      "train": 15,
+      "val": 4,
+      "test": 11
+    },
+    "COLD": {
+      "train": 15,
+      "val": 4,
+      "test": 12
+    },
+    "COME": {
+      "train": 15,
+      "val": 2,
+      "test": 12
+    },
+    "DANCE": {
+      "train": 15,
+      "val": 3,
+      "test": 14
+    },
+    "FAMILY": {
+      "train": 15,
+      "val": 3,
+      "test": 12
+    },
+    "FATHER": {
+      "train": 14,
+      "val": 3,
+      "test": 12
+    },
+    "FISH": {
+      "train": 14,
+      "val": 4,
+      "test": 13
+    },
+    "FRIEND": {
+      "train": 15,
+      "val": 3,
+      "test": 11
+    },
+    "GIRL": {
+      "train": 16,
+      "val": 3,
+      "test": 10
+    },
+    "GO": {
+      "train": 15,
+      "val": 3,
+      "test": 13
+    },
+    "HAPPY": {
+      "train": 15,
+      "val": 4,
+      "test": 12
+    },
+    "HELLO": {
+      "train": 14,
+      "val": 4,
+      "test": 14
+    },
+    "HELP": {
+      "train": 13,
+      "val": 5,
+      "test": 13
+    },
+    "HOME": {
+      "train": 14,
+      "val": 4,
+      "test": 13
+    },
+    "HORSE": {
+      "train": 14,
+      "val": 4,
+      "test": 11
+    },
+    "HOT": {
+      "train": 16,
+      "val": 4,
+      "test": 11
+    },
+    "HOUSE": {
+      "train": 16,
+      "val": 3,
+      "test": 11
+    },
+    "KNOW": {
+      "train": 14,
+      "val": 4,
+      "test": 13
+    },
+    "LEARN": {
+      "train": 15,
+      "val": 4,
+      "test": 12
+    },
+    "LIKE": {
+      "train": 15,
+      "val": 3,
+      "test": 12
+    },
+    "LOVE": {
+      "train": 12,
+      "val": 5,
+      "test": 12
+    },
+    "MORE": {
+      "train": 15,
+      "val": 4,
+      "test": 12
+    },
+    "MOTHER": {
+      "train": 14,
+      "val": 3,
+      "test": 15
+    },
+    "NO": {
+      "train": 16,
+      "val": 3,
+      "test": 11
+    },
+    "PLAY": {
+      "train": 14,
+      "val": 4,
+      "test": 14
+    },
+    "PLEASE": {
+      "train": 14,
+      "val": 4,
+      "test": 13
+    },
+    "SAD": {
+      "train": 14,
+      "val": 4,
+      "test": 12
+    },
+    "SCHOOL": {
+      "train": 16,
+      "val": 3,
+      "test": 11
+    },
+    "SLEEP": {
+      "train": 12,
+      "val": 4,
+      "test": 12
+    },
+    "SMALL": {
+      "train": 16,
+      "val": 3,
+      "test": 12
+    },
+    "SORRY": {
+      "train": 15,
+      "val": 3,
+      "test": 12
+    },
+    "STOP": {
+      "train": 16,
+      "val": 3,
+      "test": 12
+    },
+    "TEACHER": {
+      "train": 14,
+      "val": 4,
+      "test": 13
+    },
+    "THANKYOU": {
+      "train": 16,
+      "val": 3,
+      "test": 12
+    },
+    "THINK": {
+      "train": 16,
+      "val": 3,
+      "test": 12
+    },
+    "UNDERSTAND": {
+      "train": 14,
+      "val": 4,
+      "test": 14
+    },
+    "WATER": {
+      "train": 14,
+      "val": 4,
+      "test": 12
+    },
+    "WHERE": {
+      "train": 14,
+      "val": 4,
+      "test": 13
+    },
+    "WHO": {
+      "train": 14,
+      "val": 4,
+      "test": 14
+    },
+    "WHY": {
+      "train": 14,
+      "val": 4,
+      "test": 14
+    },
+    "WORK": {
+      "train": 14,
+      "val": 3,
+      "test": 15
+    },
+    "YES": {
+      "train": 15,
+      "val": 5,
+      "test": 10
+    }
+  },
+  "workers": 6,
+  "stride": 1,
+  "wall_seconds": 997.9,
+  "mean_seconds_per_clip_in_worker": 3.77,
+  "mean_pose_frames_per_clip": 77.7
+}

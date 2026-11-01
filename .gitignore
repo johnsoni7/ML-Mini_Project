@@ -31,3 +31,4 @@ logs/
 *.log
 nohup.out
 .venv-tfjs/
+node_modules/

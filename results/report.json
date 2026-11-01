@@ -1,0 +1,691 @@
+{
+  "run": "bilstm_seed0",
+  "evaluated_at": "2026-11-01 23:44:47",
+  "split_policy": "official",
+  "num_classes": 50,
+  "labels": [
+    "again",
+    "airplane",
+    "apple",
+    "big",
+    "bird",
+    "book",
+    "boy",
+    "car",
+    "coffee",
+    "cold",
+    "come",
+    "dance",
+    "family",
+    "father",
+    "fish",
+    "friend",
+    "girl",
+    "go",
+    "happy",
+    "hello",
+    "help",
+    "home",
+    "horse",
+    "hot",
+    "house",
+    "know",
+    "learn",
+    "like",
+    "love",
+    "more",
+    "mother",
+    "no",
+    "play",
+    "please",
+    "sad",
+    "school",
+    "sleep",
+    "small",
+    "sorry",
+    "stop",
+    "teacher",
+    "thankyou",
+    "think",
+    "understand",
+    "water",
+    "where",
+    "who",
+    "why",
+    "work",
+    "yes"
+  ],
+  "counts": {
+    "train": 729,
+    "val": 186,
+    "test": 614
+  },
+  "signers": {
+    "train": 29,
+    "val": 5,
+    "test": 11
+  },
+  "signer_overlap": {
+    "train_val": 0,
+    "train_test": 0,
+    "val_test": 0
+  },
+  "test_top1": 0.7671009771986971,
+  "test_top5": 0.9592833876221498,
+  "val_top1": 0.8225806451612904,
+  "val_top5": 0.9623655913978495,
+  "chance_top1": 0.02,
+  "macro_precision": 0.7929395762326844,
+  "macro_recall": 0.7668291708291709,
+  "best_classes": [
+    {
+      "sign": "more",
+      "precision": 0.9231,
+      "recall": 1.0,
+      "f1": 0.96,
+      "test_clips": 12
+    },
+    {
+      "sign": "friend",
+      "precision": 0.9167,
+      "recall": 1.0,
+      "f1": 0.9565,
+      "test_clips": 11
+    },
+    {
+      "sign": "know",
+      "precision": 0.9231,
+      "recall": 0.9231,
+      "f1": 0.9231,
+      "test_clips": 13
+    },
+    {
+      "sign": "home",
+      "precision": 1.0,
+      "recall": 0.8462,
+      "f1": 0.9167,
+      "test_clips": 13
+    },
+    {
+      "sign": "big",
+      "precision": 1.0,
+      "recall": 0.8333,
+      "f1": 0.9091,
+      "test_clips": 12
+    },
+    {
+      "sign": "book",
+      "precision": 1.0,
+      "recall": 0.8333,
+      "f1": 0.9091,
+      "test_clips": 12
+    },
+    {
+      "sign": "family",
+      "precision": 1.0,
+      "recall": 0.8333,
+      "f1": 0.9091,
+      "test_clips": 12
+    },
+    {
+      "sign": "house",
+      "precision": 1.0,
+      "recall": 0.8182,
+      "f1": 0.9,
+      "test_clips": 11
+    },
+    {
+      "sign": "play",
+      "precision": 0.8667,
+      "recall": 0.9286,
+      "f1": 0.8966,
+      "test_clips": 14
+    },
+    {
+      "sign": "apple",
+      "precision": 0.8333,
+      "recall": 0.9091,
+      "f1": 0.8696,
+      "test_clips": 11
+    }
+  ],
+  "worst_classes": [
+    {
+      "sign": "no",
+      "precision": 0.4,
+      "recall": 0.5455,
+      "f1": 0.4615,
+      "test_clips": 11
+    },
+    {
+      "sign": "stop",
+      "precision": 0.5556,
+      "recall": 0.4167,
+      "f1": 0.4762,
+      "test_clips": 12
+    },
+    {
+      "sign": "happy",
+      "precision": 0.5,
+      "recall": 0.5833,
+      "f1": 0.5385,
+      "test_clips": 12
+    },
+    {
+      "sign": "again",
+      "precision": 0.5,
+      "recall": 0.5833,
+      "f1": 0.5385,
+      "test_clips": 12
+    },
+    {
+      "sign": "school",
+      "precision": 0.5,
+      "recall": 0.6364,
+      "f1": 0.56,
+      "test_clips": 11
+    },
+    {
+      "sign": "airplane",
+      "precision": 0.75,
+      "recall": 0.4615,
+      "f1": 0.5714,
+      "test_clips": 13
+    },
+    {
+      "sign": "coffee",
+      "precision": 0.4737,
+      "recall": 0.8182,
+      "f1": 0.6,
+      "test_clips": 11
+    },
+    {
+      "sign": "yes",
+      "precision": 0.8333,
+      "recall": 0.5,
+      "f1": 0.625,
+      "test_clips": 10
+    },
+    {
+      "sign": "dance",
+      "precision": 0.875,
+      "recall": 0.5,
+      "f1": 0.6364,
+      "test_clips": 14
+    },
+    {
+      "sign": "water",
+      "precision": 0.5217,
+      "recall": 1.0,
+      "f1": 0.6857,
+      "test_clips": 12
+    }
+  ],
+  "top_confusions": [
+    {
+      "count": 4,
+      "true": "stop",
+      "predicted": "school"
+    },
+    {
+      "count": 3,
+      "true": "yes",
+      "predicted": "no"
+    },
+    {
+      "count": 3,
+      "true": "work",
+      "predicted": "coffee"
+    },
+    {
+      "count": 3,
+      "true": "mother",
+      "predicted": "water"
+    },
+    {
+      "count": 3,
+      "true": "dance",
+      "predicted": "fish"
+    },
+    {
+      "count": 3,
+      "true": "airplane",
+      "predicted": "no"
+    },
+    {
+      "count": 2,
+      "true": "who",
+      "predicted": "coffee"
+    },
+    {
+      "count": 2,
+      "true": "where",
+      "predicted": "who"
+    },
+    {
+      "count": 2,
+      "true": "think",
+      "predicted": "understand"
+    },
+    {
+      "count": 2,
+      "true": "thankyou",
+      "predicted": "hot"
+    }
+  ],
+  "per_class": [
+    {
+      "sign": "again",
+      "precision": 0.5,
+      "recall": 0.5833,
+      "f1": 0.5385,
+      "test_clips": 12
+    },
+    {
+      "sign": "airplane",
+      "precision": 0.75,
+      "recall": 0.4615,
+      "f1": 0.5714,
+      "test_clips": 13
+    },
+    {
+      "sign": "apple",
+      "precision": 0.8333,
+      "recall": 0.9091,
+      "f1": 0.8696,
+      "test_clips": 11
+    },
+    {
+      "sign": "big",
+      "precision": 1.0,
+      "recall": 0.8333,
+      "f1": 0.9091,
+      "test_clips": 12
+    },
+    {
+      "sign": "bird",
+      "precision": 0.9091,
+      "recall": 0.8333,
+      "f1": 0.8696,
+      "test_clips": 12
+    },
+    {
+      "sign": "book",
+      "precision": 1.0,
+      "recall": 0.8333,
+      "f1": 0.9091,
+      "test_clips": 12
+    },
+    {
+      "sign": "boy",
+      "precision": 0.7692,
+      "recall": 0.8333,
+      "f1": 0.8,
+      "test_clips": 12
+    },
+    {
+      "sign": "car",
+      "precision": 0.6923,
+      "recall": 0.8182,
+      "f1": 0.75,
+      "test_clips": 11
+    },
+    {
+      "sign": "coffee",
+      "precision": 0.4737,
+      "recall": 0.8182,
+      "f1": 0.6,
+      "test_clips": 11
+    },
+    {
+      "sign": "cold",
+      "precision": 0.9091,
+      "recall": 0.8333,
+      "f1": 0.8696,
+      "test_clips": 12
+    },
+    {
+      "sign": "come",
+      "precision": 0.875,
+      "recall": 0.5833,
+      "f1": 0.7,
+      "test_clips": 12
+    },
+    {
+      "sign": "dance",
+      "precision": 0.875,
+      "recall": 0.5,
+      "f1": 0.6364,
+      "test_clips": 14
+    },
+    {
+      "sign": "family",
+      "precision": 1.0,
+      "recall": 0.8333,
+      "f1": 0.9091,
+      "test_clips": 12
+    },
+    {
+      "sign": "father",
+      "precision": 0.7273,
+      "recall": 0.6667,
+      "f1": 0.6957,
+      "test_clips": 12
+    },
+    {
+      "sign": "fish",
+      "precision": 0.6471,
+      "recall": 0.8462,
+      "f1": 0.7333,
+      "test_clips": 13
+    },
+    {
+      "sign": "friend",
+      "precision": 0.9167,
+      "recall": 1.0,
+      "f1": 0.9565,
+      "test_clips": 11
+    },
+    {
+      "sign": "girl",
+      "precision": 0.875,
+      "recall": 0.7,
+      "f1": 0.7778,
+      "test_clips": 10
+    },
+    {
+      "sign": "go",
+      "precision": 0.8,
+      "recall": 0.9231,
+      "f1": 0.8571,
+      "test_clips": 13
+    },
+    {
+      "sign": "happy",
+      "precision": 0.5,
+      "recall": 0.5833,
+      "f1": 0.5385,
+      "test_clips": 12
+    },
+    {
+      "sign": "hello",
+      "precision": 0.7647,
+      "recall": 0.9286,
+      "f1": 0.8387,
+      "test_clips": 14
+    },
+    {
+      "sign": "help",
+      "precision": 0.7857,
+      "recall": 0.8462,
+      "f1": 0.8148,
+      "test_clips": 13
+    },
+    {
+      "sign": "home",
+      "precision": 1.0,
+      "recall": 0.8462,
+      "f1": 0.9167,
+      "test_clips": 13
+    },
+    {
+      "sign": "horse",
+      "precision": 0.875,
+      "recall": 0.6364,
+      "f1": 0.7368,
+      "test_clips": 11
+    },
+    {
+      "sign": "hot",
+      "precision": 0.7143,
+      "recall": 0.9091,
+      "f1": 0.8,
+      "test_clips": 11
+    },
+    {
+      "sign": "house",
+      "precision": 1.0,
+      "recall": 0.8182,
+      "f1": 0.9,
+      "test_clips": 11
+    },
+    {
+      "sign": "know",
+      "precision": 0.9231,
+      "recall": 0.9231,
+      "f1": 0.9231,
+      "test_clips": 13
+    },
+    {
+      "sign": "learn",
+      "precision": 0.8333,
+      "recall": 0.8333,
+      "f1": 0.8333,
+      "test_clips": 12
+    },
+    {
+      "sign": "like",
+      "precision": 1.0,
+      "recall": 0.5833,
+      "f1": 0.7368,
+      "test_clips": 12
+    },
+    {
+      "sign": "love",
+      "precision": 0.9,
+      "recall": 0.75,
+      "f1": 0.8182,
+      "test_clips": 12
+    },
+    {
+      "sign": "more",
+      "precision": 0.9231,
+      "recall": 1.0,
+      "f1": 0.96,
+      "test_clips": 12
+    },
+    {
+      "sign": "mother",
+      "precision": 0.9,
+      "recall": 0.6,
+      "f1": 0.72,
+      "test_clips": 15
+    },
+    {
+      "sign": "no",
+      "precision": 0.4,
+      "recall": 0.5455,
+      "f1": 0.4615,
+      "test_clips": 11
+    },
+    {
+      "sign": "play",
+      "precision": 0.8667,
+      "recall": 0.9286,
+      "f1": 0.8966,
+      "test_clips": 14
+    },
+    {
+      "sign": "please",
+      "precision": 0.7143,
+      "recall": 0.7692,
+      "f1": 0.7407,
+      "test_clips": 13
+    },
+    {
+      "sign": "sad",
+      "precision": 0.7857,
+      "recall": 0.9167,
+      "f1": 0.8462,
+      "test_clips": 12
+    },
+    {
+      "sign": "school",
+      "precision": 0.5,
+      "recall": 0.6364,
+      "f1": 0.56,
+      "test_clips": 11
+    },
+    {
+      "sign": "sleep",
+      "precision": 0.75,
+      "recall": 1.0,
+      "f1": 0.8571,
+      "test_clips": 12
+    },
+    {
+      "sign": "small",
+      "precision": 0.9091,
+      "recall": 0.8333,
+      "f1": 0.8696,
+      "test_clips": 12
+    },
+    {
+      "sign": "sorry",
+      "precision": 0.9,
+      "recall": 0.75,
+      "f1": 0.8182,
+      "test_clips": 12
+    },
+    {
+      "sign": "stop",
+      "precision": 0.5556,
+      "recall": 0.4167,
+      "f1": 0.4762,
+      "test_clips": 12
+    },
+    {
+      "sign": "teacher",
+      "precision": 0.7222,
+      "recall": 1.0,
+      "f1": 0.8387,
+      "test_clips": 13
+    },
+    {
+      "sign": "thankyou",
+      "precision": 0.6923,
+      "recall": 0.75,
+      "f1": 0.72,
+      "test_clips": 12
+    },
+    {
+      "sign": "think",
+      "precision": 0.875,
+      "recall": 0.5833,
+      "f1": 0.7,
+      "test_clips": 12
+    },
+    {
+      "sign": "understand",
+      "precision": 0.6667,
+      "recall": 0.7143,
+      "f1": 0.6897,
+      "test_clips": 14
+    },
+    {
+      "sign": "water",
+      "precision": 0.5217,
+      "recall": 1.0,
+      "f1": 0.6857,
+      "test_clips": 12
+    },
+    {
+      "sign": "where",
+      "precision": 0.8182,
+      "recall": 0.6923,
+      "f1": 0.75,
+      "test_clips": 13
+    },
+    {
+      "sign": "who",
+      "precision": 0.7143,
+      "recall": 0.7143,
+      "f1": 0.7143,
+      "test_clips": 14
+    },
+    {
+      "sign": "why",
+      "precision": 0.75,
+      "recall": 0.8571,
+      "f1": 0.8,
+      "test_clips": 14
+    },
+    {
+      "sign": "work",
+      "precision": 1.0,
+      "recall": 0.6667,
+      "f1": 0.8,
+      "test_clips": 15
+    },
+    {
+      "sign": "yes",
+      "precision": 0.8333,
+      "recall": 0.5,
+      "f1": 0.625,
+      "test_clips": 10
+    }
+  ],
+  "model_config": {
+    "model": "bilstm",
+    "units": 48,
+    "dropout": 0.3,
+    "lr": 0.003,
+    "batch": 32,
+    "epochs_max": 80,
+    "patience": 15,
+    "aug": 4,
+    "seed": 0,
+    "split_policy": "official",
+    "data": [
+      "signo_dataset.json"
+    ],
+    "best_epoch": 27,
+    "epochs_run": 42,
+    "train_seconds": 25.5,
+    "split_summary": {
+      "classes": 50,
+      "counts": {
+        "train": 729,
+        "val": 186,
+        "test": 614
+      },
+      "min_per_class": {
+        "train": 12,
+        "val": 2,
+        "test": 10
+      },
+      "max_per_class": {
+        "train": 17,
+        "val": 6,
+        "test": 15
+      },
+      "signers": {
+        "train": 29,
+        "val": 5,
+        "test": 11
+      },
+      "signer_overlap": {
+        "train_val": 0,
+        "train_test": 0,
+        "val_test": 0
+      }
+    },
+    "split_fingerprint": "3ec8e73bce162f7f",
+    "params": 64322
+  },
+  "extraction": {
+    "selected_videos": 1535,
+    "status_counts": {
+      "ok": 1529,
+      "no_hands": 6
+    },
+    "successfully_extracted": 1529,
+    "per_split_ok": {
+      "train": 729,
+      "val": 186,
+      "test": 614
+    },
+    "wall_seconds": 997.9,
+    "workers": 6
+  }
+}
