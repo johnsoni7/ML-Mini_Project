@@ -1,8 +1,14 @@
-numpy
-opencv-python
-mediapipe
+# Main environment (.venv, Python 3.11). Versions verified together on an arm64 Mac.
+numpy==1.26.4
+opencv-python-headless==4.11.0.86
+mediapipe==0.10.14
+tensorflow==2.16.2
+tf_keras==2.16.0
+scikit-learn==1.9.1
+matplotlib==3.11.2
 tqdm
-scikit-learn
-tensorflow
-tf_keras
-tensorflowjs
+pytest
+remotezip
+requests
+wordfreq
+# The TF.js converter lives in a separate environment (.venv-tfjs): see README.md

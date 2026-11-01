@@ -26,6 +26,14 @@ import numpy as np
 from common import T, D, trim, to_seq
 
 
+def read_cache(row, cache):
+    cached = os.path.join(cache, os.path.splitext(row["video"])[0] + ".npz")
+    if not os.path.exists(cached):
+        return None
+    z = np.load(cached, allow_pickle=False)
+    return {**row, "status": str(z["status"]), "seconds": 0.0, "frames": int(z["frames"]), "from_cache": True}
+
+
 def process_one(job):
     """Runs in a worker process. Returns the row plus status: ok | missing | corrupt | no_pose | no_hands | invalid."""
     row, videos, cache, stride = job
@@ -33,10 +41,6 @@ def process_one(job):
 
     stem = os.path.splitext(row["video"])[0]
     cached = os.path.join(cache, stem + ".npz")
-    if os.path.exists(cached):
-        z = np.load(cached, allow_pickle=False)
-        return {**row, "status": str(z["status"]), "seconds": 0.0, "frames": int(z["frames"]), "from_cache": True}
-
     path = os.path.join(videos, row["video"])
     t0 = time.time()
     seq, n = None, 0
@@ -95,12 +99,18 @@ def main():
     os.makedirs(a.cache, exist_ok=True)
 
     t0 = time.time()
-    jobs = [(r, a.videos, a.cache, a.stride) for r in rows]
-    results = []
-    with mp_proc.get_context("spawn").Pool(a.workers, maxtasksperchild=50) as pool:
+    results, jobs = [], []
+    for r in rows:  # finished clips are answered here, so a resumed run does not start workers for them
+        c = read_cache(r, a.cache)
+        if c is not None:
+            results.append(c)
+        else:
+            jobs.append((r, a.videos, a.cache, a.stride))
+    print(f"{len(results)} clips already cached, {len(jobs)} to process", flush=True)
+    with mp_proc.get_context("spawn").Pool(a.workers, maxtasksperchild=200) as pool:
         for i, res in enumerate(pool.imap_unordered(process_one, jobs), 1):
             results.append(res)
-            if i % 50 == 0 or i == len(jobs):
+            if i % 200 == 0 or i == len(jobs):
                 print(f"{i}/{len(jobs)} clips, {time.time() - t0:.0f}s, status so far {dict(collections.Counter(x['status'] for x in results))}", flush=True)
     elapsed = time.time() - t0
 

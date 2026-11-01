@@ -12,7 +12,7 @@
 :root{--ink:#2b2140;--bg:#fff3cf;--purple:#7c5cff;--pink:#ff6fa5;--yellow:#ffd23f;--green:#3ddc97;--blue:#4cc9f0;--orange:#ff9f43}
 *{box-sizing:border-box}
 body{margin:0;font-family:'Fredoka','Baloo 2','Comic Sans MS',system-ui,sans-serif;color:var(--ink);background:var(--bg) radial-gradient(circle,#ffe08a 2px,transparent 2.5px) 0 0/28px 28px;min-height:100vh}
-header{display:flex;flex-wrap:wrap;align-items:center;gap:14px;padding:14px 20px}
+header{display:flex;flex-wrap:wrap;align-items:center;gap:14px;padding:8px 16px}
 .logo{font-size:2.4rem;font-weight:700;letter-spacing:1px;display:flex;gap:2px;margin-right:auto}
 .logo span{display:inline-block;-webkit-text-stroke:2px var(--ink);paint-order:stroke fill;text-shadow:3px 3px 0 var(--ink);animation:bob 2s ease-in-out infinite}
 .logo span:nth-child(1){color:var(--pink)}.logo span:nth-child(2){color:var(--yellow);animation-delay:.15s}.logo span:nth-child(3){color:var(--green);animation-delay:.3s}.logo span:nth-child(4){color:var(--blue);animation-delay:.45s}.logo span:nth-child(5){color:var(--purple);animation-delay:.6s}
@@ -27,11 +27,13 @@ nav{display:flex;gap:8px;flex-wrap:wrap}
 .btn.sm{font-size:.85rem;padding:4px 10px;border-radius:12px;box-shadow:0 3px 0 var(--ink)}
 .btn:disabled{opacity:.5;cursor:not-allowed}
 .chip{display:inline-block;background:#fff;border:3px solid var(--ink);border-radius:999px;padding:3px 12px;font-weight:600;font-size:.9rem}
-main{display:grid;grid-template-columns:minmax(300px,1.15fr) minmax(300px,1fr);gap:22px;padding:6px 20px 40px;max-width:1280px;margin:0 auto}
-@media(max-width:900px){main{grid-template-columns:1fr}}
+main{display:grid;grid-template-columns:minmax(0,1fr) clamp(300px,27vw,400px);gap:18px;padding:0 16px 16px;align-items:start}
+.side{display:flex;flex-direction:column;gap:12px;max-height:calc(100vh - 86px);overflow-y:auto;padding:0 8px 8px 0}
+@media(max-width:900px){main{grid-template-columns:1fr}.side{max-height:none}}
 .card{background:#fff;border:4px solid var(--ink);border-radius:26px;box-shadow:7px 7px 0 var(--ink);padding:16px}
 .card h2{margin:0 0 10px;font-size:1.5rem}
-.stage{position:relative;aspect-ratio:4/3;background:#cfe9ff repeating-linear-gradient(45deg,#cfe9ff 0 14px,#bfe0ff 14px 28px);border:4px solid var(--ink);border-radius:20px;overflow:hidden}
+.videocard{padding:0;background:none;border:none;box-shadow:none;display:flex;justify-content:center}
+.stage{position:relative;aspect-ratio:4/3;width:min(100%,calc((100vh - 118px) * 4 / 3));background:#cfe9ff repeating-linear-gradient(45deg,#cfe9ff 0 14px,#bfe0ff 14px 28px);border:4px solid var(--ink);border-radius:20px;overflow:hidden}
 .stage video,.stage canvas.ov{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scaleX(-1)}
 .stage video{opacity:.92}
 #camOff{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;padding:20px;background:rgba(255,255,255,.55)}
@@ -43,8 +45,8 @@ main{display:grid;grid-template-columns:minmax(300px,1.15fr) minmax(300px,1fr);g
 #recBar{position:absolute;left:0;bottom:0;height:12px;width:0;background:var(--pink);border-top:3px solid var(--ink)}
 #recDot{position:absolute;right:12px;top:12px;display:none;background:#ff3b3b;color:#fff;border:3px solid var(--ink);border-radius:999px;padding:2px 12px;font-weight:700;animation:blink .6s infinite}
 @keyframes blink{50%{opacity:.4}}
-.buddyrow{display:flex;gap:12px;align-items:center;margin-top:14px}
-#buddy{width:120px;flex:none;animation:float 3s ease-in-out infinite}
+.buddyrow{display:flex;gap:12px;align-items:center}
+#buddy{width:64px;flex:none;animation:float 3s ease-in-out infinite}
 @keyframes float{50%{transform:translateY(-6px)}}
 #buddy .eyes{transform-box:fill-box;transform-origin:center;animation:blinky 4s infinite}
 @keyframes blinky{0%,92%,100%{transform:scaleY(1)}95%{transform:scaleY(.1)}}
@@ -52,7 +54,7 @@ main{display:grid;grid-template-columns:minmax(300px,1.15fr) minmax(300px,1fr);g
 @keyframes hop{50%{transform:translateY(-14px) rotate(4deg)}}
 #buddy[data-mood=think]{animation:wiggle .6s ease-in-out infinite}
 @keyframes wiggle{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
-.bubble{position:relative;background:#fff6c9;border:3px solid var(--ink);border-radius:20px;padding:10px 14px;font-weight:500;flex:1;min-height:60px}
+.bubble{position:relative;background:#fff6c9;border:3px solid var(--ink);border-radius:20px;padding:8px 12px;font-weight:500;font-size:.9rem;flex:1;min-height:48px}
 .bubble::before{content:"";position:absolute;left:-14px;top:24px;border:10px solid transparent;border-right:14px solid var(--ink)}
 .bubble::after{content:"";position:absolute;left:-9px;top:26px;border:8px solid transparent;border-right:11px solid #fff6c9}
 .bubble.talk{animation:pop .35s ease-out}
@@ -63,7 +65,7 @@ main{display:grid;grid-template-columns:minmax(300px,1.15fr) minmax(300px,1fr);g
 .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
 .sentence{min-height:62px;border:3px dashed var(--ink);border-radius:18px;padding:10px;display:flex;gap:8px;flex-wrap:wrap;align-items:center;background:#f7fbff}
 .sentence .chip{background:var(--blue);animation:pop .35s}
-.top3 div{display:flex;gap:8px;align-items:center;margin:4px 0}.top3 b{width:90px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.top3 .meter{flex:1;height:16px;border-width:2px}
+.top3 div{display:flex;gap:8px;align-items:center;margin:4px 0}.top3 b{width:104px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.top3 .meter{flex:1;height:16px;border-width:2px}
 input[type=text]{font-family:inherit;font-size:1rem;padding:8px 12px;border:3px solid var(--ink);border-radius:14px;flex:1;min-width:120px}
 input[type=range]{accent-color:var(--purple)}
 .word{display:flex;align-items:center;gap:10px;border:3px solid var(--ink);border-radius:18px;padding:8px 12px;margin:8px 0;background:#fffdf2}
@@ -83,7 +85,9 @@ canvas#chart{width:100%;height:150px;border:3px solid var(--ink);border-radius:1
 #confetti{position:fixed;inset:0;pointer-events:none;z-index:40}
 .target{font-size:2.6rem;text-align:center}
 .hint{font-size:.85rem;opacity:.75}
-.bigword.quiet{font-size:1.9rem;line-height:4.4rem;color:#6b6480;-webkit-text-stroke:0;text-shadow:none}
+#predWord{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);max-width:92%;min-height:0;padding:4px 26px;font-size:clamp(2.2rem,5.5vw,5rem);line-height:1.15;color:var(--yellow);background:rgba(43,33,64,.72);border-radius:24px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-shadow:3px 3px 0 var(--ink);pointer-events:none}
+#predWord.quiet{font-size:clamp(1.2rem,2.4vw,2rem);color:#fff;-webkit-text-stroke:0;text-shadow:none}
+#vocabList{max-height:150px;overflow-y:auto}
 #modelPick select{font:inherit;border:none;background:transparent;color:inherit;cursor:pointer}
 details summary{cursor:pointer;font-weight:600}
 </style>
@@ -103,11 +107,12 @@ details summary{cursor:pointer;font-weight:600}
 </header>
 
 <main>
-  <section class="card">
+  <section class="card videocard">
     <div class="stage">
       <video id="video" playsinline muted></video>
       <canvas id="overlay" class="ov"></canvas>
       <div id="hud"><span class="chip" id="pL">✋ left</span><span class="chip" id="pR">🤚 right</span></div>
+      <div class="bigword" id="predWord" style="display:none">...</div>
       <div id="recDot">● REC</div>
       <div id="countdown"></div>
       <div id="recBar"></div>
@@ -117,6 +122,9 @@ details summary{cursor:pointer;font-weight:600}
         <button class="btn big purple" id="camBtn">Wake up Signo!</button>
       </div>
     </div>
+  </section>
+
+  <section class="side">
     <div class="buddyrow">
       <svg id="buddy" viewBox="0 0 120 120" data-mood="sleep" role="img" aria-label="Signo the buddy">
         <path d="M60 30 Q58 18 66 12" stroke="#2b2140" stroke-width="4" fill="none" stroke-linecap="round"/>
@@ -137,9 +145,6 @@ details summary{cursor:pointer;font-weight:600}
       </svg>
       <div class="bubble" id="bubble">Zzz... wake me up with the camera button!</div>
     </div>
-  </section>
-
-  <section>
     <!-- PLAY -->
     <div class="panel card on" id="tab-play">
       <h2>🎥 Show me a sign!</h2>
@@ -150,7 +155,6 @@ details summary{cursor:pointer;font-weight:600}
         <div class="hint">...or load a model you trained with the Python scripts.</div>
       </div>
       <div id="playLive" style="display:none">
-        <div class="bigword" id="predWord">...</div>
         <div class="meter" id="confMeter"><i id="confFill"></i></div>
         <div class="top3" id="top3" style="margin:10px 0"></div>
         <div class="row" style="margin:6px 0 12px">
@@ -240,7 +244,7 @@ const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAl
 
 const S = { samples: [], words: [], model: null, labels: [], report: null, tab: 'play',
   recording: false, recFrames: null, buffer: [], lastHandT: 0, hist: [], stable: 0, lastTop: null,
-  locked: false, shown: null, slots: { dataset: null, custom: null }, source: null, sentence: [], thr: .7, muted: false, training: false, predBusy: false, camOn: false, ch: null };
+  locked: false, shown: null, slots: { dataset: null, dataset1000: null, custom: null }, source: null, sentence: [], thr: .7, muted: false, training: false, predBusy: false, camOn: false, ch: null };
 
 /* ====== tiny storage layer (IndexedDB with in-memory fallback) ====== */
 const DB = (() => {
@@ -318,7 +322,7 @@ function setTab(t) {
   $$('.tab[data-tab]').forEach(b => b.classList.toggle('on', b.dataset.tab === t));
   $$('.panel').forEach(p => p.classList.toggle('on', p.id === 'tab-' + t));
   if (t !== 'challenge' && S.ch) quitChallenge();
-  S.hist = []; S.stable = 0; S.locked = true;
+  S.hist = []; S.stable = 0; S.locked = true; syncCaption();
 }
 $$('.tab[data-tab]').forEach(b => b.onclick = () => { sfx.pop(); setTab(b.dataset.tab); });
 $('#muteBtn').onclick = () => { S.muted = !S.muted; $('#muteBtn').textContent = S.muted ? '🔇' : '🔊'; };
@@ -380,7 +384,7 @@ async function startCam() {
   let busy = false;
   const loop = async () => { if (!busy && video.readyState >= 2) { busy = true; try { await holistic.send({ image: video }); } catch (e) { } busy = false; } requestAnimationFrame(loop); };
   loop();
-  S.camOn = true; $('#camOff').style.display = 'none'; sfx.go(); mood('idle', 'I\'m awake! Show me your hands ✋');
+  S.camOn = true; syncCaption(); $('#camOff').style.display = 'none'; sfx.go(); mood('idle', 'I\'m awake! Show me your hands ✋');
   if (!S.model) say('I\'m awake! Head to Teach to show me some signs.');
 }
 function drawLine(a, b, col, w) {
@@ -470,7 +474,8 @@ async function record(w) {
 }
 
 /* ====== model slots: the dataset model and the Teach model live side by side, so neither replaces the other ====== */
-const SOURCE_NAME = { dataset: '📚 Dataset model', custom: '🎓 My Teach model' };
+const SOURCE_NAME = { dataset: '📚 Dataset model', dataset1000: '📚 Dataset model', custom: '🎓 My Teach model' };
+const DATASET_DIRS = { dataset: './app_model', dataset1000: './app_model_1000' };
 function renderModelPick() {
   const sel = $('#modelSel'), have = Object.keys(S.slots).filter(k => S.slots[k]);
   sel.innerHTML = '';
@@ -491,21 +496,21 @@ function setCustomModel(model, labels, report) {
   DB.setMeta('activeModel', 'custom');
 }
 $('#modelSel').onchange = e => { useModel(e.target.value); DB.setMeta('activeModel', S.source); sfx.pop(); say(`Switched to ${SOURCE_NAME[S.source]}.`); };
-async function loadDatasetModel() {
+async function loadDatasetModel(key) {
   if (typeof tf === 'undefined') return;
   S.modelLoading = true; refreshPlay();
   try {
-    const r = await fetch('./app_model/labels.json');
+    const r = await fetch(DATASET_DIRS[key] + '/labels.json');
     if (r.status === 404) return;  // no exported model yet: the app still works with Teach
     if (!r.ok) throw new Error('labels.json: HTTP ' + r.status);
-    const lab = (await r.json()).labels, m = await tf.loadLayersModel('./app_model/model.json'), shp = m.inputs[0].shape;
+    const lab = (await r.json()).labels, m = await tf.loadLayersModel(DATASET_DIRS[key] + '/model.json'), shp = m.inputs[0].shape;
     if (shp[1] !== T || shp[2] !== D) throw new Error(`Model expects [${shp.slice(1)}], app uses [${T},${D}]`);
     if (m.outputs[0].shape[1] !== lab.length) throw new Error('labels.json size does not match the model');
     const trial = tf.tidy(() => Array.from(m.predict(tf.zeros([1, T, D])).dataSync()));
     if (trial.length !== lab.length || !trial.every(Number.isFinite)) throw new Error('model gave invalid output');
     let report = null;
-    try { const rr = await fetch('./app_model/report.json'); if (rr.ok) report = await rr.json(); } catch (e) { }
-    S.slots.dataset = { model: m, labels: lab, report };
+    try { const rr = await fetch(DATASET_DIRS[key] + '/report.json'); if (rr.ok) report = await rr.json(); } catch (e) { }
+    S.slots[key] = { model: m, labels: lab, report };
   } catch (e) { console.error(e); toast('Could not load the sign model: ' + e.message); } finally { S.modelLoading = false; }
 }
 
@@ -585,7 +590,8 @@ function updateBrainChip() {
   const k = S.labels.length, n = S.samples.length;
   $('#brainChip').textContent = k ? `🧠 ${k} words known · ${n} takes` : `🧠 Brain: empty · ${n} takes`;
 }
-function refreshPlay() { const has = !!S.model, wait = !has && S.modelLoading; $('#modelLoading').style.display = wait ? '' : 'none'; $('#noModel').style.display = has || wait ? 'none' : ''; $('#playLive').style.display = has ? '' : 'none'; }
+function refreshPlay() { const has = !!S.model, wait = !has && S.modelLoading; $('#modelLoading').style.display = wait ? '' : 'none'; $('#noModel').style.display = has || wait ? 'none' : ''; $('#playLive').style.display = has ? '' : 'none'; syncCaption(); }
+function syncCaption() { $('#predWord').style.display = S.tab === 'play' && S.model && S.camOn ? '' : 'none'; }
 
 /* ====== live recognition ====== */
 function showPred(label, conf, top, status) {
@@ -717,7 +723,7 @@ $('#wipe').onclick = async () => {
   if (!confirm('Delete ALL recordings and the trained brain from this browser?')) return;
   await DB.wipe(); try { await tf.io.removeModel('indexeddb://signo-model'); } catch (e) { }
   if (S.slots.custom) S.slots.custom.model.dispose();
-  S.samples = []; S.words = []; S.slots.custom = null; useModel('dataset'); renderWords(); mood('idle', 'Fresh start!');
+  S.samples = []; S.words = []; S.slots.custom = null; useModel(S.slots.dataset ? 'dataset' : 'dataset1000'); renderWords(); mood('idle', 'Fresh start!');
 };
 
 /* ====== boot ====== */
@@ -729,9 +735,9 @@ $('#wipe').onclick = async () => {
   S.report = (await DB.getMeta('report')) || null; const best = await DB.getMeta('best'); if (best) $('#bestScore').textContent = 'Best: ' + best;
   try { const lab = await DB.getMeta('labels'); if (lab && typeof tf !== 'undefined') S.slots.custom = { model: await tf.loadLayersModel('indexeddb://signo-model'), labels: lab, report: S.report }; } catch (e) { S.slots.custom = null; }
   renderWords(); renderSentence();
-  await loadDatasetModel();
+  for (const key of Object.keys(DATASET_DIRS)) await loadDatasetModel(key);
   const pref = await DB.getMeta('activeModel');
-  useModel(S.slots[pref] ? pref : S.slots.dataset ? 'dataset' : 'custom');
+  useModel(S.slots[pref] ? pref : S.slots.dataset ? 'dataset' : S.slots.dataset1000 ? 'dataset1000' : 'custom');
   if (S.model) say('Welcome back! I remember ' + S.labels.length + ' words. Wake me up!');
 })();
 </script>

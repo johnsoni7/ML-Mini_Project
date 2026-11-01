@@ -10,6 +10,7 @@ Usage:
 import argparse
 import collections
 import csv
+import hashlib
 import json
 import os
 import threading
@@ -54,6 +55,7 @@ def main():
     ap.add_argument("--manifest", required=True)
     ap.add_argument("--max-mb", type=float, default=2500, help="refuse to download more than this")
     ap.add_argument("--workers", type=int, default=4)
+    ap.add_argument("--test-per-class", type=int, default=0, help="keep only N official test clips per sign, picked by a hash of the file name (0 = all)")
     ap.add_argument("--limit", type=int, default=0, help="only fetch the first N rows (for a quick test)")
     a = ap.parse_args()
 
@@ -61,9 +63,23 @@ def main():
     rows = read_split_rows(a.meta, set(vocab))
     missing_glosses = set(vocab) - {r["gloss"] for r in rows}
     assert not missing_glosses, f"not in dataset: {missing_glosses}"
+    if a.test_per_class:
+        kept, by_gloss = [], collections.defaultdict(list)
+        for r in rows:
+            if r["split"] == "test":
+                by_gloss[r["gloss"]].append(r)
+            else:
+                kept.append(r)
+        for g in sorted(by_gloss):  # the hash is unrelated to clip content, so this is an unbiased pick
+            kept += sorted(by_gloss[g], key=lambda r: hashlib.sha256(r["video"].encode()).hexdigest())[: a.test_per_class]
+        rows = kept
     if a.limit:
         rows = rows[:: max(1, len(rows) // a.limit)][: a.limit]
     os.makedirs(a.out, exist_ok=True)
+    with open(a.manifest + ".planned.csv", "w", newline="") as f:  # lets the extractor start while this still downloads
+        w = csv.DictWriter(f, fieldnames=["video", "gloss", "split", "participant"])
+        w.writeheader()
+        w.writerows(rows)
 
     t0 = time.time()
     with open_zip() as z:  # raises RangeNotSupported rather than silently fetching the whole file
