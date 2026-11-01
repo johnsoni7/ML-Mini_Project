@@ -76,14 +76,14 @@ Original architecture and settings, no tuning. 64,322 parameters. Stopped at epo
 - Keras vs TF.js on same sequences: 50 of 50 same top-1 and top-3 order, max probability difference 7e-7.
 - Full browser pipeline, 50 clips: 72% top-1, 92% top-5. Python on same clips: 76%. Agreement 48 of 50. Mean absolute feature difference 0.048 shoulder widths. No page errors.
 
-## 23:50 Real webcam (user report)
+## Before 00:03 Real webcam (user report)
 User tried the 50-sign model on their own webcam and said some words were recognised correctly. Informal, with no counts. Not a measured accuracy.
 
 ## 00:03 User asked for about 1000 words and a bigger video
 - Dataset videos sampled (300): about 95% are 640x480, matching the webcam request. Camera request left unchanged.
 - 1,991 unnumbered glosses have enough data. 1000 chosen by `make_vocab_1000.py`: keep the 50 demo signs, then most common English words (wordfreq). Fixed before training.
 - Full cost would be 30,583 videos, 17 GB, about 5.5 h extraction. **Test split cut to 4 clips per sign**, picked by hash of file name: 22,421 videos, 12.1 GB. All official train and val clips kept. Results must state this.
-- Every-second-frame experiment (50 signs, val only): 79.5% vs 82.3% top-1, 96.2% top-5 both, 11 vs about 3 no-hands failures on train+val, about 1.7x faster. Gap is about 5 clips on a single run, so inconclusive, but no evidence in favour. Kept every frame.
+- Every-second-frame experiment (50 signs, val only): 79.5% vs 82.3% top-1, 96.2% top-5 both, 11 vs 4 no-hands failures on train+val, about 1.7x faster. Gap is about 5 clips on a single run, so inconclusive, but no evidence in favour. Kept every frame.
 - UI: video fills the main area, word is a caption on the video, side panel slimmed. Second model slot `app_model_1000/`.
 - Measured extraction speed with 8 workers while other jobs ran: 1.43 clips/s, so finish by about 04:15. Deadline about 07:15.
 
