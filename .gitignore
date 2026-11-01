@@ -1,0 +1,33 @@
+# OS / editor
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# Raw datasets and anything derived from them (licence forbids redistribution)
+data/
+videos/
+cache/
+*.mp4
+*.y4m
+*.npz
+features/
+extract_tmp/
+signo_dataset*.json
+wlasl*.json
+
+# Large intermediate training output (the browser model in app_model/ stays tracked)
+model_out/
+checkpoints/
+*.keras
+*.h5
+
+# Logs
+logs/
+*.log
+nohup.out
+.venv-tfjs/

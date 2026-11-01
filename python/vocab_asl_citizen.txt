@@ -1,0 +1,10 @@
+# Signo demo vocabulary: 50 ASL Citizen glosses, fixed BEFORE any model was trained.
+# Rules: exists in all 3 official splits, no numbered variants (EAT1/EAT2), common words,
+# avoid near-identical pairs (e.g. GOOD vs THANKYOU). Never chosen by looking at test accuracy.
+HELLO YES NO THANKYOU PLEASE HELP SORRY MORE STOP AGAIN
+MOTHER FATHER FRIEND FAMILY BOY GIRL TEACHER
+WHERE WHO WHY
+GO COME LEARN UNDERSTAND KNOW THINK LIKE LOVE WORK PLAY DANCE SLEEP
+WATER BOOK COFFEE APPLE CAR AIRPLANE HOUSE SCHOOL HOME
+BIRD FISH HORSE
+HAPPY SAD BIG SMALL HOT COLD
