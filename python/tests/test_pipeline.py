@@ -249,3 +249,21 @@ def test_real_dataset_integrity():
     flags = d["X"][:, :, 98:]
     assert set(np.unique(flags).tolist()) <= {0.0, 1.0}
     assert (flags.sum(axis=2) > 0).mean() > 0.5  # hands are actually visible in most frames
+
+
+def test_mirror_is_its_own_inverse_and_swaps_hands():
+    from train_plus import mirror
+    x = np.random.RandomState(0).rand(2, T, D).astype(np.float32)
+    assert np.allclose(mirror(mirror(x)), x)
+    m = mirror(x)
+    assert np.allclose(m[:, :, 14:56:2], -x[:, :, 56:98:2])  # left-hand x becomes the negated right-hand x
+    assert np.allclose(m[:, :, [98, 99]], x[:, :, [99, 98]])
+
+
+def test_training_augmentation_keeps_shape_and_missing_hands_at_zero():
+    from train_plus import augment_batch
+    x = np.random.RandomState(1).rand(8, T, D).astype(np.float32)
+    x[:, :, 56:98], x[:, :, 99] = 0, 0  # no right hand
+    y = augment_batch(x.copy(), np.random.default_rng(0), use_mirror=False)
+    assert y.shape == x.shape and np.isfinite(y).all()
+    assert (y[:, :, 56:98] == 0).all()

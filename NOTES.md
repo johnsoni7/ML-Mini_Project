@@ -125,3 +125,12 @@ Real webcam test of the 1,000-sign model, more seeds, GRU comparison, `demo_webc
 
 ## Citation checked
 The ASL Citizen citation was checked against arXiv:2304.05934 and the NeurIPS 2023 proceedings. Title, first author and year are correct.
+
+## 08:04 onward: optimisation sprint
+User asked for better accuracy (target 85%), then gave a full optimisation brief. Limits: 10 GB extra storage, frozen 30 x 100 input, no test-based choices, stop by about 10:00.
+
+**Storage budget (hard limit 10 GB, 122 GB free at 08:21).** Existing: videos 12 GB, feature cache 217 MB, dataset JSON 468 MB, models 106 MB. Allocation: new videos 5 GB at most (none yet), new features and caches 2 GB (`ds1000.npz` 261 MB so far), checkpoints 1 GB, reserve 2 GB.
+
+**Corrections to the brief.** The 121 ms latency came from a trial of a larger model. The deployed 48-unit model measured about 67 ms. The test set isn't untouched: it was scored once at 07:22, so the final evaluation will be a logged second look.
+
+**Rule for test data.** No new predictions on test clips until selection is final. Data-quality checks used test clips only for their flags and coordinates, with no labels or predictions.

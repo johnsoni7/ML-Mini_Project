@@ -179,7 +179,7 @@ def main():
         "signer_overlap": summary["signer_overlap"],
         "test_top1": te["top1"], f"test_top{k5}": te["topk"], "val_top1": metrics["val"]["top1"], f"val_top{k5}": metrics["val"]["topk"],
         "chance_top1": 1 / len(labels),
-        "macro_precision": float(P.mean()), "macro_recall": float(R.mean()),
+        "macro_precision": float(P.mean()), "macro_recall": float(R.mean()), "macro_f1": float(F.mean()), "weighted_f1": float(np.average(F, weights=S)),
         "best_classes": ranked[:10], "worst_classes": ranked[-10:][::-1], "top_confusions": [{"count": c, "true": t, "predicted": p} for c, t, p in pairs],
         "per_class": rows,
         "model_config": cfg,

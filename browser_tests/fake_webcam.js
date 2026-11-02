@@ -14,6 +14,7 @@ const meta = JSON.parse(fs.readFileSync(metaPath));
   await p.waitForFunction(k => S.slots[k], process.env.SLOT || 'dataset', { timeout: 60000 });
   await p.evaluate(k => useModel(k), process.env.SLOT || 'dataset');
   if (thr) await p.evaluate(v => { const t = $('#thr'); t.value = v; t.dispatchEvent(new Event('input')); }, thr);
+  await p.evaluate(() => { window.__t = []; const f = S.model.predict.bind(S.model); S.model.predict = x => { window.__t.push(performance.now()); return f(x); }; });
   await p.click('#camBtn');
   await p.waitForFunction(() => S.camOn && S.buffer.length >= 0, { timeout: 60000 });
   const t0 = Date.now(), log = [];
@@ -33,7 +34,7 @@ const meta = JSON.parse(fs.readFileSync(metaPath));
   const states = {};
   words.forEach(w => { states[w] = (states[w] || 0) + 1; });
   const fps = await p.evaluate(async () => { const a = S.buffer.length, t = performance.now(); await new Promise(r => setTimeout(r, 2000)); return (S.buffer.length - a) / ((performance.now() - t) / 1000); });
-  console.log(JSON.stringify({ threshold: thr || 'default 70', plan: meta.plan.map(x => x.sign), seconds_observed: (Date.now() - t0) / 1000, sentence_committed: log[log.length - 1].sentence, display_state_counts: states, display_changes: changes, flat_seq_length_seen: shapeSeen, expected_flat_length: 3000, page_errors: errors }, null, 1));
+  console.log(JSON.stringify({ threshold: thr || 'default 70', plan: meta.plan.map(x => x.sign), seconds_observed: (Date.now() - t0) / 1000, camera_frames_per_second: +fps.toFixed(1), prediction_gaps_ms: await p.evaluate(() => { const g = window.__t.slice(1).map((v, i) => v - window.__t[i]).filter(v => v < 1000).sort((a, b) => a - b); return { count: g.length, median: Math.round(g[g.length >> 1]), p95: Math.round(g[Math.floor(g.length * .95)]) }; }), sentence_committed: log[log.length - 1].sentence, display_state_counts: states, display_changes: changes, flat_seq_length_seen: shapeSeen, expected_flat_length: 3000, page_errors: errors }, null, 1));
   // Readable timeline: what the screen showed, one line per change
   let last = null;
   for (const l of log) if (l.word !== last) { console.log(`${l.t.toFixed(1).padStart(6)}s  ${l.word.padEnd(22)} conf=${l.conf.toFixed(0).padStart(3)}%  ${l.top3.slice(0, 3).join(' | ')}`); last = l.word; }
