@@ -155,6 +155,9 @@ def main():
     ap.add_argument("--lr", type=float, default=3e-3)
     ap.add_argument("--batch", type=int, default=32)
     ap.add_argument("--seed", type=int, default=0)
+    ap.add_argument("--max-minutes", type=float, default=None, help="stop after the current epoch once this much time has passed")
+    ap.add_argument("--select", choices=["val_loss", "val_accuracy"], default="val_loss", help="validation measure that picks the epoch to keep")
+    ap.add_argument("--reduce-lr", action="store_true", help="halve the learning rate when validation loss stops improving")
     a = ap.parse_args()
 
     random.seed(a.seed)
@@ -185,10 +188,18 @@ def main():
     model = build(K, a.model, a.units, a.dropout, a.lr)
     best = os.path.join(a.out, "model.keras")
     cbs = [
-        tf.keras.callbacks.EarlyStopping(monitor="val_loss", patience=a.patience, restore_best_weights=True),
-        tf.keras.callbacks.ModelCheckpoint(best, monitor="val_loss", save_best_only=True),
+        tf.keras.callbacks.EarlyStopping(monitor=a.select, patience=a.patience, restore_best_weights=True),
+        tf.keras.callbacks.ModelCheckpoint(best, monitor=a.select, save_best_only=True),
     ]
+    if a.reduce_lr:
+        cbs.append(tf.keras.callbacks.ReduceLROnPlateau(monitor="val_loss", factor=0.5, patience=3, min_lr=1e-5, verbose=1))
     t0 = time.time()
+    if a.max_minutes is not None:
+        def stop_on_time(epoch, logs):
+            if time.time() - t0 > a.max_minutes * 60:
+                print(f"time limit of {a.max_minutes} minutes reached, stopping")
+                model.stop_training = True
+        cbs.append(tf.keras.callbacks.LambdaCallback(on_epoch_end=stop_on_time))
     hist = model.fit(
         Xtr, ytr, validation_data=(X[va], tf.keras.utils.to_categorical(y[va], K)),
         epochs=a.epochs, batch_size=a.batch, shuffle=True, callbacks=cbs, verbose=2,
@@ -200,7 +211,7 @@ def main():
     k5 = min(5, K)
     val = {"top1": float((probs.argmax(1) == y[va]).mean()), "top5": topk(probs, y[va], k5), "n": int(len(va))}
     h = {k: [float(v) for v in vs] for k, vs in hist.history.items()}
-    best_epoch = int(np.argmin(h["val_loss"])) + 1
+    best_epoch = int(np.argmax(h["val_accuracy"]) if a.select == "val_accuracy" else np.argmin(h["val_loss"])) + 1
     print(f"\nbest epoch {best_epoch}/{len(h['val_loss'])}  VALIDATION top-1 {val['top1']:.3f}  top-{k5} {val['top5']:.3f}  ({seconds:.0f}s)")
 
     json.dump({"labels": labels}, open(os.path.join(a.out, "labels.json"), "w"))
@@ -208,7 +219,7 @@ def main():
     json.dump(val, open(os.path.join(a.out, "val_report.json"), "w"), indent=2)
     json.dump({
         "model": a.model, "units": a.units, "dropout": a.dropout, "lr": a.lr, "batch": a.batch, "epochs_max": a.epochs,
-        "patience": a.patience, "aug": a.aug, "seed": a.seed, "split_policy": policy, "data": [os.path.basename(p) for p in a.data],
+        "patience": a.patience, "aug": a.aug, "seed": a.seed, "select": a.select, "reduce_lr": a.reduce_lr, "split_policy": policy, "data": [os.path.basename(p) for p in a.data],
         "best_epoch": best_epoch, "epochs_run": len(h["val_loss"]), "train_seconds": round(seconds, 1), "split_summary": summary,
         "split_fingerprint": fingerprint(d["videos"], splits), "params": int(model.count_params()),
     }, open(os.path.join(a.out, "config.json"), "w"), indent=2)

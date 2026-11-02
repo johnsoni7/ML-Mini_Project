@@ -32,6 +32,7 @@ from train import assign_splits, fingerprint, load, split_indices, topk, validat
 SURFACE, INK, MUTED, GRID = "#fcfcfb", "#0b0b0b", "#52514e", "#e6e5e0"
 TRAIN_COL, VAL_COL = "#2a78d6", "#eb6834"
 RAMP = ["#fcfcfb", "#cde2fb", "#86b6ef", "#3987e5", "#256abf", "#104281"]
+MATRIX_MAX = 60
 
 
 def style(ax):
@@ -159,7 +160,11 @@ def main():
     tag = cfg["model"].upper()
     curve(os.path.join(a.results, "loss_curve.png"), hist["loss"], hist["val_loss"], f"{tag} loss by epoch", "Loss (lower is better)", ep_best)
     curve(os.path.join(a.results, "accuracy_curve.png"), hist["accuracy"], hist["val_accuracy"], f"{tag} accuracy by epoch", "Accuracy (%)", ep_best, percent=True)
-    matrix_png(os.path.join(a.results, "confusion_matrix.png"), cm, labels, f"{tag} test-set confusion matrix ({te['n']} clips, unseen signers)")
+    if len(labels) <= MATRIX_MAX:
+        matrix_png(os.path.join(a.results, "confusion_matrix.png"), cm, labels, f"{tag} test-set confusion matrix ({te['n']} clips, unseen signers)")
+    else:  # 1000 x 1000 cells can't be read as one picture: draw the most-confused signs, the full table is in the CSV
+        keep = sorted(np.argsort(-(off.sum(0) + off.sum(1)))[:MATRIX_MAX])
+        matrix_png(os.path.join(a.results, "confusion_matrix.png"), cm[np.ix_(keep, keep)], [labels[i] for i in keep], f"{tag} test confusions: the {MATRIX_MAX} most-confused of {len(labels)} signs")
 
     ex_path = a.extraction_report or os.path.join(a.results, "extraction_report.json")
     extraction = json.load(open(ex_path)) if os.path.exists(ex_path) else None

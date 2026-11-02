@@ -27,6 +27,7 @@ def main():
     ap.add_argument("--run", required=True)
     ap.add_argument("--out", default="app_model")
     ap.add_argument("--report", default="results/report.json", help="evaluate.py output, shown in the app's Brain tab")
+    ap.add_argument("--test-note", default="Official ASL Citizen test split", help="how the test clips were chosen, shown in the app's Brain tab")
     a = ap.parse_args()
 
     model = tf.keras.models.load_model(os.path.join(a.run, "model.keras"))
@@ -47,7 +48,7 @@ def main():
         r = json.load(open(a.report))
         json.dump({
             "usedVal": True, "n": r["counts"]["test"], "top1": r["test_top1"], "top5": r["test_top5"],
-            "note": f"Official ASL Citizen test split: {r['counts']['test']} clips from {r['signers']['test']} signers this model never saw.",
+            "note": f"{a.test_note}: {r['counts']['test']} clips from {r['signers']['test']} signers this model never saw.",
             "rows": [{"label": x["sign"], "precision": x["precision"], "recall": x["recall"], "support": x["test_clips"]} for x in r["per_class"]],
         }, open(os.path.join(a.out, "report.json"), "w"))
     j = json.load(open(os.path.join(a.out, "model.json")))

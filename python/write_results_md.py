@@ -46,7 +46,7 @@ def main():
         f"- **Classes:** {r['num_classes']}. **Clips:** {c['train']} train, {c['val']} validation, {c['test']} test.",
         f"- **Signers:** {r['signers']['train']} train, {r['signers']['val']} validation, {r['signers']['test']} test. Overlap between splits: {sum(r['signer_overlap'].values())}.",
         f"- **Model:** {m['model']}, {m['units']} units, dropout {m['dropout']}, Adam learning rate {m['lr']}, batch {m['batch']}, {m['params']:,} parameters.",
-        f"- **Training:** seed {m['seed']}, {m['aug']} augmented copies per training clip, early stopping on validation loss with patience {m['patience']}. Stopped at epoch {m['epochs_run']}, kept epoch {m['best_epoch']}, {m['train_seconds']:.0f} s on CPU.",
+        f"- **Training:** seed {m['seed']}, {m['aug']} augmented copies per training clip, kept the epoch with the best {m.get('select', 'val_loss').replace('_', ' ')}, patience {m['patience']}{', learning rate halved when validation loss stalled' if m.get('reduce_lr') else ''}. Stopped at epoch {m['epochs_run']}, kept epoch {m['best_epoch']}, {m['train_seconds']:.0f} s on CPU.",
         f"- **Extraction:** {ex.get('selected_videos')} clips selected, {ex.get('successfully_extracted')} extracted. Status counts: {ex.get('status_counts')}.",
         "",
         "## Figures",
@@ -72,6 +72,12 @@ def main():
     ]
     lines += [f"| {x['true']} | {x['predicted']} | {x['count']} |" for x in r["top_confusions"]]
     lines += ["", "Per-class numbers for every sign are in `per_class_metrics.csv` and the raw matrix is in `confusion_matrix.csv`.", ""]
+    cmp_path = os.path.join(a.results, "model_comparison.json")
+    if os.path.exists(cmp_path):
+        lines += ["## Model comparison (validation only)", "", "The model was chosen from this table before the test set was scored.", "",
+                  "| Run | Units | Dropout | Kept epoch | Val top-1 | Val top-5 | Val loss | Train accuracy | Parameters | Minutes |", "|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|"]
+        lines += [f"| {x['run']} | {x['units']} | {x['dropout']} | {x['best_epoch']}/{x['epochs_run']} | {pct(x['val_top1'])} | {pct(x['val_top5'])} | {x['val_loss']:.3f} | {pct(x['train_accuracy'])} | {x['params']:,} | {x['train_minutes']} |" for x in json.load(open(cmp_path))]
+        lines.append("")
     open(os.path.join(a.results, "results.md"), "w").write("\n".join(lines))
     print("wrote", os.path.join(a.results, "results.md"))
 

@@ -1,6 +1,6 @@
 # Signo: word-level sign recognition from hands and upper-body pose
 
-Signo recognises isolated American Sign Language (ASL) words from a webcam, live in the browser. MediaPipe Holistic finds hand and upper-body landmarks, and a BiLSTM classifies how they move over time. All processing happens on your device, and no video is uploaded.
+Signo recognises isolated American Sign Language (ASL) words from a webcam, live in the browser. It ships with two trained models: 1,000 signs (the default) and 50 signs (the fallback). MediaPipe Holistic finds hand and upper-body landmarks, and a BiLSTM classifies how they move over time. All processing happens on your device, and no video is uploaded.
 
 **This is isolated sign recognition, not continuous sign-language translation.** It recognises one word at a time from a fixed vocabulary. It doesn't follow natural signing or produce grammatical sentences.
 
@@ -64,15 +64,18 @@ Coordinates are centred on the shoulder midpoint and divided by shoulder width, 
 
 **ASL Citizen** (Microsoft Research), selectively downloaded with HTTP Range requests so the 45.9 GB archive never had to be fetched in full.
 
-| | 50-sign model |
-|---|---:|
-| Clips selected / extracted | 1,535 / 1,529 |
-| Failed extraction (too few hand frames) | 6 |
-| Train / validation / test clips | 729 / 186 / 614 |
-| Train / validation / test signers | 29 / 5 / 11 |
-| Signers shared between splits | 0 |
+| | 1,000-sign model | 50-sign model |
+|---|---:|---:|
+| Clips selected / extracted | 22,421 / 22,372 | 1,535 / 1,529 |
+| Failed extraction (too few hand frames) | 49 | 6 |
+| Train / validation / test clips | 14,626 / 3,763 / 3,983 | 729 / 186 / 614 |
+| Train / validation / test signers | 35 / 5 / 11 | 29 / 5 / 11 |
+| Signers shared between splits | 0 | 0 |
+| Training clips per sign | 11 to 17 | about 15 |
 
-The vocabulary was fixed before training and never chosen using accuracy. See `python/vocab_asl_citizen.txt`.
+Both vocabularies were fixed before training and never chosen using accuracy (`python/vocab_asl_citizen.txt`, `python/vocab_asl_citizen_1000.txt`). The 1,000 signs are the 50 demo signs plus the most common English words among the dataset's signs, chosen by `python/make_vocab_1000.py`.
+
+**One deliberate change to the split for 1,000 signs:** all official training and validation clips were kept, but the test split was capped at 4 clips per sign to save about 5 GB and 1.5 hours. Clips were picked by a hash of the file name, not by content. The split between signers is unchanged. Some signs have 3 test clips because extraction failed on the other.
 
 ### Licence and citation
 
@@ -88,31 +91,59 @@ Cite: Desai et al. (2023), *ASL Citizen: A Community-Sourced Dataset for Advanci
 ## Training methodology
 
 - **Train:** the weights learn from these clips, plus 4 augmented copies of each (scale, rotation, shift, jitter).
-- **Validation:** early stopping on validation loss (patience 15) and choosing the best checkpoint.
+- **Validation:** decides when to stop, which epoch to keep, and which model to use. The 50-sign model used validation loss. The 1,000-sign model used validation accuracy, for the reason given under Results.
 - **Test:** scored only by `evaluate.py`, after the configuration is final. Each evaluation is logged in `test_log.json`, and repeats are refused by default.
 - The official split is preserved. The original `train.py` merged validation and test into one set, which leaked test data into model selection. This is fixed, with a regression test.
 
-Model: Input (30, 100), Bidirectional LSTM (48), Dropout (0.3), Dense (48, ReLU), Softmax. Adam, learning rate 0.003, batch 32, seed 0.
+Both final models have the same shape: Input (30, 100), Bidirectional LSTM (48), Dropout (0.3), Dense (48, ReLU), Softmax. Adam, learning rate 0.003, seed 0. The 50-sign model used batch 32 and has 64,322 parameters. The 1,000-sign model used batch 64, halved its learning rate whenever validation loss stalled for 3 epochs, and has 110,872 parameters.
 
 ## Results
 
-One training run with one seed, so there is no mean or standard deviation. Full details are in [results/results.md](results/results.md).
+Each final model comes from one training run with one seed, so there is no mean or standard deviation. Full details are in [results_1000/results.md](results_1000/results.md) and [results/results.md](results/results.md).
 
-| Model | Signs | Val top-1 | Val top-5 | Test top-1 | Test top-5 | Test clips |
-|---|---:|---:|---:|---:|---:|---:|
-| BiLSTM | 50 | 82.3% | 96.2% | **76.7%** | **95.9%** | 614 |
+| Model | Signs | Val top-1 | Val top-5 | Test top-1 | Test top-5 | Test clips | Random guessing (top-1 / top-5) |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| BiLSTM | 1,000 | 69.5% | 90.2% | **61.4%** | **84.4%** | 3,983 | 0.1% / 0.5% |
+| BiLSTM | 50 | 82.3% | 96.2% | **76.7%** | **95.9%** | 614 | 2% / 10% |
 
-Random guessing would score 2% top-1 and 10% top-5.
+The 1,000-sign model's mean per-sign precision is 65.0% and recall 61.5%. The test set was scored once, after the model was chosen.
 
-Browser check on 50 held-out clips, one per sign, not used to choose anything:
+### Choosing the 1,000-sign model
+
+Six runs were compared using validation clips only. Round 1 kept the epoch with the lowest validation loss. In those logs validation accuracy kept rising after loss had turned upwards, so round 2 kept the epoch with the best validation accuracy and added a falling learning rate.
+
+| Run | Units | Dropout | Epoch kept | Val top-1 | Val top-5 | Val loss | Train accuracy | Parameters |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| **Round 2, selected** | **48** | **0.3** | **29 of 39** | **69.5%** | **90.2%** | **1.618** | **92.3%** | **110,872** |
+| Round 2 | 128 | 0.5 | 27 of 31 | 68.7% | 89.3% | 1.968 | 98.4% | 396,392 |
+| Round 2 | 256 | 0.5 | 12 of 12 | 66.9% | 88.1% | 2.251 | 99.0% | 1,119,464 |
+| Round 1 | 48 | 0.3 | 14 of 22 | 66.0% | 89.9% | 1.498 | 79.4% | 110,872 |
+| Round 1 | 256 | 0.4 | 4 of 8 | 59.6% | 85.2% | 1.929 | 85.7% | 1,119,464 |
+| Round 1 | 128 | 0.3 | 3 of 11 | 56.3% | 83.9% | 1.808 | 69.7% | 396,392 |
+
+The selected model has the best validation top-1 and top-5, and it's the smallest. The larger models overfitted more among the round 2 runs. **This doesn't prove that larger models can't do better:** the 128-unit and 256-unit runs in round 2 hit a 25-minute time limit, and the 256-unit run's best epoch was its last one.
+
+### Browser checks on the 1,000-sign model
+
+Not used to choose anything.
+
+| Check | Result |
+|---|---|
+| TF.js vs Keras on 1,000 identical test sequences | Same top-1 and top-3 order on 1,000 of 1,000, largest probability difference under 0.000002 |
+| Browser MediaPipe, features and model on 60 test videos | 65% top-1, 85% top-5 (Python: 65% top-1 on the same clips) |
+| Browser prediction agrees with Python | 53 of 60 |
+| Model switching and fallback | Labels and outputs stay matched when switching. If the 1,000-sign model is missing or corrupt, the app opens with the 50-sign model |
+| Live app loop with dataset video as a pretend camera | Input length 3,000 (30 x 100). First pass through 8 clips in three runs: 6 right, 1 no word, 1 wrong; 5 right, 3 no word, 0 wrong; 5 right, 2 no word, 1 wrong. Six of the 8 signs were picked for good test results, so this checks that the loop works and isn't an accuracy score |
+
+### Browser checks on the 50-sign model
 
 | Check | Result |
 |---|---|
 | TF.js vs Keras on identical sequences | Same top-1 and top-3 order on 50 of 50, largest probability difference under 0.000001 |
-| Browser MediaPipe, features and model on the videos | 72% top-1, 92% top-5 (Python: 76% top-1 on the same clips) |
+| Browser MediaPipe, features and model on 50 videos | 72% top-1, 92% top-5 (Python: 76% top-1 on the same clips) |
 | Browser prediction agrees with Python | 48 of 50 |
 
-These scores come from fluent signers in dataset videos. They are not a measurement of live webcam accuracy, which hasn't been measured.
+These scores come from fluent signers in dataset videos. **Live webcam accuracy hasn't been measured for either model.**
 
 ## Install
 
@@ -145,6 +176,16 @@ M=~/signo_data/asl_citizen
 .venv-tfjs/bin/python python/export_tfjs.py --run model_out/bilstm_seed0 --out app_model
 ```
 
+The 1,000-sign model uses the same steps with `--vocab python/vocab_asl_citizen_1000.txt --test-per-class 4` when fetching, `manifest_1000.csv` and `signo_dataset_1000.json`, and these settings:
+
+```bash
+.venv/bin/python python/train.py --data $M/signo_dataset_1000.json --out model_out/w1000_u48_acc --seed 0 \
+    --batch 64 --patience 10 --max-minutes 25 --select val_accuracy --reduce-lr --units 48 --lr 3e-3
+.venv/bin/python python/evaluate.py --run model_out/w1000_u48_acc --data $M/signo_dataset_1000.json --results results_1000
+.venv-tfjs/bin/python python/export_tfjs.py --run model_out/w1000_u48_acc --out app_model_1000 \
+    --report results_1000/report.json --test-note "ASL Citizen test split, 4 clips per sign where available"
+```
+
 Tests: `.venv/bin/python -m pytest python/tests -q`
 
 ## Run the app
@@ -153,7 +194,7 @@ Tests: `.venv/bin/python -m pytest python/tests -q`
 python3 -m http.server 8000 --bind 127.0.0.1
 ```
 
-Open http://localhost:8000 in Chrome. An internet connection is needed to load TensorFlow.js and MediaPipe from their CDN.
+Open http://localhost:8000 in Chrome. If you've opened the app before, press Cmd+Shift+R once to load the newest page. An internet connection is needed to load TensorFlow.js and MediaPipe from their CDN.
 
 ## Run the demo
 
@@ -162,13 +203,16 @@ Open http://localhost:8000 in Chrome. An internet connection is needed to load T
 3. Sign one word at normal speed, then lower your hands.
 4. Read the caption on the video and the top-3 bars. "Not sure yet" means confidence is below the Picky level slider.
 
-The other tabs are still there: **Teach** to record your own signs, **Brain** to train in the browser and see reports, and **Challenge** for a 5-round game. Models you train in Teach are stored separately and don't replace the dataset model. Use the dropdown at the top to switch.
+The other tabs are still there: **Teach** to record your own signs, **Brain** to train in the browser and see reports, and **Challenge** for a 5-round game. Models you train in Teach are stored separately and don't replace the dataset models. Use the dropdown at the top to switch between **Large ASL model (1000 signs)**, **Small ASL model (50 signs)** and your own. The app remembers a model you pick or train.
 
 ## Limitations
 
 - **Signer variation:** accuracy varies between people, and the training set has few signers per word.
-- **Small data:** about 15 training clips per word. Training accuracy reaches about 99% while validation levels off near 80%, which shows overfitting.
-- **Small vocabulary:** only the listed words can be recognised. Anything else gets forced into the closest one.
+- **Small data:** 11 to 17 training clips per word. Both models overfit: the 1,000-sign model reaches 92.3% training accuracy against 69.5% on validation.
+- **Fixed vocabulary:** only the listed words can be recognised. Anything else gets forced into the closest one.
+- **Coarse per-sign numbers:** the 1,000-sign test has at most 4 clips per sign, so each clip moves a sign's recall by 25%. The overall scores are more reliable than any single sign's score.
+- **Single seed, limited training time:** the larger round 2 models were stopped by a time limit, and no run was repeated with another seed.
+- **Unfiltered vocabulary:** the 1,000 signs were chosen by word frequency and include some rude words, which can appear in the top-3 bars.
 - **Camera position and lighting:** poor framing or light reduces landmark quality.
 - **Hand detection failures:** fast movement or hands overlapping can lose landmarks.
 - **No facial or non-manual features:** expressions carry meaning in ASL and aren't captured.

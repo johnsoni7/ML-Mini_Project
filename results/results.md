@@ -74,3 +74,29 @@ Random guessing would score 2.0% top-1 and 10.0% top-5. Mean per-class precision
 | thankyou | hot | 2 |
 
 Per-class numbers for every sign are in `per_class_metrics.csv` and the raw matrix is in `confusion_matrix.csv`.
+
+## The 1,000-sign model
+
+The default model in the app is now the 1,000-sign model. Its full results are in [`results_1000/results.md`](../results_1000/results.md).
+
+| Measure | Validation | Test |
+|---|---:|---:|
+| Top-1 accuracy | 69.5% | **61.4%** |
+| Top-5 accuracy | 90.2% | **84.4%** |
+| Clips | 3,763 | 3,983 |
+| Signers | 5 | 11 |
+
+Random guessing would score 0.1% top-1 and 0.5% top-5. Mean per-sign precision 65.0%, recall 61.5%. The test split was capped at 4 clips per sign.
+
+### Model comparison (validation only)
+
+| Run | Units | Dropout | Epoch kept | Val top-1 | Val top-5 | Val loss | Train accuracy | Parameters |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| **w1000_u48_acc (selected)** | 48 | 0.3 | 29 of 39 | 69.5% | 90.2% | 1.618 | 92.3% | 110,872 |
+| w1000_u128_acc | 128 | 0.5 | 27 of 31 | 68.7% | 89.3% | 1.968 | 98.4% | 396,392 |
+| w1000_u256_acc | 256 | 0.5 | 12 of 12 | 66.9% | 88.1% | 2.251 | 99.0% | 1,119,464 |
+| w1000_u48 | 48 | 0.3 | 14 of 22 | 66.0% | 89.9% | 1.498 | 79.4% | 110,872 |
+| w1000_u256 | 256 | 0.4 | 4 of 8 | 59.6% | 85.2% | 1.929 | 85.7% | 1,119,464 |
+| w1000_u128 | 128 | 0.3 | 3 of 11 | 56.3% | 83.9% | 1.808 | 69.7% | 396,392 |
+
+Runs ending in `_acc` kept the epoch with the best validation accuracy and lowered the learning rate as training stalled. The others kept the epoch with the lowest validation loss. The 128-unit and 256-unit `_acc` runs were stopped by a 25-minute limit.

@@ -31,7 +31,7 @@ Most hearing people don't understand sign language, which creates a barrier for 
 
 ## 2. What is sign-language recognition?
 
-It means getting a computer to work out which sign a person made by watching them. Signo recognises American Sign Language (ASL) words from a fixed list of 50, stored in `python/vocab_asl_citizen.txt`.
+It means getting a computer to work out which sign a person made by watching them. Signo recognises American Sign Language (ASL) words from a fixed list. The default model knows 1,000 words (`python/vocab_asl_citizen_1000.txt`), and the fallback model knows 50 (`python/vocab_asl_citizen.txt`).
 
 ASL is its own language, and it isn't the same as Indian Sign Language. Signo only knows ASL, so someone signing ISL won't be recognised correctly.
 
@@ -107,7 +107,7 @@ Input: 30 frames x 100 numbers
   -> Bidirectional LSTM (48 memory units each way): reads the movement
   -> Dropout (30%): randomly switches off parts during training to prevent memorising
   -> Dense (48 neurons): combines what was learned
-  -> Dense with softmax (50 outputs): one probability per sign, adding up to 100%
+  -> Dense with softmax (1,000 or 50 outputs): one probability per sign, adding up to 100%
 ```
 
 ## 11. What does bidirectional mean?
@@ -121,7 +121,7 @@ Why bother? How a sign ends can help make sense of how it began. HELLO and SORRY
 Nobody writes a rule like "HELLO starts at the forehead". Learning goes like this:
 
 1. The model starts with random internal numbers (weights), so its guesses are random.
-2. It sees a clip and outputs 50 probabilities.
+2. It sees a clip and outputs one probability per sign.
 3. The **loss** measures how wrong it was. Low probability for the correct sign means high loss.
 4. An algorithm called Adam nudges all the weights slightly to reduce that loss.
 5. Repeat thousands of times.
@@ -140,7 +140,7 @@ Think of a student preparing for an exam:
 
 **The bug we fixed.** The original `train.py` mixed validation and test into one set, then used that set both to decide when to stop and to report the final score. That's like practising on the final exam and then quoting your mark. It makes the score look better than it should. Now `train.py` never scores test clips, and a separate `evaluate.py` does it and logs each attempt.
 
-(These numbers are for the 50-sign model. The whole dataset has 35 / 6 / 11 signers, but not every signer recorded every word.)
+(These numbers are for the 50-sign model. The 1,000-sign model has 14,626 / 3,763 / 3,983 clips from 35 / 5 / 11 signers. The whole dataset has 35 / 6 / 11 signers, but not every signer recorded every word.)
 
 **Why signer-independent matters.** The three sets contain completely different people (overlap measured as 0). So the test score answers the question "how well does it work on people it has never seen?", which is what happens when you use it yourself.
 
@@ -171,7 +171,7 @@ It's like seeing the same sign from slightly different people and camera angles.
 
 If you sign HELP and the model ranks `please, help, sorry, more, want`, that counts as wrong for top-1 and right for top-5. Top-5 shows whether the model is "close", which is useful when many signs look alike.
 
-For comparison, random guessing among 50 signs gets 2% top-1 and 10% top-5.
+For comparison, random guessing gets 2% top-1 and 10% top-5 among 50 signs, and 0.1% top-1 and 0.5% top-5 among 1,000 signs.
 
 ## 17. How does the trained model recognise a sign through a webcam?
 
@@ -182,7 +182,7 @@ All of this happens on your laptop. No video leaves the browser.
 3. **Features:** `extract()` in `index.html` makes the same 100 numbers as Python. A test runs both versions and checks they match.
 4. **Memory:** the app keeps the last 3 seconds of frames.
 5. **Input:** about 5 times a second, it takes the last 2.2 seconds, trims them to where hands are visible, and resamples to 30 frames.
-6. **Prediction:** the BiLSTM outputs 50 probabilities.
+6. **Prediction:** the BiLSTM outputs one probability per sign.
 7. **Smoothing:** the last 3 predictions are averaged to reduce flicker.
 8. **Decision:** a word only appears if it's above the threshold (default 70%, the "Picky level" slider) and stays top for 2 checks in a row. Otherwise you see "Not sure yet". With no hands visible you see "No hands in view".
 
@@ -197,8 +197,9 @@ All of this happens on your laptop. No video leaves the browser.
 | `python/evaluate.py` | Scores the chosen model on the test set and makes the figures |
 | `python/export_tfjs.py` | Converts the model for the browser |
 | `index.html` | The whole web app |
-| `app_model/` | The trained model the browser loads |
-| `results/` | The real scores and figures |
+| `python/compare_runs.py` | Compares training runs using validation numbers only |
+| `app_model_1000/`, `app_model/` | The 1,000-sign and 50-sign models the browser loads |
+| `results_1000/`, `results/` | The real scores and figures for each model |
 
 ## What the real results mean (50-sign model)
 
@@ -214,3 +215,17 @@ All of this happens on your laptop. No video leaves the browser.
 - **Confusions make sense.** The most common errors include stop read as school, and yes read as no. See `results/confusion_matrix.png`.
 
 These numbers come from fluent signers in dataset videos. Your own webcam accuracy may be lower.
+
+## What the real results mean (1,000-sign model)
+
+| Measure | Validation | Test | Random guessing |
+|---|---:|---:|---:|
+| Top-1 | 69.5% | **61.4%** | 0.1% |
+| Top-5 | 90.2% | **84.4%** | 0.5% |
+
+- **Why is it lower than the 50-sign model's 76.7%?** It has 20 times as many signs to choose between, so there are many more ways to be wrong, but only about the same number of training clips per sign. It isn't a worse model. It's a harder exam.
+- **Why did the smallest model win?** Bigger models have more memory, so they can memorise more. The 256-unit model reached 99.0% on training clips but only 66.9% on validation. The 48-unit model reached 92.3% and 69.5%. More units didn't help on people the model hadn't seen, at least within the 25 minutes they were given.
+- **Why does validation loss rise while validation accuracy rises?** Loss also punishes overconfidence. As training goes on, the model gets more answers right, but it's very sure of its wrong answers too, and those cost a lot of loss. We wanted the most correct answers, so the final runs kept the epoch with the best validation accuracy.
+- **What does the falling learning rate do?** The learning rate is the size of each weight nudge. Big nudges learn fast but can't settle, so the rate is halved whenever validation loss stops improving for 3 epochs.
+- **Why be careful with single-sign scores?** Most signs have only 4 test clips, so one clip moves that sign's recall by 25%. Trust the overall score more than "family got 100%".
+- **The threshold trade-off.** On validation clips, a 70% threshold shows a word for 75% of clips, and 81% of those are correct. At 90% it shows a word for 56% of clips, and 89% are correct. A pickier setting gives fewer words, but more of them are right.

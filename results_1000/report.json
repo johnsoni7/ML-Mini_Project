@@ -1,0 +1,8293 @@
+{
+  "run": "w1000_u48_acc",
+  "evaluated_at": "2026-11-02 07:22:50",
+  "split_policy": "official",
+  "num_classes": 1000,
+  "labels": [
+    "above",
+    "accept",
+    "access",
+    "accident",
+    "act",
+    "action",
+    "actor",
+    "add",
+    "address",
+    "admit",
+    "adult",
+    "advantage",
+    "africa",
+    "after",
+    "afternoon",
+    "again",
+    "against",
+    "age",
+    "agency",
+    "agreement",
+    "airplane",
+    "alcohol",
+    "all",
+    "alone",
+    "alright",
+    "always",
+    "amazing",
+    "america",
+    "and",
+    "angel",
+    "angry",
+    "animal",
+    "answer",
+    "any",
+    "anyone",
+    "apart",
+    "appear",
+    "apple",
+    "appointment",
+    "april",
+    "area",
+    "argue",
+    "arizona",
+    "army",
+    "arrive",
+    "art",
+    "article",
+    "asia",
+    "ask",
+    "assembly",
+    "assist",
+    "assistant",
+    "at",
+    "atlanta",
+    "attention",
+    "attitude",
+    "audience",
+    "australia",
+    "automatic",
+    "average",
+    "avoid",
+    "award",
+    "away",
+    "back",
+    "bad",
+    "balance",
+    "ball",
+    "bank",
+    "bar",
+    "barely",
+    "baseball",
+    "basic",
+    "bath",
+    "bathroom",
+    "battery",
+    "beach",
+    "bear",
+    "beat",
+    "because",
+    "become",
+    "bedroom",
+    "beer",
+    "before",
+    "behavior",
+    "behind",
+    "bell",
+    "benefit",
+    "best",
+    "bet",
+    "better",
+    "between",
+    "big",
+    "bird",
+    "birth",
+    "birthday",
+    "bitch",
+    "black",
+    "blame",
+    "blind",
+    "blood",
+    "blow",
+    "blue",
+    "board",
+    "boat",
+    "body",
+    "bomb",
+    "bone",
+    "book",
+    "boss",
+    "boston",
+    "both",
+    "bother",
+    "bottle",
+    "bottom",
+    "bowl",
+    "box",
+    "boy",
+    "boyfriend",
+    "bread",
+    "break",
+    "bright",
+    "bring",
+    "brother",
+    "brown",
+    "budget",
+    "building",
+    "bullshit",
+    "burn",
+    "bus",
+    "business",
+    "busy",
+    "but",
+    "butter",
+    "buy",
+    "bye",
+    "cabinet",
+    "cake",
+    "california",
+    "calm",
+    "camera",
+    "canada",
+    "cannot",
+    "capture",
+    "car",
+    "cards",
+    "careful",
+    "carry",
+    "category",
+    "catholic",
+    "caught",
+    "cause",
+    "celebrate",
+    "center",
+    "chain",
+    "chair",
+    "challenge",
+    "champion",
+    "chance",
+    "change",
+    "channel",
+    "character",
+    "charge",
+    "chase",
+    "chat",
+    "cheap",
+    "check",
+    "cheese",
+    "chicago",
+    "child",
+    "children",
+    "china",
+    "chocolate",
+    "church",
+    "circle",
+    "class",
+    "clean",
+    "clear",
+    "click",
+    "client",
+    "close",
+    "clothes",
+    "coach",
+    "coffee",
+    "cold",
+    "college",
+    "color",
+    "come",
+    "comfortable",
+    "comment",
+    "committee",
+    "communication",
+    "community",
+    "complex",
+    "computer",
+    "concept",
+    "concerned",
+    "confident",
+    "conflict",
+    "congratulations",
+    "connection",
+    "contact",
+    "continue",
+    "cook",
+    "copy",
+    "corner",
+    "cost",
+    "count",
+    "country",
+    "cousin",
+    "crack",
+    "crash",
+    "crazy",
+    "create",
+    "crown",
+    "culture",
+    "cup",
+    "curious",
+    "cut",
+    "damn",
+    "dance",
+    "danger",
+    "date",
+    "daughter",
+    "day",
+    "death",
+    "decline",
+    "deep",
+    "defeat",
+    "degree",
+    "department",
+    "depth",
+    "desert",
+    "design",
+    "destroy",
+    "diamond",
+    "die",
+    "different",
+    "director",
+    "dirty",
+    "discuss",
+    "disney",
+    "divorce",
+    "document",
+    "door",
+    "double",
+    "doubt",
+    "down",
+    "download",
+    "dragon",
+    "draw",
+    "dream",
+    "dress",
+    "drive",
+    "drop",
+    "drug",
+    "drunk",
+    "dry",
+    "due",
+    "dumb",
+    "duty",
+    "each",
+    "ear",
+    "early",
+    "earn",
+    "earth",
+    "east",
+    "easy",
+    "edge",
+    "effect",
+    "egg",
+    "egypt",
+    "eight",
+    "either",
+    "email",
+    "end",
+    "enemy",
+    "energy",
+    "engineer",
+    "english",
+    "enjoy",
+    "enough",
+    "enter",
+    "environment",
+    "equal",
+    "escape",
+    "europe",
+    "even",
+    "event",
+    "everyday",
+    "everything",
+    "evidence",
+    "example",
+    "excited",
+    "excuse",
+    "exercise",
+    "expect",
+    "expensive",
+    "experience",
+    "experienced",
+    "experiment",
+    "expert",
+    "explanation",
+    "express",
+    "eyes",
+    "face",
+    "fail",
+    "fair",
+    "fake",
+    "family",
+    "famous",
+    "fan",
+    "fantasy",
+    "far",
+    "farm",
+    "fashion",
+    "fast",
+    "fat",
+    "father",
+    "fault",
+    "favorite",
+    "february",
+    "feel",
+    "few",
+    "fifth",
+    "fight",
+    "figure",
+    "film",
+    "finally",
+    "finance",
+    "find",
+    "finger",
+    "finish",
+    "fire",
+    "fired",
+    "first",
+    "fish",
+    "fit",
+    "fix",
+    "floor",
+    "flower",
+    "fly",
+    "focus",
+    "football",
+    "for",
+    "forest",
+    "form",
+    "former",
+    "four",
+    "fourth",
+    "fox",
+    "frame",
+    "france",
+    "fraud",
+    "free",
+    "freedom",
+    "french",
+    "friday",
+    "friend",
+    "friendly",
+    "from",
+    "front",
+    "fruit",
+    "full",
+    "fun",
+    "function",
+    "funny",
+    "future",
+    "game",
+    "gas",
+    "gate",
+    "gay",
+    "generation",
+    "germany",
+    "get",
+    "ghost",
+    "gift",
+    "girl",
+    "give",
+    "go",
+    "goal",
+    "god",
+    "gold",
+    "golf",
+    "gone",
+    "good",
+    "government",
+    "grab",
+    "grade",
+    "graduate",
+    "grass",
+    "gray",
+    "great",
+    "green",
+    "group",
+    "grow",
+    "guide",
+    "guilty",
+    "guitar",
+    "gym",
+    "haha",
+    "half",
+    "hall",
+    "hands",
+    "hang",
+    "happen",
+    "happy",
+    "hard",
+    "hate",
+    "have",
+    "he",
+    "head",
+    "health",
+    "hearing",
+    "heart",
+    "heaven",
+    "heavy",
+    "hell",
+    "hello",
+    "help",
+    "here",
+    "hide",
+    "high",
+    "his",
+    "history",
+    "hockey",
+    "holiday",
+    "holy",
+    "home",
+    "honest",
+    "honor",
+    "hop",
+    "hope",
+    "horrible",
+    "horse",
+    "hot",
+    "hotel",
+    "hour",
+    "house",
+    "hundred",
+    "hungry",
+    "hunt",
+    "hurt",
+    "husband",
+    "ice",
+    "idea",
+    "identity",
+    "if",
+    "ignore",
+    "impact",
+    "important",
+    "impossible",
+    "improve",
+    "in",
+    "inch",
+    "incredible",
+    "independent",
+    "indian",
+    "influence",
+    "innocent",
+    "inside",
+    "instead",
+    "institute",
+    "insurance",
+    "interest",
+    "interested",
+    "internet",
+    "interview",
+    "introduce",
+    "iphone",
+    "island",
+    "israel",
+    "italy",
+    "japan",
+    "jewish",
+    "join",
+    "joke",
+    "journey",
+    "judge",
+    "jump",
+    "junior",
+    "keep",
+    "key",
+    "kid",
+    "kill",
+    "king",
+    "kitchen",
+    "knock",
+    "know",
+    "label",
+    "land",
+    "language",
+    "last",
+    "late",
+    "later",
+    "laugh",
+    "law",
+    "lawyer",
+    "lead",
+    "league",
+    "learn",
+    "leather",
+    "leave",
+    "left",
+    "less",
+    "lesson",
+    "library",
+    "license",
+    "lie",
+    "light",
+    "like",
+    "limited",
+    "line",
+    "lips",
+    "list",
+    "listen",
+    "long",
+    "lose",
+    "lost",
+    "loud",
+    "love",
+    "luck",
+    "lucky",
+    "machine",
+    "mad",
+    "magazine",
+    "magic",
+    "major",
+    "make",
+    "man",
+    "manage",
+    "many",
+    "march",
+    "marry",
+    "match",
+    "math",
+    "maybe",
+    "me",
+    "medicine",
+    "meet",
+    "meeting",
+    "member",
+    "mention",
+    "mess",
+    "metal",
+    "middle",
+    "mind",
+    "mine",
+    "minute",
+    "mirror",
+    "miss",
+    "missing",
+    "monday",
+    "monster",
+    "month",
+    "moon",
+    "more",
+    "morning",
+    "most",
+    "mother",
+    "mouth",
+    "move",
+    "much",
+    "murder",
+    "muscle",
+    "museum",
+    "music",
+    "must",
+    "my",
+    "myself",
+    "naked",
+    "name",
+    "navy",
+    "near",
+    "neck",
+    "need",
+    "negative",
+    "net",
+    "network",
+    "never",
+    "new",
+    "newspaper",
+    "next",
+    "nice",
+    "nine",
+    "no",
+    "noise",
+    "none",
+    "normal",
+    "north",
+    "nose",
+    "not",
+    "now",
+    "numbers",
+    "nurse",
+    "obvious",
+    "ocean",
+    "off",
+    "office",
+    "often",
+    "ok",
+    "old",
+    "on",
+    "once",
+    "one",
+    "open",
+    "opportunity",
+    "option",
+    "or",
+    "orange",
+    "organization",
+    "other",
+    "our",
+    "out",
+    "outside",
+    "over",
+    "own",
+    "pack",
+    "page",
+    "pain",
+    "paint",
+    "pair",
+    "paper",
+    "parents",
+    "park",
+    "pass",
+    "past",
+    "pay",
+    "peace",
+    "pen",
+    "people",
+    "percent",
+    "perfect",
+    "period",
+    "permission",
+    "person",
+    "perspective",
+    "philadelphia",
+    "philosophy",
+    "phone",
+    "photography",
+    "physics",
+    "pick",
+    "picture",
+    "pink",
+    "place",
+    "plain",
+    "plan",
+    "planet",
+    "plant",
+    "plate",
+    "platform",
+    "play",
+    "players",
+    "please",
+    "plenty",
+    "plus",
+    "point",
+    "policy",
+    "poor",
+    "pope",
+    "popular",
+    "positive",
+    "possible",
+    "power",
+    "practice",
+    "prayer",
+    "prefer",
+    "pregnant",
+    "president",
+    "press",
+    "pretty",
+    "price",
+    "pride",
+    "prince",
+    "principal",
+    "print",
+    "priority",
+    "prison",
+    "process",
+    "program",
+    "project",
+    "promise",
+    "promote",
+    "proof",
+    "protection",
+    "protest",
+    "provide",
+    "public",
+    "pull",
+    "push",
+    "put",
+    "quality",
+    "quarter",
+    "queen",
+    "quiet",
+    "quit",
+    "race",
+    "radio",
+    "rain",
+    "range",
+    "reach",
+    "read",
+    "ready",
+    "really",
+    "reason",
+    "record",
+    "recording",
+    "red",
+    "reduce",
+    "reflect",
+    "refuse",
+    "register",
+    "regular",
+    "relationship",
+    "release",
+    "relief",
+    "religion",
+    "remind",
+    "remove",
+    "replace",
+    "request",
+    "rescue",
+    "respect",
+    "responsibility",
+    "rest",
+    "restaurant",
+    "result",
+    "rich",
+    "ring",
+    "risk",
+    "road",
+    "rob",
+    "rock",
+    "role",
+    "roll",
+    "roof",
+    "room",
+    "rose",
+    "rough",
+    "row",
+    "rule",
+    "rush",
+    "russia",
+    "sad",
+    "safe",
+    "salt",
+    "santa",
+    "saturday",
+    "save",
+    "scared",
+    "school",
+    "science",
+    "score",
+    "script",
+    "secret",
+    "secretary",
+    "see",
+    "seem",
+    "select",
+    "self",
+    "sell",
+    "senate",
+    "send",
+    "sensitive",
+    "sequence",
+    "serious",
+    "seven",
+    "several",
+    "shame",
+    "shape",
+    "share",
+    "shoes",
+    "shooting",
+    "shot",
+    "should",
+    "show",
+    "shower",
+    "sick",
+    "side",
+    "sign",
+    "silly",
+    "silver",
+    "since",
+    "sing",
+    "single",
+    "sister",
+    "sit",
+    "situation",
+    "six",
+    "skill",
+    "skin",
+    "sleep",
+    "slow",
+    "small",
+    "smart",
+    "smell",
+    "smoke",
+    "smoking",
+    "smooth",
+    "so",
+    "social",
+    "society",
+    "soft",
+    "some",
+    "something",
+    "sometimes",
+    "son",
+    "sorry",
+    "sound",
+    "south",
+    "space",
+    "spain",
+    "specific",
+    "spend",
+    "sports",
+    "spring",
+    "square",
+    "stadium",
+    "staff",
+    "stand-up",
+    "star",
+    "stars",
+    "start",
+    "state",
+    "stay",
+    "steal",
+    "steam",
+    "step",
+    "still",
+    "stomach",
+    "stop",
+    "straight",
+    "strange",
+    "street",
+    "stress",
+    "string",
+    "strong",
+    "structure",
+    "struggle",
+    "stuck",
+    "student",
+    "study",
+    "suck",
+    "suit",
+    "summer",
+    "sun",
+    "sunday",
+    "superior",
+    "sure",
+    "surgery",
+    "surprise",
+    "suspect",
+    "sweet",
+    "sword",
+    "system",
+    "table",
+    "take",
+    "tape",
+    "taste",
+    "tea",
+    "teacher",
+    "team",
+    "tear",
+    "technology",
+    "teeth",
+    "tell",
+    "temporary",
+    "test",
+    "text",
+    "than",
+    "thankyou",
+    "that",
+    "theatre",
+    "then",
+    "theory",
+    "therapy",
+    "there",
+    "these",
+    "thin",
+    "things",
+    "think",
+    "this/it",
+    "three",
+    "thursday",
+    "ticket",
+    "time",
+    "tiny",
+    "tired",
+    "to",
+    "today",
+    "together",
+    "tomorrow",
+    "tongue",
+    "top",
+    "topic",
+    "total",
+    "touch",
+    "tough",
+    "tournament",
+    "tradition",
+    "traffic",
+    "train",
+    "transfer",
+    "trash",
+    "travel",
+    "tree",
+    "trouble",
+    "true",
+    "truth",
+    "try",
+    "tube",
+    "tuesday",
+    "turn",
+    "tv",
+    "two",
+    "ugly",
+    "uncle",
+    "under",
+    "understand",
+    "unique",
+    "universe",
+    "university",
+    "until",
+    "up",
+    "us",
+    "use",
+    "vacation",
+    "valley",
+    "value",
+    "very",
+    "view",
+    "village",
+    "vision",
+    "visit",
+    "voice",
+    "vote",
+    "wait",
+    "wall",
+    "war",
+    "warm",
+    "waste",
+    "watch",
+    "water",
+    "wave",
+    "way",
+    "we",
+    "weak",
+    "wear",
+    "weather",
+    "wedding",
+    "wednesday",
+    "week",
+    "weekend",
+    "weight",
+    "weird",
+    "well",
+    "west",
+    "wet",
+    "whatever",
+    "wheel",
+    "when",
+    "where",
+    "which",
+    "while",
+    "white",
+    "who",
+    "whole",
+    "why",
+    "wide",
+    "wife",
+    "will",
+    "win",
+    "wind",
+    "window",
+    "wine",
+    "winter",
+    "wise",
+    "wish",
+    "with",
+    "without",
+    "wonder",
+    "wood",
+    "word",
+    "work",
+    "world",
+    "worry",
+    "worse",
+    "wow",
+    "write",
+    "wrong",
+    "yeah",
+    "year",
+    "yellow",
+    "yes",
+    "yesterday",
+    "you",
+    "young",
+    "your",
+    "yourself",
+    "zero"
+  ],
+  "counts": {
+    "train": 14626,
+    "val": 3763,
+    "test": 3983
+  },
+  "signers": {
+    "train": 35,
+    "val": 5,
+    "test": 11
+  },
+  "signer_overlap": {
+    "train_val": 0,
+    "train_test": 0,
+    "val_test": 0
+  },
+  "test_top1": 0.6143610343961838,
+  "test_top5": 0.8438363042932463,
+  "val_top1": 0.695455753388254,
+  "val_top5": 0.9016741961201169,
+  "chance_top1": 0.001,
+  "macro_precision": 0.6498989538239538,
+  "macro_recall": 0.6145833333333333,
+  "best_classes": [
+    {
+      "sign": "accident",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "any",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "april",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "award",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "away",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "ball",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "bedroom",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "boss",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "building",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "celebrate",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    }
+  ],
+  "worst_classes": [
+    {
+      "sign": "true",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "to",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "think",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "thankyou",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "surgery",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "sure",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "suck",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "stop",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "sports",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "several",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    }
+  ],
+  "top_confusions": [
+    {
+      "count": 4,
+      "true": "haha",
+      "predicted": "three"
+    },
+    {
+      "count": 4,
+      "true": "favorite",
+      "predicted": "color"
+    },
+    {
+      "count": 3,
+      "true": "true",
+      "predicted": "really"
+    },
+    {
+      "count": 3,
+      "true": "think",
+      "predicted": "mind"
+    },
+    {
+      "count": 3,
+      "true": "stars",
+      "predicted": "star"
+    },
+    {
+      "count": 3,
+      "true": "sit",
+      "predicted": "chair"
+    },
+    {
+      "count": 3,
+      "true": "numbers",
+      "predicted": "more"
+    },
+    {
+      "count": 3,
+      "true": "help",
+      "predicted": "therapy"
+    },
+    {
+      "count": 3,
+      "true": "expect",
+      "predicted": "loud"
+    },
+    {
+      "count": 3,
+      "true": "equal",
+      "predicted": "even"
+    }
+  ],
+  "per_class": [
+    {
+      "sign": "above",
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "test_clips": 4
+    },
+    {
+      "sign": "accept",
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "test_clips": 4
+    },
+    {
+      "sign": "access",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "accident",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "act",
+      "precision": 0.25,
+      "recall": 0.25,
+      "f1": 0.25,
+      "test_clips": 4
+    },
+    {
+      "sign": "action",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "actor",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "add",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "address",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "admit",
+      "precision": 0.4,
+      "recall": 0.5,
+      "f1": 0.4444,
+      "test_clips": 4
+    },
+    {
+      "sign": "adult",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "advantage",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "africa",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "after",
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1": 0.3333,
+      "test_clips": 4
+    },
+    {
+      "sign": "afternoon",
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "test_clips": 4
+    },
+    {
+      "sign": "again",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "against",
+      "precision": 0.3333,
+      "recall": 0.25,
+      "f1": 0.2857,
+      "test_clips": 4
+    },
+    {
+      "sign": "age",
+      "precision": 0.3333,
+      "recall": 0.25,
+      "f1": 0.2857,
+      "test_clips": 4
+    },
+    {
+      "sign": "agency",
+      "precision": 0.75,
+      "recall": 1.0,
+      "f1": 0.8571,
+      "test_clips": 3
+    },
+    {
+      "sign": "agreement",
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "test_clips": 4
+    },
+    {
+      "sign": "airplane",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "alcohol",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "all",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "alone",
+      "precision": 0.4286,
+      "recall": 0.75,
+      "f1": 0.5455,
+      "test_clips": 4
+    },
+    {
+      "sign": "alright",
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1": 0.3333,
+      "test_clips": 4
+    },
+    {
+      "sign": "always",
+      "precision": 0.5,
+      "recall": 0.75,
+      "f1": 0.6,
+      "test_clips": 4
+    },
+    {
+      "sign": "amazing",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "america",
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8,
+      "test_clips": 4
+    },
+    {
+      "sign": "and",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "angel",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "angry",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "animal",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "answer",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "any",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "anyone",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "apart",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "appear",
+      "precision": 0.3333,
+      "recall": 0.25,
+      "f1": 0.2857,
+      "test_clips": 4
+    },
+    {
+      "sign": "apple",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "appointment",
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "test_clips": 4
+    },
+    {
+      "sign": "april",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "area",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "argue",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "arizona",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "army",
+      "precision": 0.3333,
+      "recall": 0.25,
+      "f1": 0.2857,
+      "test_clips": 4
+    },
+    {
+      "sign": "arrive",
+      "precision": 1.0,
+      "recall": 0.3333,
+      "f1": 0.5,
+      "test_clips": 3
+    },
+    {
+      "sign": "art",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "article",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "asia",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "ask",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "assembly",
+      "precision": 0.25,
+      "recall": 0.25,
+      "f1": 0.25,
+      "test_clips": 4
+    },
+    {
+      "sign": "assist",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "assistant",
+      "precision": 0.4286,
+      "recall": 0.75,
+      "f1": 0.5455,
+      "test_clips": 4
+    },
+    {
+      "sign": "at",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "atlanta",
+      "precision": 0.25,
+      "recall": 0.25,
+      "f1": 0.25,
+      "test_clips": 4
+    },
+    {
+      "sign": "attention",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "attitude",
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8,
+      "test_clips": 4
+    },
+    {
+      "sign": "audience",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "australia",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "automatic",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "average",
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1": 0.3333,
+      "test_clips": 4
+    },
+    {
+      "sign": "avoid",
+      "precision": 0.5,
+      "recall": 0.75,
+      "f1": 0.6,
+      "test_clips": 4
+    },
+    {
+      "sign": "award",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "away",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "back",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "bad",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "balance",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "ball",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "bank",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "bar",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "barely",
+      "precision": 0.5714,
+      "recall": 1.0,
+      "f1": 0.7273,
+      "test_clips": 4
+    },
+    {
+      "sign": "baseball",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "basic",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "bath",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "bathroom",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "battery",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "beach",
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8,
+      "test_clips": 4
+    },
+    {
+      "sign": "bear",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "beat",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "because",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "become",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "bedroom",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "beer",
+      "precision": 0.5,
+      "recall": 0.75,
+      "f1": 0.6,
+      "test_clips": 4
+    },
+    {
+      "sign": "before",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "behavior",
+      "precision": 0.25,
+      "recall": 0.25,
+      "f1": 0.25,
+      "test_clips": 4
+    },
+    {
+      "sign": "behind",
+      "precision": 0.3333,
+      "recall": 0.25,
+      "f1": 0.2857,
+      "test_clips": 4
+    },
+    {
+      "sign": "bell",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "benefit",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "best",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "bet",
+      "precision": 0.3333,
+      "recall": 0.25,
+      "f1": 0.2857,
+      "test_clips": 4
+    },
+    {
+      "sign": "better",
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1": 0.3333,
+      "test_clips": 4
+    },
+    {
+      "sign": "between",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "big",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "bird",
+      "precision": 1.0,
+      "recall": 0.6667,
+      "f1": 0.8,
+      "test_clips": 3
+    },
+    {
+      "sign": "birth",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "birthday",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "bitch",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "black",
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1": 0.3333,
+      "test_clips": 4
+    },
+    {
+      "sign": "blame",
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "test_clips": 4
+    },
+    {
+      "sign": "blind",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "blood",
+      "precision": 0.25,
+      "recall": 0.25,
+      "f1": 0.25,
+      "test_clips": 4
+    },
+    {
+      "sign": "blow",
+      "precision": 0.4444,
+      "recall": 1.0,
+      "f1": 0.6154,
+      "test_clips": 4
+    },
+    {
+      "sign": "blue",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "board",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "boat",
+      "precision": 0.125,
+      "recall": 0.25,
+      "f1": 0.1667,
+      "test_clips": 4
+    },
+    {
+      "sign": "body",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "bomb",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "bone",
+      "precision": 0.5,
+      "recall": 0.75,
+      "f1": 0.6,
+      "test_clips": 4
+    },
+    {
+      "sign": "book",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "boss",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "boston",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "both",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "bother",
+      "precision": 0.2,
+      "recall": 0.25,
+      "f1": 0.2222,
+      "test_clips": 4
+    },
+    {
+      "sign": "bottle",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "bottom",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "bowl",
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8,
+      "test_clips": 4
+    },
+    {
+      "sign": "box",
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1": 0.3333,
+      "test_clips": 4
+    },
+    {
+      "sign": "boy",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "boyfriend",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "bread",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "break",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "bright",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "bring",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "brother",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "brown",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "budget",
+      "precision": 0.3,
+      "recall": 0.75,
+      "f1": 0.4286,
+      "test_clips": 4
+    },
+    {
+      "sign": "building",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "bullshit",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "burn",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "bus",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "business",
+      "precision": 0.25,
+      "recall": 0.25,
+      "f1": 0.25,
+      "test_clips": 4
+    },
+    {
+      "sign": "busy",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "but",
+      "precision": 0.3333,
+      "recall": 0.25,
+      "f1": 0.2857,
+      "test_clips": 4
+    },
+    {
+      "sign": "butter",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "buy",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "bye",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "cabinet",
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8,
+      "test_clips": 4
+    },
+    {
+      "sign": "cake",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "california",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "calm",
+      "precision": 0.5,
+      "recall": 0.75,
+      "f1": 0.6,
+      "test_clips": 4
+    },
+    {
+      "sign": "camera",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "canada",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "cannot",
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8,
+      "test_clips": 4
+    },
+    {
+      "sign": "capture",
+      "precision": 0.3333,
+      "recall": 0.5,
+      "f1": 0.4,
+      "test_clips": 4
+    },
+    {
+      "sign": "car",
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8,
+      "test_clips": 4
+    },
+    {
+      "sign": "cards",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "careful",
+      "precision": 0.3333,
+      "recall": 0.25,
+      "f1": 0.2857,
+      "test_clips": 4
+    },
+    {
+      "sign": "carry",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "category",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "catholic",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "caught",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "cause",
+      "precision": 0.3333,
+      "recall": 0.25,
+      "f1": 0.2857,
+      "test_clips": 4
+    },
+    {
+      "sign": "celebrate",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "center",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "chain",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "chair",
+      "precision": 0.3333,
+      "recall": 0.5,
+      "f1": 0.4,
+      "test_clips": 4
+    },
+    {
+      "sign": "challenge",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "champion",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "chance",
+      "precision": 0.5714,
+      "recall": 1.0,
+      "f1": 0.7273,
+      "test_clips": 4
+    },
+    {
+      "sign": "change",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "channel",
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "test_clips": 4
+    },
+    {
+      "sign": "character",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "charge",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "chase",
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "test_clips": 4
+    },
+    {
+      "sign": "chat",
+      "precision": 0.25,
+      "recall": 0.5,
+      "f1": 0.3333,
+      "test_clips": 4
+    },
+    {
+      "sign": "cheap",
+      "precision": 0.4286,
+      "recall": 0.75,
+      "f1": 0.5455,
+      "test_clips": 4
+    },
+    {
+      "sign": "check",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "cheese",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "chicago",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "child",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "children",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "china",
+      "precision": 0.4,
+      "recall": 0.5,
+      "f1": 0.4444,
+      "test_clips": 4
+    },
+    {
+      "sign": "chocolate",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "church",
+      "precision": 0.5,
+      "recall": 0.75,
+      "f1": 0.6,
+      "test_clips": 4
+    },
+    {
+      "sign": "circle",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "class",
+      "precision": 0.5,
+      "recall": 0.75,
+      "f1": 0.6,
+      "test_clips": 4
+    },
+    {
+      "sign": "clean",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "clear",
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1": 0.3333,
+      "test_clips": 4
+    },
+    {
+      "sign": "click",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "client",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "close",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "clothes",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "coach",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "coffee",
+      "precision": 0.3333,
+      "recall": 0.5,
+      "f1": 0.4,
+      "test_clips": 4
+    },
+    {
+      "sign": "cold",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "college",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "color",
+      "precision": 0.3,
+      "recall": 0.75,
+      "f1": 0.4286,
+      "test_clips": 4
+    },
+    {
+      "sign": "come",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "comfortable",
+      "precision": 0.5,
+      "recall": 0.75,
+      "f1": 0.6,
+      "test_clips": 4
+    },
+    {
+      "sign": "comment",
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1": 0.3333,
+      "test_clips": 4
+    },
+    {
+      "sign": "committee",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "communication",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "community",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "complex",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "computer",
+      "precision": 0.5,
+      "recall": 0.75,
+      "f1": 0.6,
+      "test_clips": 4
+    },
+    {
+      "sign": "concept",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "concerned",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "confident",
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "test_clips": 4
+    },
+    {
+      "sign": "conflict",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "congratulations",
+      "precision": 0.2857,
+      "recall": 0.5,
+      "f1": 0.3636,
+      "test_clips": 4
+    },
+    {
+      "sign": "connection",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "contact",
+      "precision": 0.4286,
+      "recall": 0.75,
+      "f1": 0.5455,
+      "test_clips": 4
+    },
+    {
+      "sign": "continue",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "cook",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "copy",
+      "precision": 0.4,
+      "recall": 0.5,
+      "f1": 0.4444,
+      "test_clips": 4
+    },
+    {
+      "sign": "corner",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "cost",
+      "precision": 0.2857,
+      "recall": 0.5,
+      "f1": 0.3636,
+      "test_clips": 4
+    },
+    {
+      "sign": "count",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "country",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "cousin",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "crack",
+      "precision": 0.4286,
+      "recall": 0.75,
+      "f1": 0.5455,
+      "test_clips": 4
+    },
+    {
+      "sign": "crash",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "crazy",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "create",
+      "precision": 0.3333,
+      "recall": 0.25,
+      "f1": 0.2857,
+      "test_clips": 4
+    },
+    {
+      "sign": "crown",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "culture",
+      "precision": 0.5,
+      "recall": 0.75,
+      "f1": 0.6,
+      "test_clips": 4
+    },
+    {
+      "sign": "cup",
+      "precision": 0.3333,
+      "recall": 0.25,
+      "f1": 0.2857,
+      "test_clips": 4
+    },
+    {
+      "sign": "curious",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "cut",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "damn",
+      "precision": 0.4,
+      "recall": 0.5,
+      "f1": 0.4444,
+      "test_clips": 4
+    },
+    {
+      "sign": "dance",
+      "precision": 0.5714,
+      "recall": 1.0,
+      "f1": 0.7273,
+      "test_clips": 4
+    },
+    {
+      "sign": "danger",
+      "precision": 0.3333,
+      "recall": 0.25,
+      "f1": 0.2857,
+      "test_clips": 4
+    },
+    {
+      "sign": "date",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "daughter",
+      "precision": 0.3333,
+      "recall": 0.25,
+      "f1": 0.2857,
+      "test_clips": 4
+    },
+    {
+      "sign": "day",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "death",
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1": 0.3333,
+      "test_clips": 4
+    },
+    {
+      "sign": "decline",
+      "precision": 0.3333,
+      "recall": 0.25,
+      "f1": 0.2857,
+      "test_clips": 4
+    },
+    {
+      "sign": "deep",
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1": 0.3333,
+      "test_clips": 4
+    },
+    {
+      "sign": "defeat",
+      "precision": 0.4,
+      "recall": 0.5,
+      "f1": 0.4444,
+      "test_clips": 4
+    },
+    {
+      "sign": "degree",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "department",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "depth",
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "test_clips": 4
+    },
+    {
+      "sign": "desert",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "design",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "destroy",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "diamond",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "die",
+      "precision": 0.3333,
+      "recall": 0.25,
+      "f1": 0.2857,
+      "test_clips": 4
+    },
+    {
+      "sign": "different",
+      "precision": 0.5,
+      "recall": 0.75,
+      "f1": 0.6,
+      "test_clips": 4
+    },
+    {
+      "sign": "director",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "dirty",
+      "precision": 0.4,
+      "recall": 0.5,
+      "f1": 0.4444,
+      "test_clips": 4
+    },
+    {
+      "sign": "discuss",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "disney",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "divorce",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "document",
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1": 0.3333,
+      "test_clips": 4
+    },
+    {
+      "sign": "door",
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "double",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "doubt",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "down",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "download",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "dragon",
+      "precision": 0.3333,
+      "recall": 0.25,
+      "f1": 0.2857,
+      "test_clips": 4
+    },
+    {
+      "sign": "draw",
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1": 0.3333,
+      "test_clips": 4
+    },
+    {
+      "sign": "dream",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "dress",
+      "precision": 0.4,
+      "recall": 0.5,
+      "f1": 0.4444,
+      "test_clips": 4
+    },
+    {
+      "sign": "drive",
+      "precision": 0.3333,
+      "recall": 0.25,
+      "f1": 0.2857,
+      "test_clips": 4
+    },
+    {
+      "sign": "drop",
+      "precision": 0.5,
+      "recall": 0.75,
+      "f1": 0.6,
+      "test_clips": 4
+    },
+    {
+      "sign": "drug",
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1": 0.3333,
+      "test_clips": 4
+    },
+    {
+      "sign": "drunk",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "dry",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "due",
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1": 0.3333,
+      "test_clips": 4
+    },
+    {
+      "sign": "dumb",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "duty",
+      "precision": 0.3333,
+      "recall": 0.25,
+      "f1": 0.2857,
+      "test_clips": 4
+    },
+    {
+      "sign": "each",
+      "precision": 0.375,
+      "recall": 0.75,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "ear",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "early",
+      "precision": 0.3333,
+      "recall": 0.25,
+      "f1": 0.2857,
+      "test_clips": 4
+    },
+    {
+      "sign": "earn",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "earth",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "east",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "easy",
+      "precision": 0.5,
+      "recall": 0.75,
+      "f1": 0.6,
+      "test_clips": 4
+    },
+    {
+      "sign": "edge",
+      "precision": 0.2,
+      "recall": 0.25,
+      "f1": 0.2222,
+      "test_clips": 4
+    },
+    {
+      "sign": "effect",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "egg",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "egypt",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "eight",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "either",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "email",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "end",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "enemy",
+      "precision": 0.3333,
+      "recall": 0.25,
+      "f1": 0.2857,
+      "test_clips": 4
+    },
+    {
+      "sign": "energy",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "engineer",
+      "precision": 0.5714,
+      "recall": 1.0,
+      "f1": 0.7273,
+      "test_clips": 4
+    },
+    {
+      "sign": "english",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "enjoy",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "enough",
+      "precision": 0.4,
+      "recall": 0.5,
+      "f1": 0.4444,
+      "test_clips": 4
+    },
+    {
+      "sign": "enter",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "environment",
+      "precision": 0.3333,
+      "recall": 0.25,
+      "f1": 0.2857,
+      "test_clips": 4
+    },
+    {
+      "sign": "equal",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "escape",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "europe",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "even",
+      "precision": 0.2857,
+      "recall": 0.5,
+      "f1": 0.3636,
+      "test_clips": 4
+    },
+    {
+      "sign": "event",
+      "precision": 0.5714,
+      "recall": 1.0,
+      "f1": 0.7273,
+      "test_clips": 4
+    },
+    {
+      "sign": "everyday",
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "test_clips": 4
+    },
+    {
+      "sign": "everything",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "evidence",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "example",
+      "precision": 0.5,
+      "recall": 0.75,
+      "f1": 0.6,
+      "test_clips": 4
+    },
+    {
+      "sign": "excited",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "excuse",
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "test_clips": 4
+    },
+    {
+      "sign": "exercise",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "expect",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "expensive",
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "test_clips": 4
+    },
+    {
+      "sign": "experience",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "experienced",
+      "precision": 0.3333,
+      "recall": 0.25,
+      "f1": 0.2857,
+      "test_clips": 4
+    },
+    {
+      "sign": "experiment",
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8,
+      "test_clips": 4
+    },
+    {
+      "sign": "expert",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "explanation",
+      "precision": 0.5714,
+      "recall": 1.0,
+      "f1": 0.7273,
+      "test_clips": 4
+    },
+    {
+      "sign": "express",
+      "precision": 0.2857,
+      "recall": 0.5,
+      "f1": 0.3636,
+      "test_clips": 4
+    },
+    {
+      "sign": "eyes",
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8,
+      "test_clips": 4
+    },
+    {
+      "sign": "face",
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6667,
+      "test_clips": 3
+    },
+    {
+      "sign": "fail",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "fair",
+      "precision": 0.3333,
+      "recall": 0.25,
+      "f1": 0.2857,
+      "test_clips": 4
+    },
+    {
+      "sign": "fake",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "family",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "famous",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "fan",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "fantasy",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "far",
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "test_clips": 4
+    },
+    {
+      "sign": "farm",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "fashion",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "fast",
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "test_clips": 4
+    },
+    {
+      "sign": "fat",
+      "precision": 0.4286,
+      "recall": 0.75,
+      "f1": 0.5455,
+      "test_clips": 4
+    },
+    {
+      "sign": "father",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "fault",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "favorite",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "february",
+      "precision": 0.5,
+      "recall": 0.75,
+      "f1": 0.6,
+      "test_clips": 4
+    },
+    {
+      "sign": "feel",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "few",
+      "precision": 0.3636,
+      "recall": 1.0,
+      "f1": 0.5333,
+      "test_clips": 4
+    },
+    {
+      "sign": "fifth",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "fight",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "figure",
+      "precision": 0.5714,
+      "recall": 1.0,
+      "f1": 0.7273,
+      "test_clips": 4
+    },
+    {
+      "sign": "film",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "finally",
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8,
+      "test_clips": 4
+    },
+    {
+      "sign": "finance",
+      "precision": 0.4286,
+      "recall": 0.75,
+      "f1": 0.5455,
+      "test_clips": 4
+    },
+    {
+      "sign": "find",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "finger",
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1": 0.3333,
+      "test_clips": 4
+    },
+    {
+      "sign": "finish",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "fire",
+      "precision": 0.4286,
+      "recall": 0.75,
+      "f1": 0.5455,
+      "test_clips": 4
+    },
+    {
+      "sign": "fired",
+      "precision": 0.25,
+      "recall": 0.5,
+      "f1": 0.3333,
+      "test_clips": 4
+    },
+    {
+      "sign": "first",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "fish",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "fit",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "fix",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "floor",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "flower",
+      "precision": 0.5714,
+      "recall": 1.0,
+      "f1": 0.7273,
+      "test_clips": 4
+    },
+    {
+      "sign": "fly",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "focus",
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "test_clips": 4
+    },
+    {
+      "sign": "football",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "for",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "forest",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "form",
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8,
+      "test_clips": 4
+    },
+    {
+      "sign": "former",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "four",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "fourth",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "fox",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "frame",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "france",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "fraud",
+      "precision": 0.75,
+      "recall": 1.0,
+      "f1": 0.8571,
+      "test_clips": 3
+    },
+    {
+      "sign": "free",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "freedom",
+      "precision": 0.2222,
+      "recall": 0.5,
+      "f1": 0.3077,
+      "test_clips": 4
+    },
+    {
+      "sign": "french",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "friday",
+      "precision": 0.5,
+      "recall": 0.75,
+      "f1": 0.6,
+      "test_clips": 4
+    },
+    {
+      "sign": "friend",
+      "precision": 0.5714,
+      "recall": 1.0,
+      "f1": 0.7273,
+      "test_clips": 4
+    },
+    {
+      "sign": "friendly",
+      "precision": 0.5,
+      "recall": 0.75,
+      "f1": 0.6,
+      "test_clips": 4
+    },
+    {
+      "sign": "from",
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1": 0.3333,
+      "test_clips": 4
+    },
+    {
+      "sign": "front",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "fruit",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "full",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "fun",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "function",
+      "precision": 0.3333,
+      "recall": 0.25,
+      "f1": 0.2857,
+      "test_clips": 4
+    },
+    {
+      "sign": "funny",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "future",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "game",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "gas",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "gate",
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8,
+      "test_clips": 4
+    },
+    {
+      "sign": "gay",
+      "precision": 1.0,
+      "recall": 0.3333,
+      "f1": 0.5,
+      "test_clips": 3
+    },
+    {
+      "sign": "generation",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "germany",
+      "precision": 0.25,
+      "recall": 0.25,
+      "f1": 0.25,
+      "test_clips": 4
+    },
+    {
+      "sign": "get",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "ghost",
+      "precision": 0.2,
+      "recall": 0.25,
+      "f1": 0.2222,
+      "test_clips": 4
+    },
+    {
+      "sign": "gift",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "girl",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "give",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "go",
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1": 0.3333,
+      "test_clips": 4
+    },
+    {
+      "sign": "goal",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "god",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "gold",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "golf",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "gone",
+      "precision": 0.1667,
+      "recall": 0.25,
+      "f1": 0.2,
+      "test_clips": 4
+    },
+    {
+      "sign": "good",
+      "precision": 0.4286,
+      "recall": 0.75,
+      "f1": 0.5455,
+      "test_clips": 4
+    },
+    {
+      "sign": "government",
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "test_clips": 4
+    },
+    {
+      "sign": "grab",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "grade",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "graduate",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "grass",
+      "precision": 0.25,
+      "recall": 0.25,
+      "f1": 0.25,
+      "test_clips": 4
+    },
+    {
+      "sign": "gray",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "great",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "green",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "group",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "grow",
+      "precision": 0.4,
+      "recall": 0.5,
+      "f1": 0.4444,
+      "test_clips": 4
+    },
+    {
+      "sign": "guide",
+      "precision": 0.1667,
+      "recall": 0.25,
+      "f1": 0.2,
+      "test_clips": 4
+    },
+    {
+      "sign": "guilty",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "guitar",
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8,
+      "test_clips": 4
+    },
+    {
+      "sign": "gym",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "haha",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "half",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "hall",
+      "precision": 0.375,
+      "recall": 0.75,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "hands",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "hang",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "happen",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "happy",
+      "precision": 0.3333,
+      "recall": 0.25,
+      "f1": 0.2857,
+      "test_clips": 4
+    },
+    {
+      "sign": "hard",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "hate",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "have",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "he",
+      "precision": 0.5,
+      "recall": 0.6667,
+      "f1": 0.5714,
+      "test_clips": 3
+    },
+    {
+      "sign": "head",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "health",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "hearing",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "heart",
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8,
+      "test_clips": 4
+    },
+    {
+      "sign": "heaven",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "heavy",
+      "precision": 0.25,
+      "recall": 0.25,
+      "f1": 0.25,
+      "test_clips": 4
+    },
+    {
+      "sign": "hell",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "hello",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "help",
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1": 0.3333,
+      "test_clips": 4
+    },
+    {
+      "sign": "here",
+      "precision": 0.4,
+      "recall": 0.5,
+      "f1": 0.4444,
+      "test_clips": 4
+    },
+    {
+      "sign": "hide",
+      "precision": 0.2,
+      "recall": 0.25,
+      "f1": 0.2222,
+      "test_clips": 4
+    },
+    {
+      "sign": "high",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "his",
+      "precision": 0.3333,
+      "recall": 0.75,
+      "f1": 0.4615,
+      "test_clips": 4
+    },
+    {
+      "sign": "history",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "hockey",
+      "precision": 0.3333,
+      "recall": 0.25,
+      "f1": 0.2857,
+      "test_clips": 4
+    },
+    {
+      "sign": "holiday",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "holy",
+      "precision": 0.375,
+      "recall": 0.75,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "home",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "honest",
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1": 0.3333,
+      "test_clips": 4
+    },
+    {
+      "sign": "honor",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "hop",
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1": 0.3333,
+      "test_clips": 4
+    },
+    {
+      "sign": "hope",
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "test_clips": 4
+    },
+    {
+      "sign": "horrible",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "horse",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "hot",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "hotel",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "hour",
+      "precision": 0.5,
+      "recall": 0.75,
+      "f1": 0.6,
+      "test_clips": 4
+    },
+    {
+      "sign": "house",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "hundred",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "hungry",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "hunt",
+      "precision": 0.3333,
+      "recall": 0.5,
+      "f1": 0.4,
+      "test_clips": 4
+    },
+    {
+      "sign": "hurt",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "husband",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "ice",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "idea",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "identity",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "if",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "ignore",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "impact",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "important",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "impossible",
+      "precision": 0.5,
+      "recall": 0.75,
+      "f1": 0.6,
+      "test_clips": 4
+    },
+    {
+      "sign": "improve",
+      "precision": 0.3333,
+      "recall": 0.5,
+      "f1": 0.4,
+      "test_clips": 4
+    },
+    {
+      "sign": "in",
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1": 0.3333,
+      "test_clips": 4
+    },
+    {
+      "sign": "inch",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "incredible",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "independent",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "indian",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "influence",
+      "precision": 0.2,
+      "recall": 0.25,
+      "f1": 0.2222,
+      "test_clips": 4
+    },
+    {
+      "sign": "innocent",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "inside",
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1": 0.3333,
+      "test_clips": 4
+    },
+    {
+      "sign": "instead",
+      "precision": 0.3333,
+      "recall": 0.5,
+      "f1": 0.4,
+      "test_clips": 4
+    },
+    {
+      "sign": "institute",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "insurance",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "interest",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "interested",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "internet",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "interview",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "introduce",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "iphone",
+      "precision": 0.5714,
+      "recall": 1.0,
+      "f1": 0.7273,
+      "test_clips": 4
+    },
+    {
+      "sign": "island",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "israel",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "italy",
+      "precision": 0.4,
+      "recall": 0.5,
+      "f1": 0.4444,
+      "test_clips": 4
+    },
+    {
+      "sign": "japan",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "jewish",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "join",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "joke",
+      "precision": 0.2857,
+      "recall": 0.5,
+      "f1": 0.3636,
+      "test_clips": 4
+    },
+    {
+      "sign": "journey",
+      "precision": 0.25,
+      "recall": 0.25,
+      "f1": 0.25,
+      "test_clips": 4
+    },
+    {
+      "sign": "judge",
+      "precision": 0.4286,
+      "recall": 0.75,
+      "f1": 0.5455,
+      "test_clips": 4
+    },
+    {
+      "sign": "jump",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "junior",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "keep",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "key",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "kid",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "kill",
+      "precision": 0.3333,
+      "recall": 0.25,
+      "f1": 0.2857,
+      "test_clips": 4
+    },
+    {
+      "sign": "king",
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8,
+      "test_clips": 4
+    },
+    {
+      "sign": "kitchen",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "knock",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "know",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "label",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "land",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "language",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "last",
+      "precision": 0.4,
+      "recall": 0.5,
+      "f1": 0.4444,
+      "test_clips": 4
+    },
+    {
+      "sign": "late",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "later",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "laugh",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "law",
+      "precision": 0.25,
+      "recall": 0.25,
+      "f1": 0.25,
+      "test_clips": 4
+    },
+    {
+      "sign": "lawyer",
+      "precision": 0.4,
+      "recall": 0.5,
+      "f1": 0.4444,
+      "test_clips": 4
+    },
+    {
+      "sign": "lead",
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1": 0.3333,
+      "test_clips": 4
+    },
+    {
+      "sign": "league",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "learn",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "leather",
+      "precision": 0.5714,
+      "recall": 1.0,
+      "f1": 0.7273,
+      "test_clips": 4
+    },
+    {
+      "sign": "leave",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "left",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "less",
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1": 0.3333,
+      "test_clips": 4
+    },
+    {
+      "sign": "lesson",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "library",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "license",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "lie",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "light",
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "like",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "limited",
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "test_clips": 4
+    },
+    {
+      "sign": "line",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "lips",
+      "precision": 0.2,
+      "recall": 0.3333,
+      "f1": 0.25,
+      "test_clips": 3
+    },
+    {
+      "sign": "list",
+      "precision": 0.4,
+      "recall": 0.5,
+      "f1": 0.4444,
+      "test_clips": 4
+    },
+    {
+      "sign": "listen",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "long",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "lose",
+      "precision": 0.3333,
+      "recall": 0.25,
+      "f1": 0.2857,
+      "test_clips": 4
+    },
+    {
+      "sign": "lost",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "loud",
+      "precision": 0.5714,
+      "recall": 1.0,
+      "f1": 0.7273,
+      "test_clips": 4
+    },
+    {
+      "sign": "love",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "luck",
+      "precision": 0.3333,
+      "recall": 0.5,
+      "f1": 0.4,
+      "test_clips": 4
+    },
+    {
+      "sign": "lucky",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "machine",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "mad",
+      "precision": 0.4286,
+      "recall": 0.75,
+      "f1": 0.5455,
+      "test_clips": 4
+    },
+    {
+      "sign": "magazine",
+      "precision": 0.1667,
+      "recall": 0.25,
+      "f1": 0.2,
+      "test_clips": 4
+    },
+    {
+      "sign": "magic",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "major",
+      "precision": 0.4,
+      "recall": 0.5,
+      "f1": 0.4444,
+      "test_clips": 4
+    },
+    {
+      "sign": "make",
+      "precision": 0.3333,
+      "recall": 0.5,
+      "f1": 0.4,
+      "test_clips": 4
+    },
+    {
+      "sign": "man",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "manage",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "many",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "march",
+      "precision": 0.5,
+      "recall": 0.75,
+      "f1": 0.6,
+      "test_clips": 4
+    },
+    {
+      "sign": "marry",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "match",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "math",
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "test_clips": 4
+    },
+    {
+      "sign": "maybe",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "me",
+      "precision": 0.25,
+      "recall": 0.25,
+      "f1": 0.25,
+      "test_clips": 4
+    },
+    {
+      "sign": "medicine",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "meet",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "meeting",
+      "precision": 0.5714,
+      "recall": 1.0,
+      "f1": 0.7273,
+      "test_clips": 4
+    },
+    {
+      "sign": "member",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "mention",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "mess",
+      "precision": 0.3333,
+      "recall": 0.5,
+      "f1": 0.4,
+      "test_clips": 4
+    },
+    {
+      "sign": "metal",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "middle",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "mind",
+      "precision": 0.2857,
+      "recall": 0.5,
+      "f1": 0.3636,
+      "test_clips": 4
+    },
+    {
+      "sign": "mine",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "minute",
+      "precision": 0.4286,
+      "recall": 0.75,
+      "f1": 0.5455,
+      "test_clips": 4
+    },
+    {
+      "sign": "mirror",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "miss",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "missing",
+      "precision": 0.2,
+      "recall": 0.25,
+      "f1": 0.2222,
+      "test_clips": 4
+    },
+    {
+      "sign": "monday",
+      "precision": 0.375,
+      "recall": 0.75,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "monster",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "month",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "moon",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "more",
+      "precision": 0.25,
+      "recall": 0.5,
+      "f1": 0.3333,
+      "test_clips": 4
+    },
+    {
+      "sign": "morning",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "most",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "mother",
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "test_clips": 4
+    },
+    {
+      "sign": "mouth",
+      "precision": 0.1429,
+      "recall": 0.25,
+      "f1": 0.1818,
+      "test_clips": 4
+    },
+    {
+      "sign": "move",
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1": 0.3333,
+      "test_clips": 4
+    },
+    {
+      "sign": "much",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "murder",
+      "precision": 0.25,
+      "recall": 0.25,
+      "f1": 0.25,
+      "test_clips": 4
+    },
+    {
+      "sign": "muscle",
+      "precision": 0.2222,
+      "recall": 0.5,
+      "f1": 0.3077,
+      "test_clips": 4
+    },
+    {
+      "sign": "museum",
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "test_clips": 4
+    },
+    {
+      "sign": "music",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "must",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "my",
+      "precision": 0.3333,
+      "recall": 0.5,
+      "f1": 0.4,
+      "test_clips": 4
+    },
+    {
+      "sign": "myself",
+      "precision": 0.4444,
+      "recall": 1.0,
+      "f1": 0.6154,
+      "test_clips": 4
+    },
+    {
+      "sign": "naked",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "name",
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1": 0.3333,
+      "test_clips": 4
+    },
+    {
+      "sign": "navy",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "near",
+      "precision": 0.4286,
+      "recall": 0.75,
+      "f1": 0.5455,
+      "test_clips": 4
+    },
+    {
+      "sign": "neck",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "need",
+      "precision": 0.3333,
+      "recall": 0.25,
+      "f1": 0.2857,
+      "test_clips": 4
+    },
+    {
+      "sign": "negative",
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "test_clips": 4
+    },
+    {
+      "sign": "net",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "network",
+      "precision": 0.3333,
+      "recall": 0.75,
+      "f1": 0.4615,
+      "test_clips": 4
+    },
+    {
+      "sign": "never",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "new",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "newspaper",
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1": 0.3333,
+      "test_clips": 4
+    },
+    {
+      "sign": "next",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "nice",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "nine",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "no",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "noise",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "none",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "normal",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "north",
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8,
+      "test_clips": 4
+    },
+    {
+      "sign": "nose",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "not",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "now",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "numbers",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "nurse",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "obvious",
+      "precision": 0.2,
+      "recall": 0.25,
+      "f1": 0.2222,
+      "test_clips": 4
+    },
+    {
+      "sign": "ocean",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "off",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "office",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "often",
+      "precision": 0.2,
+      "recall": 0.25,
+      "f1": 0.2222,
+      "test_clips": 4
+    },
+    {
+      "sign": "ok",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "old",
+      "precision": 0.3333,
+      "recall": 0.5,
+      "f1": 0.4,
+      "test_clips": 4
+    },
+    {
+      "sign": "on",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "once",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "one",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "open",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "opportunity",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "option",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "or",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "orange",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "organization",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "other",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "our",
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8,
+      "test_clips": 4
+    },
+    {
+      "sign": "out",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "outside",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "over",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "own",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "pack",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "page",
+      "precision": 0.4,
+      "recall": 0.5,
+      "f1": 0.4444,
+      "test_clips": 4
+    },
+    {
+      "sign": "pain",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "paint",
+      "precision": 0.25,
+      "recall": 0.25,
+      "f1": 0.25,
+      "test_clips": 4
+    },
+    {
+      "sign": "pair",
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8,
+      "test_clips": 4
+    },
+    {
+      "sign": "paper",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "parents",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "park",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "pass",
+      "precision": 0.2,
+      "recall": 0.25,
+      "f1": 0.2222,
+      "test_clips": 4
+    },
+    {
+      "sign": "past",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "pay",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "peace",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "pen",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "people",
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "percent",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "perfect",
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "test_clips": 4
+    },
+    {
+      "sign": "period",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "permission",
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8,
+      "test_clips": 4
+    },
+    {
+      "sign": "person",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "perspective",
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8,
+      "test_clips": 4
+    },
+    {
+      "sign": "philadelphia",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "philosophy",
+      "precision": 0.5,
+      "recall": 0.75,
+      "f1": 0.6,
+      "test_clips": 4
+    },
+    {
+      "sign": "phone",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 3
+    },
+    {
+      "sign": "photography",
+      "precision": 0.5,
+      "recall": 0.75,
+      "f1": 0.6,
+      "test_clips": 4
+    },
+    {
+      "sign": "physics",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "pick",
+      "precision": 0.3,
+      "recall": 0.75,
+      "f1": 0.4286,
+      "test_clips": 4
+    },
+    {
+      "sign": "picture",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "pink",
+      "precision": 0.3333,
+      "recall": 0.5,
+      "f1": 0.4,
+      "test_clips": 4
+    },
+    {
+      "sign": "place",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "plain",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "plan",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "planet",
+      "precision": 0.4,
+      "recall": 0.5,
+      "f1": 0.4444,
+      "test_clips": 4
+    },
+    {
+      "sign": "plant",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "plate",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "platform",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "play",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "players",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "please",
+      "precision": 0.4286,
+      "recall": 0.75,
+      "f1": 0.5455,
+      "test_clips": 4
+    },
+    {
+      "sign": "plenty",
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "test_clips": 4
+    },
+    {
+      "sign": "plus",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "point",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "policy",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "poor",
+      "precision": 0.2,
+      "recall": 0.25,
+      "f1": 0.2222,
+      "test_clips": 4
+    },
+    {
+      "sign": "pope",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "popular",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "positive",
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1": 0.3333,
+      "test_clips": 4
+    },
+    {
+      "sign": "possible",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "power",
+      "precision": 0.25,
+      "recall": 0.25,
+      "f1": 0.25,
+      "test_clips": 4
+    },
+    {
+      "sign": "practice",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "prayer",
+      "precision": 0.4286,
+      "recall": 0.75,
+      "f1": 0.5455,
+      "test_clips": 4
+    },
+    {
+      "sign": "prefer",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "pregnant",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "president",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "press",
+      "precision": 0.4,
+      "recall": 0.5,
+      "f1": 0.4444,
+      "test_clips": 4
+    },
+    {
+      "sign": "pretty",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "price",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "pride",
+      "precision": 0.4286,
+      "recall": 0.75,
+      "f1": 0.5455,
+      "test_clips": 4
+    },
+    {
+      "sign": "prince",
+      "precision": 0.3333,
+      "recall": 0.3333,
+      "f1": 0.3333,
+      "test_clips": 3
+    },
+    {
+      "sign": "principal",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "print",
+      "precision": 0.25,
+      "recall": 0.25,
+      "f1": 0.25,
+      "test_clips": 4
+    },
+    {
+      "sign": "priority",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "prison",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "process",
+      "precision": 0.5714,
+      "recall": 1.0,
+      "f1": 0.7273,
+      "test_clips": 4
+    },
+    {
+      "sign": "program",
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "test_clips": 4
+    },
+    {
+      "sign": "project",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "promise",
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8,
+      "test_clips": 4
+    },
+    {
+      "sign": "promote",
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8,
+      "test_clips": 4
+    },
+    {
+      "sign": "proof",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "protection",
+      "precision": 0.4444,
+      "recall": 1.0,
+      "f1": 0.6154,
+      "test_clips": 4
+    },
+    {
+      "sign": "protest",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "provide",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "public",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "pull",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "push",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "put",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "quality",
+      "precision": 0.3333,
+      "recall": 0.25,
+      "f1": 0.2857,
+      "test_clips": 4
+    },
+    {
+      "sign": "quarter",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "queen",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "quiet",
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1": 0.3333,
+      "test_clips": 4
+    },
+    {
+      "sign": "quit",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "race",
+      "precision": 0.3333,
+      "recall": 0.25,
+      "f1": 0.2857,
+      "test_clips": 4
+    },
+    {
+      "sign": "radio",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "rain",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "range",
+      "precision": 0.1667,
+      "recall": 0.25,
+      "f1": 0.2,
+      "test_clips": 4
+    },
+    {
+      "sign": "reach",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "read",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "ready",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "really",
+      "precision": 0.1429,
+      "recall": 0.25,
+      "f1": 0.1818,
+      "test_clips": 4
+    },
+    {
+      "sign": "reason",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "record",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "recording",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "red",
+      "precision": 0.4,
+      "recall": 0.5,
+      "f1": 0.4444,
+      "test_clips": 4
+    },
+    {
+      "sign": "reduce",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "reflect",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "refuse",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "register",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "regular",
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1": 0.3333,
+      "test_clips": 4
+    },
+    {
+      "sign": "relationship",
+      "precision": 0.25,
+      "recall": 0.5,
+      "f1": 0.3333,
+      "test_clips": 4
+    },
+    {
+      "sign": "release",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "relief",
+      "precision": 0.4,
+      "recall": 0.5,
+      "f1": 0.4444,
+      "test_clips": 4
+    },
+    {
+      "sign": "religion",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "remind",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "remove",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "replace",
+      "precision": 0.1,
+      "recall": 0.25,
+      "f1": 0.1429,
+      "test_clips": 4
+    },
+    {
+      "sign": "request",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "rescue",
+      "precision": 0.3333,
+      "recall": 0.25,
+      "f1": 0.2857,
+      "test_clips": 4
+    },
+    {
+      "sign": "respect",
+      "precision": 0.375,
+      "recall": 0.75,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "responsibility",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "rest",
+      "precision": 0.4444,
+      "recall": 1.0,
+      "f1": 0.6154,
+      "test_clips": 4
+    },
+    {
+      "sign": "restaurant",
+      "precision": 0.4,
+      "recall": 0.5,
+      "f1": 0.4444,
+      "test_clips": 4
+    },
+    {
+      "sign": "result",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "rich",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "ring",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "risk",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "road",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "rob",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "rock",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "role",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "roll",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "roof",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "room",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "rose",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "rough",
+      "precision": 0.4,
+      "recall": 0.5,
+      "f1": 0.4444,
+      "test_clips": 4
+    },
+    {
+      "sign": "row",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "rule",
+      "precision": 0.5,
+      "recall": 0.75,
+      "f1": 0.6,
+      "test_clips": 4
+    },
+    {
+      "sign": "rush",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "russia",
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8,
+      "test_clips": 4
+    },
+    {
+      "sign": "sad",
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1": 0.3333,
+      "test_clips": 4
+    },
+    {
+      "sign": "safe",
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1": 0.3333,
+      "test_clips": 4
+    },
+    {
+      "sign": "salt",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "santa",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "saturday",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "save",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "scared",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "school",
+      "precision": 0.25,
+      "recall": 0.25,
+      "f1": 0.25,
+      "test_clips": 4
+    },
+    {
+      "sign": "science",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "score",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "script",
+      "precision": 0.4,
+      "recall": 1.0,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "secret",
+      "precision": 0.4,
+      "recall": 0.5,
+      "f1": 0.4444,
+      "test_clips": 4
+    },
+    {
+      "sign": "secretary",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "see",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "seem",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "select",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "self",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 3
+    },
+    {
+      "sign": "sell",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "senate",
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8,
+      "test_clips": 4
+    },
+    {
+      "sign": "send",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "sensitive",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "sequence",
+      "precision": 0.3333,
+      "recall": 0.25,
+      "f1": 0.2857,
+      "test_clips": 4
+    },
+    {
+      "sign": "serious",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "seven",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "several",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "shame",
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8,
+      "test_clips": 4
+    },
+    {
+      "sign": "shape",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "share",
+      "precision": 0.4286,
+      "recall": 0.75,
+      "f1": 0.5455,
+      "test_clips": 4
+    },
+    {
+      "sign": "shoes",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "shooting",
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8,
+      "test_clips": 4
+    },
+    {
+      "sign": "shot",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "should",
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1": 0.3333,
+      "test_clips": 4
+    },
+    {
+      "sign": "show",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "shower",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "sick",
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8,
+      "test_clips": 4
+    },
+    {
+      "sign": "side",
+      "precision": 0.25,
+      "recall": 0.25,
+      "f1": 0.25,
+      "test_clips": 4
+    },
+    {
+      "sign": "sign",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "silly",
+      "precision": 0.5,
+      "recall": 0.6667,
+      "f1": 0.5714,
+      "test_clips": 3
+    },
+    {
+      "sign": "silver",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "since",
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "test_clips": 4
+    },
+    {
+      "sign": "sing",
+      "precision": 0.2,
+      "recall": 0.25,
+      "f1": 0.2222,
+      "test_clips": 4
+    },
+    {
+      "sign": "single",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "sister",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "sit",
+      "precision": 0.25,
+      "recall": 0.25,
+      "f1": 0.25,
+      "test_clips": 4
+    },
+    {
+      "sign": "situation",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "six",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "skill",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "skin",
+      "precision": 0.5,
+      "recall": 0.75,
+      "f1": 0.6,
+      "test_clips": 4
+    },
+    {
+      "sign": "sleep",
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8,
+      "test_clips": 4
+    },
+    {
+      "sign": "slow",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "small",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "smart",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "smell",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "smoke",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "smoking",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "smooth",
+      "precision": 0.4,
+      "recall": 0.5,
+      "f1": 0.4444,
+      "test_clips": 4
+    },
+    {
+      "sign": "so",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "social",
+      "precision": 0.3333,
+      "recall": 0.5,
+      "f1": 0.4,
+      "test_clips": 4
+    },
+    {
+      "sign": "society",
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "test_clips": 4
+    },
+    {
+      "sign": "soft",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "some",
+      "precision": 0.3333,
+      "recall": 0.25,
+      "f1": 0.2857,
+      "test_clips": 4
+    },
+    {
+      "sign": "something",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "sometimes",
+      "precision": 0.5,
+      "recall": 0.75,
+      "f1": 0.6,
+      "test_clips": 4
+    },
+    {
+      "sign": "son",
+      "precision": 0.4,
+      "recall": 0.5,
+      "f1": 0.4444,
+      "test_clips": 4
+    },
+    {
+      "sign": "sorry",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "sound",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "south",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "space",
+      "precision": 0.3333,
+      "recall": 0.25,
+      "f1": 0.2857,
+      "test_clips": 4
+    },
+    {
+      "sign": "spain",
+      "precision": 0.25,
+      "recall": 0.5,
+      "f1": 0.3333,
+      "test_clips": 4
+    },
+    {
+      "sign": "specific",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "spend",
+      "precision": 0.6,
+      "recall": 1.0,
+      "f1": 0.75,
+      "test_clips": 3
+    },
+    {
+      "sign": "sports",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "spring",
+      "precision": 0.25,
+      "recall": 0.25,
+      "f1": 0.25,
+      "test_clips": 4
+    },
+    {
+      "sign": "square",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "stadium",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "staff",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "stand-up",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "star",
+      "precision": 0.2857,
+      "recall": 0.5,
+      "f1": 0.3636,
+      "test_clips": 4
+    },
+    {
+      "sign": "stars",
+      "precision": 0.3333,
+      "recall": 0.25,
+      "f1": 0.2857,
+      "test_clips": 4
+    },
+    {
+      "sign": "start",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "state",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "stay",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "steal",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "steam",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "step",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "still",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "stomach",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "stop",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "straight",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "strange",
+      "precision": 0.75,
+      "recall": 1.0,
+      "f1": 0.8571,
+      "test_clips": 3
+    },
+    {
+      "sign": "street",
+      "precision": 0.25,
+      "recall": 0.25,
+      "f1": 0.25,
+      "test_clips": 4
+    },
+    {
+      "sign": "stress",
+      "precision": 0.25,
+      "recall": 0.25,
+      "f1": 0.25,
+      "test_clips": 4
+    },
+    {
+      "sign": "string",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "strong",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "structure",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "struggle",
+      "precision": 0.3333,
+      "recall": 0.25,
+      "f1": 0.2857,
+      "test_clips": 4
+    },
+    {
+      "sign": "stuck",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "student",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "study",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "suck",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "suit",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "summer",
+      "precision": 0.4286,
+      "recall": 0.75,
+      "f1": 0.5455,
+      "test_clips": 4
+    },
+    {
+      "sign": "sun",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "sunday",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "superior",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "sure",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "surgery",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "surprise",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "suspect",
+      "precision": 0.3333,
+      "recall": 0.25,
+      "f1": 0.2857,
+      "test_clips": 4
+    },
+    {
+      "sign": "sweet",
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "test_clips": 4
+    },
+    {
+      "sign": "sword",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "system",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "table",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "take",
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1": 0.3333,
+      "test_clips": 4
+    },
+    {
+      "sign": "tape",
+      "precision": 0.5,
+      "recall": 0.75,
+      "f1": 0.6,
+      "test_clips": 4
+    },
+    {
+      "sign": "taste",
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "test_clips": 4
+    },
+    {
+      "sign": "tea",
+      "precision": 0.3333,
+      "recall": 0.25,
+      "f1": 0.2857,
+      "test_clips": 4
+    },
+    {
+      "sign": "teacher",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "team",
+      "precision": 0.5714,
+      "recall": 1.0,
+      "f1": 0.7273,
+      "test_clips": 4
+    },
+    {
+      "sign": "tear",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "technology",
+      "precision": 0.3,
+      "recall": 0.75,
+      "f1": 0.4286,
+      "test_clips": 4
+    },
+    {
+      "sign": "teeth",
+      "precision": 0.3333,
+      "recall": 0.5,
+      "f1": 0.4,
+      "test_clips": 4
+    },
+    {
+      "sign": "tell",
+      "precision": 0.5,
+      "recall": 0.75,
+      "f1": 0.6,
+      "test_clips": 4
+    },
+    {
+      "sign": "temporary",
+      "precision": 0.5714,
+      "recall": 1.0,
+      "f1": 0.7273,
+      "test_clips": 4
+    },
+    {
+      "sign": "test",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "text",
+      "precision": 0.4,
+      "recall": 0.5,
+      "f1": 0.4444,
+      "test_clips": 4
+    },
+    {
+      "sign": "than",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "thankyou",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "that",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "theatre",
+      "precision": 0.4,
+      "recall": 0.5,
+      "f1": 0.4444,
+      "test_clips": 4
+    },
+    {
+      "sign": "then",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "theory",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "therapy",
+      "precision": 0.2857,
+      "recall": 0.5,
+      "f1": 0.3636,
+      "test_clips": 4
+    },
+    {
+      "sign": "there",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "these",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "thin",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "things",
+      "precision": 0.3333,
+      "recall": 0.25,
+      "f1": 0.2857,
+      "test_clips": 4
+    },
+    {
+      "sign": "think",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "this/it",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "three",
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "thursday",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "ticket",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "time",
+      "precision": 0.3333,
+      "recall": 0.25,
+      "f1": 0.2857,
+      "test_clips": 4
+    },
+    {
+      "sign": "tiny",
+      "precision": 0.5,
+      "recall": 0.75,
+      "f1": 0.6,
+      "test_clips": 4
+    },
+    {
+      "sign": "tired",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "to",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "today",
+      "precision": 0.5714,
+      "recall": 1.0,
+      "f1": 0.7273,
+      "test_clips": 4
+    },
+    {
+      "sign": "together",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "tomorrow",
+      "precision": 0.75,
+      "recall": 1.0,
+      "f1": 0.8571,
+      "test_clips": 3
+    },
+    {
+      "sign": "tongue",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "top",
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "test_clips": 4
+    },
+    {
+      "sign": "topic",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "total",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "touch",
+      "precision": 0.3333,
+      "recall": 0.25,
+      "f1": 0.2857,
+      "test_clips": 4
+    },
+    {
+      "sign": "tough",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "tournament",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "tradition",
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "test_clips": 4
+    },
+    {
+      "sign": "traffic",
+      "precision": 0.3333,
+      "recall": 0.5,
+      "f1": 0.4,
+      "test_clips": 4
+    },
+    {
+      "sign": "train",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "transfer",
+      "precision": 0.25,
+      "recall": 0.25,
+      "f1": 0.25,
+      "test_clips": 4
+    },
+    {
+      "sign": "trash",
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "test_clips": 4
+    },
+    {
+      "sign": "travel",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "tree",
+      "precision": 1.0,
+      "recall": 0.3333,
+      "f1": 0.5,
+      "test_clips": 3
+    },
+    {
+      "sign": "trouble",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "true",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "truth",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "try",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "tube",
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8,
+      "test_clips": 4
+    },
+    {
+      "sign": "tuesday",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "turn",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "tv",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "two",
+      "precision": 0.3333,
+      "recall": 0.6667,
+      "f1": 0.4444,
+      "test_clips": 3
+    },
+    {
+      "sign": "ugly",
+      "precision": 0.2,
+      "recall": 0.25,
+      "f1": 0.2222,
+      "test_clips": 4
+    },
+    {
+      "sign": "uncle",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "under",
+      "precision": 0.5714,
+      "recall": 1.0,
+      "f1": 0.7273,
+      "test_clips": 4
+    },
+    {
+      "sign": "understand",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "unique",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "universe",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "university",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "until",
+      "precision": 0.4,
+      "recall": 0.5,
+      "f1": 0.4444,
+      "test_clips": 4
+    },
+    {
+      "sign": "up",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "us",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "use",
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8,
+      "test_clips": 4
+    },
+    {
+      "sign": "vacation",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "valley",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "value",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "very",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "view",
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "test_clips": 4
+    },
+    {
+      "sign": "village",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "vision",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "visit",
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8,
+      "test_clips": 4
+    },
+    {
+      "sign": "voice",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "vote",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "wait",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "wall",
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8,
+      "test_clips": 4
+    },
+    {
+      "sign": "war",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "test_clips": 4
+    },
+    {
+      "sign": "warm",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "waste",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "watch",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "water",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "wave",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "way",
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1": 0.3333,
+      "test_clips": 4
+    },
+    {
+      "sign": "we",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "weak",
+      "precision": 0.3333,
+      "recall": 0.25,
+      "f1": 0.2857,
+      "test_clips": 4
+    },
+    {
+      "sign": "wear",
+      "precision": 0.25,
+      "recall": 0.25,
+      "f1": 0.25,
+      "test_clips": 4
+    },
+    {
+      "sign": "weather",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "wedding",
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8,
+      "test_clips": 4
+    },
+    {
+      "sign": "wednesday",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "week",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "weekend",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "weight",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "weird",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "well",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "west",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "wet",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "whatever",
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "test_clips": 4
+    },
+    {
+      "sign": "wheel",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "when",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "where",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "which",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "while",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "white",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "who",
+      "precision": 0.5,
+      "recall": 0.75,
+      "f1": 0.6,
+      "test_clips": 4
+    },
+    {
+      "sign": "whole",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "why",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "wide",
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1": 0.3333,
+      "test_clips": 4
+    },
+    {
+      "sign": "wife",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "will",
+      "precision": 0.2,
+      "recall": 0.25,
+      "f1": 0.2222,
+      "test_clips": 4
+    },
+    {
+      "sign": "win",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "wind",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "window",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "wine",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "winter",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "wise",
+      "precision": 0.5714,
+      "recall": 1.0,
+      "f1": 0.7273,
+      "test_clips": 4
+    },
+    {
+      "sign": "wish",
+      "precision": 0.25,
+      "recall": 0.25,
+      "f1": 0.25,
+      "test_clips": 4
+    },
+    {
+      "sign": "with",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "without",
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8,
+      "test_clips": 4
+    },
+    {
+      "sign": "wonder",
+      "precision": 0.4,
+      "recall": 0.5,
+      "f1": 0.4444,
+      "test_clips": 4
+    },
+    {
+      "sign": "wood",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "word",
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8,
+      "test_clips": 4
+    },
+    {
+      "sign": "work",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "world",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    },
+    {
+      "sign": "worry",
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8,
+      "test_clips": 4
+    },
+    {
+      "sign": "worse",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "wow",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "write",
+      "precision": 0.4,
+      "recall": 0.5,
+      "f1": 0.4444,
+      "test_clips": 4
+    },
+    {
+      "sign": "wrong",
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "test_clips": 4
+    },
+    {
+      "sign": "yeah",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "year",
+      "precision": 0.4,
+      "recall": 0.5,
+      "f1": 0.4444,
+      "test_clips": 4
+    },
+    {
+      "sign": "yellow",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "test_clips": 4
+    },
+    {
+      "sign": "yes",
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6667,
+      "test_clips": 4
+    },
+    {
+      "sign": "yesterday",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "you",
+      "precision": 0.375,
+      "recall": 0.75,
+      "f1": 0.5,
+      "test_clips": 4
+    },
+    {
+      "sign": "young",
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "test_clips": 4
+    },
+    {
+      "sign": "your",
+      "precision": 0.4286,
+      "recall": 0.75,
+      "f1": 0.5455,
+      "test_clips": 4
+    },
+    {
+      "sign": "yourself",
+      "precision": 0.5,
+      "recall": 0.75,
+      "f1": 0.6,
+      "test_clips": 4
+    },
+    {
+      "sign": "zero",
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "test_clips": 4
+    }
+  ],
+  "model_config": {
+    "model": "bilstm",
+    "units": 48,
+    "dropout": 0.3,
+    "lr": 0.003,
+    "batch": 64,
+    "epochs_max": 80,
+    "patience": 10,
+    "aug": 4,
+    "seed": 0,
+    "select": "val_accuracy",
+    "reduce_lr": true,
+    "split_policy": "official",
+    "data": [
+      "signo_dataset_1000.json"
+    ],
+    "best_epoch": 29,
+    "epochs_run": 39,
+    "train_seconds": 887.4,
+    "split_summary": {
+      "classes": 1000,
+      "counts": {
+        "train": 14626,
+        "val": 3763,
+        "test": 3983
+      },
+      "min_per_class": {
+        "train": 11,
+        "val": 2,
+        "test": 3
+      },
+      "max_per_class": {
+        "train": 17,
+        "val": 6,
+        "test": 4
+      },
+      "signers": {
+        "train": 35,
+        "val": 5,
+        "test": 11
+      },
+      "signer_overlap": {
+        "train_val": 0,
+        "train_test": 0,
+        "val_test": 0
+      }
+    },
+    "split_fingerprint": "a9b37a32a54712a5",
+    "params": 110872
+  },
+  "extraction": {
+    "selected_videos": 22421,
+    "status_counts": {
+      "ok": 22372,
+      "no_hands": 49
+    },
+    "successfully_extracted": 22372,
+    "per_split_ok": {
+      "train": 14626,
+      "val": 3763,
+      "test": 3983
+    },
+    "wall_seconds": 1.9,
+    "workers": 8
+  }
+}

@@ -87,5 +87,41 @@ User tried the 50-sign model on their own webcam and said some words were recogn
 - UI: video fills the main area, word is a caption on the video, side panel slimmed. Second model slot `app_model_1000/`.
 - Measured extraction speed with 8 workers while other jobs ran: 1.43 clips/s, so finish by about 04:15. Deadline about 07:15.
 
+## 03:37-06:31 Three hours lost to a bug in my waiting script
+Extraction finished at about 03:37, but the loop waiting for the download used `pgrep -f fetch_asl_citizen`, which matched its own command line, so it never exited. Noticed at 06:31 when the user asked whether it was done. Stopped the loop and built the dataset. The planned longer training was cut back to fit.
+
+## 06:32 Dataset, 1,000 signs
+22,372 of 22,421 clips extracted, 49 `no_hands`. 14,626 / 3,763 / 3,983 clips, 35 / 5 / 11 signers, 0 overlap. Each sign has 11-17 train, 2-6 val and 3-4 test clips.
+
+## 06:33-06:49 Round 1, three sizes
+Batch 64, patience 8, 15-minute limit, epoch kept by lowest val loss. Validation: 48 units 66.0% / 89.9%, 128 units 56.3% / 83.9%, 256 units 59.6% / 85.2% (stopped by the limit). The logs showed val accuracy still rising after val loss turned upwards, so this rule was keeping weak epochs.
+
+## 06:44 User: 2 hours left, and a report still to write
+New deadline about 08:45. Used 25 minutes of it for a second round.
+
+## 06:46-07:12 Round 2
+Added `--select val_accuracy`, `--reduce-lr` and `--max-minutes` to `train.py`. Patience 10, 25-minute limit. Dropout 0.5 for the two larger models. Validation: 48 units 69.5% / 90.2% (finished by early stopping), 128 units 68.7% / 89.3% and 256 units 66.9% / 88.1% (both stopped by the limit, and 256 units was still improving).
+
+## 07:21 Selected model: `w1000_u48_acc`
+Best val top-1 and top-5, smallest model, smallest train/val gap among round 2. Chosen on validation only. Caveat: the larger models weren't given as long, so this doesn't show they could never do better. Single seed. Validation threshold check: at 70%, a word is shown for 75% of clips and 81% of those are right, so the default stayed at 70%.
+
+## 07:22 Test set, scored once
+**Top-1 61.4%, top-5 84.4%**, n=3,983. Mean per-sign precision 65.0%, recall 61.5%. 198 signs at 100% recall and 45 at 0%, but most signs have only 4 clips. No tuning afterwards. Test top-1 is 8.1 points below validation.
+
+## 07:23-07:40 Export and browser checks, 1,000 signs
+- Export worked first time: `[null, 30, 100]`, 1,000 labels, 443 KB weights.
+- Python: real test clip gave finite output of size 1,000 summing to 1.0, and the correct label.
+- TF.js vs Keras on 1,000 test sequences: same top-1 and top-3 order on all, largest difference 1.5e-6.
+- Video through browser MediaPipe, features and model, 60 clips: 65% top-1, 85% top-5. Python 65% on the same clips. Agreement 53 of 60. Mean feature difference 0.043. Repeated on 20 clips with the final page: 80% top-1, agreement 18 of 20.
+- `model_slots.js`: starts on the 1,000-sign model, labels and outputs stay matched when switching, and a missing or corrupt model falls back to 50 signs. Test pattern shows "No hands in view". About 67 ms per prediction.
+- Fake webcam, real app loop, 8 test clips, first pass: 6 right, 1 no word, 1 wrong; then 5 right, 3 no word, 0 wrong; then 5 right, 2 no word, 1 wrong. Coffee was read as "replace" twice. Results vary between runs because timing varies. Six of the 8 signs were picked for good test results, so this isn't an accuracy score.
+- Teach, train and reload still work with both dataset models present. The test logged two 404 console errors, probably the missing favicon on its two page loads (not confirmed). A normal page load showed no failed requests.
+
+## 07:30 Bug found by the fake webcam: words vanished too fast
+The word was replaced by "No hands in view" as soon as hands left, sometimes after 0.1 s. Now it stays for 2 seconds, with the top 3 kept beside it. After the fix each word stayed on screen for about 2 to 3 seconds.
+
+## Not done
+Real webcam test of the 1,000-sign model, more seeds, GRU comparison, `demo_webcam.py`.
+
 ## Citation to check
 The ASL Citizen citation in the docs was written from memory, not from a downloaded file. Check it against the project page before submission.

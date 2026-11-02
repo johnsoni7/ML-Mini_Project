@@ -1,0 +1,6022 @@
+{
+  "selected_videos": 22421,
+  "status_counts": {
+    "ok": 22372,
+    "no_hands": 49
+  },
+  "successfully_extracted": 22372,
+  "per_split_ok": {
+    "train": 14626,
+    "val": 3763,
+    "test": 3983
+  },
+  "per_class_ok": {
+    "ABOVE": 23,
+    "ACCEPT": 23,
+    "ACCESS": 22,
+    "ACCIDENT": 22,
+    "ACT": 22,
+    "ACTION": 22,
+    "ACTOR": 22,
+    "ADD": 23,
+    "ADDRESS": 24,
+    "ADMIT": 23,
+    "ADULT": 22,
+    "ADVANTAGE": 23,
+    "AFRICA": 22,
+    "AFTER": 22,
+    "AFTERNOON": 22,
+    "AGAIN": 21,
+    "AGAINST": 22,
+    "AGE": 22,
+    "AGENCY": 22,
+    "AGREEMENT": 22,
+    "AIRPLANE": 21,
+    "ALCOHOL": 23,
+    "ALL": 22,
+    "ALONE": 23,
+    "ALRIGHT": 25,
+    "ALWAYS": 25,
+    "AMAZING": 22,
+    "AMERICA": 22,
+    "AND": 21,
+    "ANGEL": 23,
+    "ANGRY": 21,
+    "ANIMAL": 22,
+    "ANSWER": 23,
+    "ANY": 23,
+    "ANYONE": 24,
+    "APART": 23,
+    "APPEAR": 22,
+    "APPLE": 25,
+    "APPOINTMENT": 22,
+    "APRIL": 23,
+    "AREA": 22,
+    "ARGUE": 22,
+    "ARIZONA": 22,
+    "ARMY": 22,
+    "ARRIVE": 21,
+    "ART": 22,
+    "ARTICLE": 23,
+    "ASIA": 22,
+    "ASK": 22,
+    "ASSEMBLY": 24,
+    "ASSIST": 24,
+    "ASSISTANT": 23,
+    "AT": 22,
+    "ATLANTA": 22,
+    "ATTENTION": 22,
+    "ATTITUDE": 22,
+    "AUDIENCE": 23,
+    "AUSTRALIA": 22,
+    "AUTOMATIC": 23,
+    "AVERAGE": 22,
+    "AVOID": 23,
+    "AWARD": 22,
+    "AWAY": 22,
+    "BACK": 23,
+    "BAD": 21,
+    "BALANCE": 23,
+    "BALL": 21,
+    "BANK": 21,
+    "BAR": 23,
+    "BARELY": 23,
+    "BASEBALL": 22,
+    "BASIC": 23,
+    "BATH": 21,
+    "BATHROOM": 21,
+    "BATTERY": 23,
+    "BEACH": 25,
+    "BEAR": 22,
+    "BEAT": 23,
+    "BECAUSE": 21,
+    "BECOME": 23,
+    "BEDROOM": 22,
+    "BEER": 21,
+    "BEFORE": 23,
+    "BEHAVIOR": 23,
+    "BEHIND": 23,
+    "BELL": 25,
+    "BENEFIT": 23,
+    "BEST": 22,
+    "BET": 22,
+    "BETTER": 21,
+    "BETWEEN": 23,
+    "BIG": 23,
+    "BIRD": 21,
+    "BIRTH": 21,
+    "BIRTHDAY": 23,
+    "BITCH": 22,
+    "BLACK": 23,
+    "BLAME": 23,
+    "BLIND": 22,
+    "BLOOD": 22,
+    "BLOW": 23,
+    "BLUE": 22,
+    "BOARD": 20,
+    "BOAT": 23,
+    "BODY": 22,
+    "BOMB": 23,
+    "BONE": 22,
+    "BOOK": 23,
+    "BOSS": 23,
+    "BOSTON": 22,
+    "BOTH": 25,
+    "BOTHER": 22,
+    "BOTTLE": 23,
+    "BOTTOM": 23,
+    "BOWL": 22,
+    "BOX": 23,
+    "BOY": 24,
+    "BOYFRIEND": 24,
+    "BREAD": 22,
+    "BREAK": 21,
+    "BRIGHT": 23,
+    "BRING": 21,
+    "BROTHER": 23,
+    "BROWN": 22,
+    "BUDGET": 23,
+    "BUILDING": 22,
+    "BULLSHIT": 23,
+    "BURN": 22,
+    "BUS": 21,
+    "BUSINESS": 21,
+    "BUSY": 23,
+    "BUT": 22,
+    "BUTTER": 22,
+    "BUY": 24,
+    "BYE": 22,
+    "CABINET": 21,
+    "CAKE": 23,
+    "CALIFORNIA": 22,
+    "CALM": 22,
+    "CAMERA": 23,
+    "CANADA": 22,
+    "CANNOT": 23,
+    "CAPTURE": 24,
+    "CAR": 22,
+    "CARDS": 23,
+    "CAREFUL": 23,
+    "CARRY": 22,
+    "CATEGORY": 23,
+    "CATHOLIC": 23,
+    "CAUGHT": 22,
+    "CAUSE": 22,
+    "CELEBRATE": 21,
+    "CENTER": 22,
+    "CHAIN": 24,
+    "CHAIR": 22,
+    "CHALLENGE": 23,
+    "CHAMPION": 23,
+    "CHANCE": 22,
+    "CHANGE": 22,
+    "CHANNEL": 22,
+    "CHARACTER": 22,
+    "CHARGE": 23,
+    "CHASE": 24,
+    "CHAT": 22,
+    "CHEAP": 23,
+    "CHECK": 22,
+    "CHEESE": 22,
+    "CHICAGO": 20,
+    "CHILD": 25,
+    "CHILDREN": 22,
+    "CHINA": 19,
+    "CHOCOLATE": 21,
+    "CHURCH": 23,
+    "CIRCLE": 23,
+    "CLASS": 21,
+    "CLEAN": 23,
+    "CLEAR": 22,
+    "CLICK": 23,
+    "CLIENT": 23,
+    "CLOSE": 25,
+    "CLOTHES": 23,
+    "COACH": 22,
+    "COFFEE": 23,
+    "COLD": 23,
+    "COLLEGE": 22,
+    "COLOR": 21,
+    "COME": 21,
+    "COMFORTABLE": 24,
+    "COMMENT": 23,
+    "COMMITTEE": 22,
+    "COMMUNICATION": 22,
+    "COMMUNITY": 22,
+    "COMPLEX": 22,
+    "COMPUTER": 23,
+    "CONCEPT": 21,
+    "CONCERNED": 23,
+    "CONFIDENT": 23,
+    "CONFLICT": 21,
+    "CONGRATULATIONS": 23,
+    "CONNECTION": 23,
+    "CONTACT": 22,
+    "CONTINUE": 23,
+    "COOK": 22,
+    "COPY": 24,
+    "CORNER": 23,
+    "COST": 23,
+    "COUNT": 23,
+    "COUNTRY": 23,
+    "COUSIN": 22,
+    "CRACK": 21,
+    "CRASH": 22,
+    "CRAZY": 22,
+    "CREATE": 23,
+    "CROWN": 22,
+    "CULTURE": 22,
+    "CUP": 23,
+    "CURIOUS": 22,
+    "CUT": 23,
+    "DAMN": 21,
+    "DANCE": 22,
+    "DANGER": 23,
+    "DATE": 23,
+    "DAUGHTER": 22,
+    "DAY": 23,
+    "DEATH": 22,
+    "DECLINE": 22,
+    "DEEP": 24,
+    "DEFEAT": 24,
+    "DEGREE": 23,
+    "DEPARTMENT": 22,
+    "DEPTH": 24,
+    "DESERT": 22,
+    "DESIGN": 22,
+    "DESTROY": 23,
+    "DIAMOND": 21,
+    "DIE": 22,
+    "DIFFERENT": 23,
+    "DIRECTOR": 22,
+    "DIRTY": 23,
+    "DISCUSS": 23,
+    "DISNEY": 23,
+    "DIVORCE": 22,
+    "DOCUMENT": 22,
+    "DOOR": 21,
+    "DOUBLE": 23,
+    "DOUBT": 22,
+    "DOWN": 22,
+    "DOWNLOAD": 23,
+    "DRAGON": 22,
+    "DRAW": 22,
+    "DREAM": 23,
+    "DRESS": 21,
+    "DRIVE": 22,
+    "DROP": 22,
+    "DRUG": 23,
+    "DRUNK": 22,
+    "DRY": 22,
+    "DUE": 23,
+    "DUMB": 23,
+    "DUTY": 22,
+    "EACH": 24,
+    "EAR": 23,
+    "EARLY": 21,
+    "EARN": 23,
+    "EARTH": 22,
+    "EAST": 21,
+    "EASY": 24,
+    "EDGE": 24,
+    "EFFECT": 22,
+    "EGG": 22,
+    "EGYPT": 22,
+    "EIGHT": 25,
+    "EITHER": 23,
+    "EMAIL": 22,
+    "END": 23,
+    "ENEMY": 23,
+    "ENERGY": 23,
+    "ENGINEER": 23,
+    "ENGLISH": 23,
+    "ENJOY": 22,
+    "ENOUGH": 24,
+    "ENTER": 24,
+    "ENVIRONMENT": 22,
+    "EQUAL": 22,
+    "ESCAPE": 21,
+    "EUROPE": 22,
+    "EVEN": 24,
+    "EVENT": 24,
+    "EVERYDAY": 23,
+    "EVERYTHING": 22,
+    "EVIDENCE": 22,
+    "EXAMPLE": 23,
+    "EXCITED": 23,
+    "EXCUSE": 23,
+    "EXERCISE": 22,
+    "EXPECT": 24,
+    "EXPENSIVE": 21,
+    "EXPERIENCE": 22,
+    "EXPERIENCED": 23,
+    "EXPERIMENT": 23,
+    "EXPERT": 22,
+    "EXPLANATION": 22,
+    "EXPRESS": 22,
+    "EYES": 23,
+    "FACE": 21,
+    "FAIL": 24,
+    "FAIR": 23,
+    "FAKE": 23,
+    "FAMILY": 22,
+    "FAMOUS": 23,
+    "FAN": 22,
+    "FANTASY": 23,
+    "FAR": 23,
+    "FARM": 22,
+    "FASHION": 23,
+    "FAST": 23,
+    "FAT": 23,
+    "FATHER": 21,
+    "FAULT": 22,
+    "FAVORITE": 21,
+    "FEBRUARY": 22,
+    "FEEL": 23,
+    "FEW": 23,
+    "FIFTH": 23,
+    "FIGHT": 22,
+    "FIGURE": 22,
+    "FILM": 23,
+    "FINALLY": 21,
+    "FINANCE": 24,
+    "FIND": 22,
+    "FINGER": 22,
+    "FINISH": 22,
+    "FIRE": 22,
+    "FIRED": 22,
+    "FIRST": 22,
+    "FISH": 22,
+    "FIT": 22,
+    "FIX": 22,
+    "FLOOR": 23,
+    "FLOWER": 22,
+    "FLY": 22,
+    "FOCUS": 22,
+    "FOOTBALL": 22,
+    "FOR": 22,
+    "FOREST": 23,
+    "FORM": 24,
+    "FORMER": 21,
+    "FOUR": 22,
+    "FOURTH": 22,
+    "FOX": 21,
+    "FRAME": 22,
+    "FRANCE": 22,
+    "FRAUD": 20,
+    "FREE": 22,
+    "FREEDOM": 22,
+    "FRENCH": 22,
+    "FRIDAY": 22,
+    "FRIEND": 22,
+    "FRIENDLY": 22,
+    "FROM": 23,
+    "FRONT": 22,
+    "FRUIT": 22,
+    "FULL": 22,
+    "FUN": 22,
+    "FUNCTION": 23,
+    "FUNNY": 22,
+    "FUTURE": 22,
+    "GAME": 22,
+    "GAS": 22,
+    "GATE": 22,
+    "GAY": 22,
+    "GENERATION": 23,
+    "GERMANY": 23,
+    "GET": 22,
+    "GHOST": 23,
+    "GIFT": 24,
+    "GIRL": 23,
+    "GIVE": 22,
+    "GO": 22,
+    "GOAL": 22,
+    "GOD": 22,
+    "GOLD": 21,
+    "GOLF": 22,
+    "GONE": 24,
+    "GOOD": 23,
+    "GOVERNMENT": 22,
+    "GRAB": 24,
+    "GRADE": 21,
+    "GRADUATE": 23,
+    "GRASS": 22,
+    "GRAY": 23,
+    "GREAT": 22,
+    "GREEN": 22,
+    "GROUP": 22,
+    "GROW": 22,
+    "GUIDE": 22,
+    "GUILTY": 23,
+    "GUITAR": 22,
+    "GYM": 22,
+    "HAHA": 23,
+    "HALF": 22,
+    "HALL": 24,
+    "HANDS": 25,
+    "HANG": 23,
+    "HAPPEN": 21,
+    "HAPPY": 23,
+    "HARD": 23,
+    "HATE": 24,
+    "HAVE": 22,
+    "HE": 21,
+    "HEAD": 24,
+    "HEALTH": 22,
+    "HEARING": 22,
+    "HEART": 23,
+    "HEAVEN": 22,
+    "HEAVY": 23,
+    "HELL": 22,
+    "HELLO": 22,
+    "HELP": 22,
+    "HERE": 21,
+    "HIDE": 23,
+    "HIGH": 20,
+    "HIS": 24,
+    "HISTORY": 22,
+    "HOCKEY": 23,
+    "HOLIDAY": 22,
+    "HOLY": 22,
+    "HOME": 22,
+    "HONEST": 22,
+    "HONOR": 23,
+    "HOP": 22,
+    "HOPE": 25,
+    "HORRIBLE": 22,
+    "HORSE": 22,
+    "HOT": 24,
+    "HOTEL": 23,
+    "HOUR": 21,
+    "HOUSE": 23,
+    "HUNDRED": 22,
+    "HUNGRY": 23,
+    "HUNT": 22,
+    "HURT": 22,
+    "HUSBAND": 22,
+    "ICE": 22,
+    "IDEA": 22,
+    "IDENTITY": 22,
+    "IF": 23,
+    "IGNORE": 23,
+    "IMPACT": 23,
+    "IMPORTANT": 21,
+    "IMPOSSIBLE": 24,
+    "IMPROVE": 23,
+    "IN": 24,
+    "INCH": 22,
+    "INCREDIBLE": 21,
+    "INDEPENDENT": 25,
+    "INDIAN": 21,
+    "INFLUENCE": 23,
+    "INNOCENT": 22,
+    "INSIDE": 22,
+    "INSTEAD": 22,
+    "INSTITUTE": 23,
+    "INSURANCE": 22,
+    "INTEREST": 23,
+    "INTERESTED": 23,
+    "INTERNET": 21,
+    "INTERVIEW": 23,
+    "INTRODUCE": 23,
+    "IPHONE": 22,
+    "ISLAND": 22,
+    "ISRAEL": 21,
+    "ITALY": 23,
+    "JAPAN": 23,
+    "JEWISH": 23,
+    "JOIN": 22,
+    "JOKE": 24,
+    "JOURNEY": 22,
+    "JUDGE": 23,
+    "JUMP": 23,
+    "JUNIOR": 22,
+    "KEEP": 22,
+    "KEY": 23,
+    "KID": 22,
+    "KILL": 22,
+    "KING": 22,
+    "KITCHEN": 23,
+    "KNOCK": 22,
+    "KNOW": 22,
+    "LABEL": 23,
+    "LAND": 25,
+    "LANGUAGE": 23,
+    "LAST": 22,
+    "LATE": 22,
+    "LATER": 24,
+    "LAUGH": 22,
+    "LAW": 22,
+    "LAWYER": 21,
+    "LEAD": 23,
+    "LEAGUE": 22,
+    "LEARN": 23,
+    "LEATHER": 23,
+    "LEAVE": 22,
+    "LEFT": 23,
+    "LESS": 22,
+    "LESSON": 22,
+    "LIBRARY": 22,
+    "LICENSE": 23,
+    "LIE": 23,
+    "LIGHT": 22,
+    "LIKE": 22,
+    "LIMITED": 22,
+    "LINE": 23,
+    "LIPS": 21,
+    "LIST": 22,
+    "LISTEN": 22,
+    "LONG": 23,
+    "LOSE": 23,
+    "LOST": 22,
+    "LOUD": 22,
+    "LOVE": 21,
+    "LUCK": 22,
+    "LUCKY": 23,
+    "MACHINE": 22,
+    "MAD": 22,
+    "MAGAZINE": 22,
+    "MAGIC": 22,
+    "MAJOR": 22,
+    "MAKE": 22,
+    "MAN": 23,
+    "MANAGE": 22,
+    "MANY": 23,
+    "MARCH": 22,
+    "MARRY": 22,
+    "MATCH": 22,
+    "MATH": 23,
+    "MAYBE": 22,
+    "ME": 19,
+    "MEDICINE": 22,
+    "MEET": 23,
+    "MEETING": 21,
+    "MEMBER": 21,
+    "MENTION": 23,
+    "MESS": 25,
+    "METAL": 24,
+    "MIDDLE": 23,
+    "MIND": 22,
+    "MINE": 22,
+    "MINUTE": 23,
+    "MIRROR": 23,
+    "MISS": 22,
+    "MISSING": 23,
+    "MONDAY": 22,
+    "MONSTER": 20,
+    "MONTH": 23,
+    "MOON": 22,
+    "MORE": 23,
+    "MORNING": 22,
+    "MOST": 23,
+    "MOTHER": 21,
+    "MOUTH": 24,
+    "MOVE": 23,
+    "MUCH": 22,
+    "MURDER": 22,
+    "MUSCLE": 22,
+    "MUSEUM": 22,
+    "MUSIC": 21,
+    "MUST": 22,
+    "MY": 21,
+    "MYSELF": 24,
+    "NAKED": 23,
+    "NAME": 22,
+    "NAVY": 22,
+    "NEAR": 23,
+    "NECK": 21,
+    "NEED": 22,
+    "NEGATIVE": 22,
+    "NET": 23,
+    "NETWORK": 23,
+    "NEVER": 22,
+    "NEW": 22,
+    "NEWSPAPER": 23,
+    "NEXT": 22,
+    "NICE": 23,
+    "NINE": 23,
+    "NO": 23,
+    "NOISE": 22,
+    "NONE": 23,
+    "NORMAL": 23,
+    "NORTH": 22,
+    "NOSE": 23,
+    "NOT": 22,
+    "NOW": 22,
+    "NUMBERS": 21,
+    "NURSE": 22,
+    "OBVIOUS": 23,
+    "OCEAN": 22,
+    "OFF": 23,
+    "OFFICE": 21,
+    "OFTEN": 22,
+    "OK": 25,
+    "OLD": 21,
+    "ON": 23,
+    "ONCE": 22,
+    "ONE": 23,
+    "OPEN": 23,
+    "OPPORTUNITY": 23,
+    "OPTION": 23,
+    "OR": 23,
+    "ORANGE": 22,
+    "ORGANIZATION": 22,
+    "OTHER": 25,
+    "OUR": 23,
+    "OUT": 20,
+    "OUTSIDE": 22,
+    "OVER": 22,
+    "OWN": 23,
+    "PACK": 22,
+    "PAGE": 25,
+    "PAIN": 22,
+    "PAINT": 22,
+    "PAIR": 22,
+    "PAPER": 22,
+    "PARENTS": 23,
+    "PARK": 22,
+    "PASS": 22,
+    "PAST": 20,
+    "PAY": 23,
+    "PEACE": 23,
+    "PEN": 23,
+    "PEOPLE": 23,
+    "PERCENT": 21,
+    "PERFECT": 23,
+    "PERIOD": 22,
+    "PERMISSION": 22,
+    "PERSON": 22,
+    "PERSPECTIVE": 22,
+    "PHILADELPHIA": 22,
+    "PHILOSOPHY": 22,
+    "PHONE": 19,
+    "PHOTOGRAPHY": 22,
+    "PHYSICS": 23,
+    "PICK": 23,
+    "PICTURE": 23,
+    "PINK": 22,
+    "PLACE": 23,
+    "PLAIN": 22,
+    "PLAN": 23,
+    "PLANET": 23,
+    "PLANT": 24,
+    "PLATE": 23,
+    "PLATFORM": 22,
+    "PLAY": 22,
+    "PLAYERS": 22,
+    "PLEASE": 22,
+    "PLENTY": 23,
+    "PLUS": 23,
+    "POINT": 21,
+    "POLICY": 23,
+    "POOR": 22,
+    "POPE": 24,
+    "POPULAR": 22,
+    "POSITIVE": 22,
+    "POSSIBLE": 22,
+    "POWER": 22,
+    "PRACTICE": 23,
+    "PRAYER": 23,
+    "PREFER": 23,
+    "PREGNANT": 23,
+    "PRESIDENT": 20,
+    "PRESS": 26,
+    "PRETTY": 22,
+    "PRICE": 24,
+    "PRIDE": 22,
+    "PRINCE": 18,
+    "PRINCIPAL": 22,
+    "PRINT": 21,
+    "PRIORITY": 22,
+    "PRISON": 22,
+    "PROCESS": 23,
+    "PROGRAM": 22,
+    "PROJECT": 23,
+    "PROMISE": 23,
+    "PROMOTE": 22,
+    "PROOF": 22,
+    "PROTECTION": 23,
+    "PROTEST": 22,
+    "PROVIDE": 23,
+    "PUBLIC": 22,
+    "PULL": 21,
+    "PUSH": 21,
+    "PUT": 22,
+    "QUALITY": 23,
+    "QUARTER": 22,
+    "QUEEN": 22,
+    "QUIET": 23,
+    "QUIT": 21,
+    "RACE": 21,
+    "RADIO": 22,
+    "RAIN": 21,
+    "RANGE": 23,
+    "REACH": 23,
+    "READ": 22,
+    "READY": 22,
+    "REALLY": 23,
+    "REASON": 23,
+    "RECORD": 22,
+    "RECORDING": 22,
+    "RED": 22,
+    "REDUCE": 22,
+    "REFLECT": 23,
+    "REFUSE": 22,
+    "REGISTER": 22,
+    "REGULAR": 23,
+    "RELATIONSHIP": 22,
+    "RELEASE": 23,
+    "RELIEF": 23,
+    "RELIGION": 22,
+    "REMIND": 21,
+    "REMOVE": 23,
+    "REPLACE": 22,
+    "REQUEST": 22,
+    "RESCUE": 23,
+    "RESPECT": 21,
+    "RESPONSIBILITY": 22,
+    "REST": 21,
+    "RESTAURANT": 23,
+    "RESULT": 23,
+    "RICH": 23,
+    "RING": 22,
+    "RISK": 21,
+    "ROAD": 24,
+    "ROB": 23,
+    "ROCK": 22,
+    "ROLE": 22,
+    "ROLL": 24,
+    "ROOF": 22,
+    "ROOM": 23,
+    "ROSE": 23,
+    "ROUGH": 23,
+    "ROW": 24,
+    "RULE": 21,
+    "RUSH": 23,
+    "RUSSIA": 23,
+    "SAD": 22,
+    "SAFE": 22,
+    "SALT": 22,
+    "SANTA": 21,
+    "SATURDAY": 21,
+    "SAVE": 22,
+    "SCARED": 22,
+    "SCHOOL": 23,
+    "SCIENCE": 22,
+    "SCORE": 21,
+    "SCRIPT": 23,
+    "SECRET": 22,
+    "SECRETARY": 23,
+    "SEE": 22,
+    "SEEM": 21,
+    "SELECT": 23,
+    "SELF": 21,
+    "SELL": 22,
+    "SENATE": 23,
+    "SEND": 23,
+    "SENSITIVE": 23,
+    "SEQUENCE": 22,
+    "SERIOUS": 21,
+    "SEVEN": 22,
+    "SEVERAL": 20,
+    "SHAME": 23,
+    "SHAPE": 21,
+    "SHARE": 23,
+    "SHOES": 22,
+    "SHOOTING": 22,
+    "SHOT": 23,
+    "SHOULD": 22,
+    "SHOW": 22,
+    "SHOWER": 21,
+    "SICK": 22,
+    "SIDE": 23,
+    "SIGN": 23,
+    "SILLY": 21,
+    "SILVER": 23,
+    "SINCE": 24,
+    "SING": 23,
+    "SINGLE": 23,
+    "SISTER": 23,
+    "SIT": 21,
+    "SITUATION": 22,
+    "SIX": 24,
+    "SKILL": 22,
+    "SKIN": 23,
+    "SLEEP": 20,
+    "SLOW": 22,
+    "SMALL": 23,
+    "SMART": 23,
+    "SMELL": 23,
+    "SMOKE": 20,
+    "SMOKING": 22,
+    "SMOOTH": 23,
+    "SO": 22,
+    "SOCIAL": 21,
+    "SOCIETY": 24,
+    "SOFT": 23,
+    "SOME": 21,
+    "SOMETHING": 23,
+    "SOMETIMES": 22,
+    "SON": 23,
+    "SORRY": 22,
+    "SOUND": 22,
+    "SOUTH": 22,
+    "SPACE": 24,
+    "SPAIN": 23,
+    "SPECIFIC": 22,
+    "SPEND": 22,
+    "SPORTS": 22,
+    "SPRING": 23,
+    "SQUARE": 22,
+    "STADIUM": 22,
+    "STAFF": 22,
+    "STAND-UP": 23,
+    "STAR": 21,
+    "STARS": 22,
+    "START": 22,
+    "STATE": 24,
+    "STAY": 22,
+    "STEAL": 23,
+    "STEAM": 22,
+    "STEP": 23,
+    "STILL": 22,
+    "STOMACH": 21,
+    "STOP": 23,
+    "STRAIGHT": 24,
+    "STRANGE": 21,
+    "STREET": 22,
+    "STRESS": 22,
+    "STRING": 21,
+    "STRONG": 23,
+    "STRUCTURE": 22,
+    "STRUGGLE": 22,
+    "STUCK": 23,
+    "STUDENT": 22,
+    "STUDY": 22,
+    "SUCK": 23,
+    "SUIT": 22,
+    "SUMMER": 22,
+    "SUN": 20,
+    "SUNDAY": 22,
+    "SUPERIOR": 23,
+    "SURE": 23,
+    "SURGERY": 22,
+    "SURPRISE": 21,
+    "SUSPECT": 22,
+    "SWEET": 22,
+    "SWORD": 23,
+    "SYSTEM": 22,
+    "TABLE": 23,
+    "TAKE": 23,
+    "TAPE": 22,
+    "TASTE": 21,
+    "TEA": 22,
+    "TEACHER": 22,
+    "TEAM": 24,
+    "TEAR": 22,
+    "TECHNOLOGY": 23,
+    "TEETH": 23,
+    "TELL": 22,
+    "TEMPORARY": 23,
+    "TEST": 23,
+    "TEXT": 22,
+    "THAN": 23,
+    "THANKYOU": 23,
+    "THAT": 22,
+    "THEATRE": 21,
+    "THEN": 23,
+    "THEORY": 22,
+    "THERAPY": 23,
+    "THERE": 22,
+    "THESE": 22,
+    "THIN": 21,
+    "THINGS": 22,
+    "THINK": 23,
+    "THIS/IT": 23,
+    "THREE": 21,
+    "THURSDAY": 22,
+    "TICKET": 23,
+    "TIME": 23,
+    "TINY": 22,
+    "TIRED": 21,
+    "TO": 21,
+    "TODAY": 23,
+    "TOGETHER": 22,
+    "TOMORROW": 23,
+    "TONGUE": 24,
+    "TOP": 22,
+    "TOPIC": 22,
+    "TOTAL": 22,
+    "TOUCH": 23,
+    "TOUGH": 23,
+    "TOURNAMENT": 22,
+    "TRADITION": 22,
+    "TRAFFIC": 22,
+    "TRAIN": 21,
+    "TRANSFER": 22,
+    "TRASH": 22,
+    "TRAVEL": 22,
+    "TREE": 19,
+    "TROUBLE": 22,
+    "TRUE": 23,
+    "TRUTH": 23,
+    "TRY": 22,
+    "TUBE": 23,
+    "TUESDAY": 23,
+    "TURN": 23,
+    "TV": 22,
+    "TWO": 21,
+    "UGLY": 22,
+    "UNCLE": 24,
+    "UNDER": 22,
+    "UNDERSTAND": 22,
+    "UNIQUE": 22,
+    "UNIVERSE": 22,
+    "UNIVERSITY": 22,
+    "UNTIL": 23,
+    "UP": 23,
+    "US": 22,
+    "USE": 23,
+    "VACATION": 23,
+    "VALLEY": 23,
+    "VALUE": 24,
+    "VERY": 22,
+    "VIEW": 24,
+    "VILLAGE": 21,
+    "VISION": 22,
+    "VISIT": 23,
+    "VOICE": 24,
+    "VOTE": 23,
+    "WAIT": 21,
+    "WALL": 23,
+    "WAR": 22,
+    "WARM": 23,
+    "WASTE": 22,
+    "WATCH": 23,
+    "WATER": 22,
+    "WAVE": 23,
+    "WAY": 21,
+    "WE": 22,
+    "WEAK": 22,
+    "WEAR": 22,
+    "WEATHER": 20,
+    "WEDDING": 23,
+    "WEDNESDAY": 22,
+    "WEEK": 22,
+    "WEEKEND": 21,
+    "WEIGHT": 23,
+    "WEIRD": 22,
+    "WELL": 21,
+    "WEST": 21,
+    "WET": 21,
+    "WHATEVER": 22,
+    "WHEEL": 24,
+    "WHEN": 22,
+    "WHERE": 22,
+    "WHICH": 22,
+    "WHILE": 22,
+    "WHITE": 23,
+    "WHO": 22,
+    "WHOLE": 23,
+    "WHY": 22,
+    "WIDE": 22,
+    "WIFE": 23,
+    "WILL": 22,
+    "WIN": 22,
+    "WIND": 22,
+    "WINDOW": 22,
+    "WINE": 23,
+    "WINTER": 23,
+    "WISE": 23,
+    "WISH": 23,
+    "WITH": 22,
+    "WITHOUT": 22,
+    "WONDER": 22,
+    "WOOD": 22,
+    "WORD": 22,
+    "WORK": 21,
+    "WORLD": 23,
+    "WORRY": 21,
+    "WORSE": 23,
+    "WOW": 24,
+    "WRITE": 23,
+    "WRONG": 22,
+    "YEAH": 22,
+    "YEAR": 23,
+    "YELLOW": 23,
+    "YES": 24,
+    "YESTERDAY": 23,
+    "YOU": 23,
+    "YOUNG": 23,
+    "YOUR": 24,
+    "YOURSELF": 24,
+    "ZERO": 23
+  },
+  "per_class_split_ok": {
+    "ABOVE": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "ACCEPT": {
+      "train": 14,
+      "val": 5,
+      "test": 4
+    },
+    "ACCESS": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "ACCIDENT": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "ACT": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "ACTION": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "ACTOR": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "ADD": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "ADDRESS": {
+      "train": 16,
+      "val": 4,
+      "test": 4
+    },
+    "ADMIT": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "ADULT": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "ADVANTAGE": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "AFRICA": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "AFTER": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "AFTERNOON": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "AGAIN": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "AGAINST": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "AGE": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "AGENCY": {
+      "train": 14,
+      "val": 5,
+      "test": 3
+    },
+    "AGREEMENT": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "AIRPLANE": {
+      "train": 12,
+      "val": 5,
+      "test": 4
+    },
+    "ALCOHOL": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "ALL": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "ALONE": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "ALRIGHT": {
+      "train": 16,
+      "val": 5,
+      "test": 4
+    },
+    "ALWAYS": {
+      "train": 16,
+      "val": 5,
+      "test": 4
+    },
+    "AMAZING": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "AMERICA": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "AND": {
+      "train": 14,
+      "val": 3,
+      "test": 4
+    },
+    "ANGEL": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "ANGRY": {
+      "train": 14,
+      "val": 3,
+      "test": 4
+    },
+    "ANIMAL": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "ANSWER": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "ANY": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "ANYONE": {
+      "train": 17,
+      "val": 3,
+      "test": 4
+    },
+    "APART": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "APPEAR": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "APPLE": {
+      "train": 17,
+      "val": 4,
+      "test": 4
+    },
+    "APPOINTMENT": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "APRIL": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "AREA": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "ARGUE": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "ARIZONA": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "ARMY": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "ARRIVE": {
+      "train": 15,
+      "val": 3,
+      "test": 3
+    },
+    "ART": {
+      "train": 13,
+      "val": 5,
+      "test": 4
+    },
+    "ARTICLE": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "ASIA": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "ASK": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "ASSEMBLY": {
+      "train": 16,
+      "val": 4,
+      "test": 4
+    },
+    "ASSIST": {
+      "train": 15,
+      "val": 5,
+      "test": 4
+    },
+    "ASSISTANT": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "AT": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "ATLANTA": {
+      "train": 13,
+      "val": 5,
+      "test": 4
+    },
+    "ATTENTION": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "ATTITUDE": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "AUDIENCE": {
+      "train": 14,
+      "val": 5,
+      "test": 4
+    },
+    "AUSTRALIA": {
+      "train": 13,
+      "val": 5,
+      "test": 4
+    },
+    "AUTOMATIC": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "AVERAGE": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "AVOID": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "AWARD": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "AWAY": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "BACK": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "BAD": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "BALANCE": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "BALL": {
+      "train": 14,
+      "val": 3,
+      "test": 4
+    },
+    "BANK": {
+      "train": 14,
+      "val": 3,
+      "test": 4
+    },
+    "BAR": {
+      "train": 13,
+      "val": 6,
+      "test": 4
+    },
+    "BARELY": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "BASEBALL": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "BASIC": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "BATH": {
+      "train": 14,
+      "val": 3,
+      "test": 4
+    },
+    "BATHROOM": {
+      "train": 14,
+      "val": 3,
+      "test": 4
+    },
+    "BATTERY": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "BEACH": {
+      "train": 16,
+      "val": 5,
+      "test": 4
+    },
+    "BEAR": {
+      "train": 13,
+      "val": 5,
+      "test": 4
+    },
+    "BEAT": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "BECAUSE": {
+      "train": 14,
+      "val": 3,
+      "test": 4
+    },
+    "BECOME": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "BEDROOM": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "BEER": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "BEFORE": {
+      "train": 14,
+      "val": 5,
+      "test": 4
+    },
+    "BEHAVIOR": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "BEHIND": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "BELL": {
+      "train": 16,
+      "val": 5,
+      "test": 4
+    },
+    "BENEFIT": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "BEST": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "BET": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "BETTER": {
+      "train": 14,
+      "val": 3,
+      "test": 4
+    },
+    "BETWEEN": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "BIG": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "BIRD": {
+      "train": 14,
+      "val": 4,
+      "test": 3
+    },
+    "BIRTH": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "BIRTHDAY": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "BITCH": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "BLACK": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "BLAME": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "BLIND": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "BLOOD": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "BLOW": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "BLUE": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "BOARD": {
+      "train": 13,
+      "val": 3,
+      "test": 4
+    },
+    "BOAT": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "BODY": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "BOMB": {
+      "train": 14,
+      "val": 5,
+      "test": 4
+    },
+    "BONE": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "BOOK": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "BOSS": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "BOSTON": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "BOTH": {
+      "train": 16,
+      "val": 5,
+      "test": 4
+    },
+    "BOTHER": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "BOTTLE": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "BOTTOM": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "BOWL": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "BOX": {
+      "train": 13,
+      "val": 6,
+      "test": 4
+    },
+    "BOY": {
+      "train": 14,
+      "val": 6,
+      "test": 4
+    },
+    "BOYFRIEND": {
+      "train": 15,
+      "val": 5,
+      "test": 4
+    },
+    "BREAD": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "BREAK": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "BRIGHT": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "BRING": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "BROTHER": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "BROWN": {
+      "train": 13,
+      "val": 5,
+      "test": 4
+    },
+    "BUDGET": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "BUILDING": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "BULLSHIT": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "BURN": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "BUS": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "BUSINESS": {
+      "train": 12,
+      "val": 5,
+      "test": 4
+    },
+    "BUSY": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "BUT": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "BUTTER": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "BUY": {
+      "train": 16,
+      "val": 4,
+      "test": 4
+    },
+    "BYE": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "CABINET": {
+      "train": 14,
+      "val": 3,
+      "test": 4
+    },
+    "CAKE": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "CALIFORNIA": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "CALM": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "CAMERA": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "CANADA": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "CANNOT": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "CAPTURE": {
+      "train": 17,
+      "val": 3,
+      "test": 4
+    },
+    "CAR": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "CARDS": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "CAREFUL": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "CARRY": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "CATEGORY": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "CATHOLIC": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "CAUGHT": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "CAUSE": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "CELEBRATE": {
+      "train": 14,
+      "val": 3,
+      "test": 4
+    },
+    "CENTER": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "CHAIN": {
+      "train": 16,
+      "val": 4,
+      "test": 4
+    },
+    "CHAIR": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "CHALLENGE": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "CHAMPION": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "CHANCE": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "CHANGE": {
+      "train": 13,
+      "val": 5,
+      "test": 4
+    },
+    "CHANNEL": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "CHARACTER": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "CHARGE": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "CHASE": {
+      "train": 16,
+      "val": 4,
+      "test": 4
+    },
+    "CHAT": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "CHEAP": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "CHECK": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "CHEESE": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "CHICAGO": {
+      "train": 12,
+      "val": 4,
+      "test": 4
+    },
+    "CHILD": {
+      "train": 16,
+      "val": 5,
+      "test": 4
+    },
+    "CHILDREN": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "CHINA": {
+      "train": 12,
+      "val": 3,
+      "test": 4
+    },
+    "CHOCOLATE": {
+      "train": 14,
+      "val": 3,
+      "test": 4
+    },
+    "CHURCH": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "CIRCLE": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "CLASS": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "CLEAN": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "CLEAR": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "CLICK": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "CLIENT": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "CLOSE": {
+      "train": 17,
+      "val": 4,
+      "test": 4
+    },
+    "CLOTHES": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "COACH": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "COFFEE": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "COLD": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "COLLEGE": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "COLOR": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "COME": {
+      "train": 15,
+      "val": 2,
+      "test": 4
+    },
+    "COMFORTABLE": {
+      "train": 15,
+      "val": 5,
+      "test": 4
+    },
+    "COMMENT": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "COMMITTEE": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "COMMUNICATION": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "COMMUNITY": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "COMPLEX": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "COMPUTER": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "CONCEPT": {
+      "train": 14,
+      "val": 3,
+      "test": 4
+    },
+    "CONCERNED": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "CONFIDENT": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "CONFLICT": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "CONGRATULATIONS": {
+      "train": 13,
+      "val": 6,
+      "test": 4
+    },
+    "CONNECTION": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "CONTACT": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "CONTINUE": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "COOK": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "COPY": {
+      "train": 17,
+      "val": 3,
+      "test": 4
+    },
+    "CORNER": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "COST": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "COUNT": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "COUNTRY": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "COUSIN": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "CRACK": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "CRASH": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "CRAZY": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "CREATE": {
+      "train": 14,
+      "val": 5,
+      "test": 4
+    },
+    "CROWN": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "CULTURE": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "CUP": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "CURIOUS": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "CUT": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "DAMN": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "DANCE": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "DANGER": {
+      "train": 14,
+      "val": 5,
+      "test": 4
+    },
+    "DATE": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "DAUGHTER": {
+      "train": 13,
+      "val": 5,
+      "test": 4
+    },
+    "DAY": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "DEATH": {
+      "train": 13,
+      "val": 5,
+      "test": 4
+    },
+    "DECLINE": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "DEEP": {
+      "train": 14,
+      "val": 6,
+      "test": 4
+    },
+    "DEFEAT": {
+      "train": 15,
+      "val": 5,
+      "test": 4
+    },
+    "DEGREE": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "DEPARTMENT": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "DEPTH": {
+      "train": 16,
+      "val": 4,
+      "test": 4
+    },
+    "DESERT": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "DESIGN": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "DESTROY": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "DIAMOND": {
+      "train": 12,
+      "val": 5,
+      "test": 4
+    },
+    "DIE": {
+      "train": 13,
+      "val": 5,
+      "test": 4
+    },
+    "DIFFERENT": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "DIRECTOR": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "DIRTY": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "DISCUSS": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "DISNEY": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "DIVORCE": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "DOCUMENT": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "DOOR": {
+      "train": 14,
+      "val": 3,
+      "test": 4
+    },
+    "DOUBLE": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "DOUBT": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "DOWN": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "DOWNLOAD": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "DRAGON": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "DRAW": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "DREAM": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "DRESS": {
+      "train": 14,
+      "val": 3,
+      "test": 4
+    },
+    "DRIVE": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "DROP": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "DRUG": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "DRUNK": {
+      "train": 13,
+      "val": 5,
+      "test": 4
+    },
+    "DRY": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "DUE": {
+      "train": 14,
+      "val": 5,
+      "test": 4
+    },
+    "DUMB": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "DUTY": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "EACH": {
+      "train": 16,
+      "val": 4,
+      "test": 4
+    },
+    "EAR": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "EARLY": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "EARN": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "EARTH": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "EAST": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "EASY": {
+      "train": 17,
+      "val": 3,
+      "test": 4
+    },
+    "EDGE": {
+      "train": 16,
+      "val": 4,
+      "test": 4
+    },
+    "EFFECT": {
+      "train": 13,
+      "val": 5,
+      "test": 4
+    },
+    "EGG": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "EGYPT": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "EIGHT": {
+      "train": 16,
+      "val": 5,
+      "test": 4
+    },
+    "EITHER": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "EMAIL": {
+      "train": 12,
+      "val": 6,
+      "test": 4
+    },
+    "END": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "ENEMY": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "ENERGY": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "ENGINEER": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "ENGLISH": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "ENJOY": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "ENOUGH": {
+      "train": 17,
+      "val": 3,
+      "test": 4
+    },
+    "ENTER": {
+      "train": 16,
+      "val": 4,
+      "test": 4
+    },
+    "ENVIRONMENT": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "EQUAL": {
+      "train": 13,
+      "val": 5,
+      "test": 4
+    },
+    "ESCAPE": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "EUROPE": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "EVEN": {
+      "train": 16,
+      "val": 4,
+      "test": 4
+    },
+    "EVENT": {
+      "train": 15,
+      "val": 5,
+      "test": 4
+    },
+    "EVERYDAY": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "EVERYTHING": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "EVIDENCE": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "EXAMPLE": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "EXCITED": {
+      "train": 14,
+      "val": 5,
+      "test": 4
+    },
+    "EXCUSE": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "EXERCISE": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "EXPECT": {
+      "train": 16,
+      "val": 4,
+      "test": 4
+    },
+    "EXPENSIVE": {
+      "train": 14,
+      "val": 3,
+      "test": 4
+    },
+    "EXPERIENCE": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "EXPERIENCED": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "EXPERIMENT": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "EXPERT": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "EXPLANATION": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "EXPRESS": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "EYES": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "FACE": {
+      "train": 15,
+      "val": 3,
+      "test": 3
+    },
+    "FAIL": {
+      "train": 17,
+      "val": 3,
+      "test": 4
+    },
+    "FAIR": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "FAKE": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "FAMILY": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "FAMOUS": {
+      "train": 14,
+      "val": 5,
+      "test": 4
+    },
+    "FAN": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "FANTASY": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "FAR": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "FARM": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "FASHION": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "FAST": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "FAT": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "FATHER": {
+      "train": 14,
+      "val": 3,
+      "test": 4
+    },
+    "FAULT": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "FAVORITE": {
+      "train": 14,
+      "val": 3,
+      "test": 4
+    },
+    "FEBRUARY": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "FEEL": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "FEW": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "FIFTH": {
+      "train": 14,
+      "val": 5,
+      "test": 4
+    },
+    "FIGHT": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "FIGURE": {
+      "train": 13,
+      "val": 5,
+      "test": 4
+    },
+    "FILM": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "FINALLY": {
+      "train": 14,
+      "val": 3,
+      "test": 4
+    },
+    "FINANCE": {
+      "train": 16,
+      "val": 4,
+      "test": 4
+    },
+    "FIND": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "FINGER": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "FINISH": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "FIRE": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "FIRED": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "FIRST": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "FISH": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "FIT": {
+      "train": 13,
+      "val": 5,
+      "test": 4
+    },
+    "FIX": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "FLOOR": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "FLOWER": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "FLY": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "FOCUS": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "FOOTBALL": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "FOR": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "FOREST": {
+      "train": 14,
+      "val": 5,
+      "test": 4
+    },
+    "FORM": {
+      "train": 15,
+      "val": 5,
+      "test": 4
+    },
+    "FORMER": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "FOUR": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "FOURTH": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "FOX": {
+      "train": 14,
+      "val": 3,
+      "test": 4
+    },
+    "FRAME": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "FRANCE": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "FRAUD": {
+      "train": 14,
+      "val": 3,
+      "test": 3
+    },
+    "FREE": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "FREEDOM": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "FRENCH": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "FRIDAY": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "FRIEND": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "FRIENDLY": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "FROM": {
+      "train": 14,
+      "val": 5,
+      "test": 4
+    },
+    "FRONT": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "FRUIT": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "FULL": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "FUN": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "FUNCTION": {
+      "train": 14,
+      "val": 5,
+      "test": 4
+    },
+    "FUNNY": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "FUTURE": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "GAME": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "GAS": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "GATE": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "GAY": {
+      "train": 15,
+      "val": 4,
+      "test": 3
+    },
+    "GENERATION": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "GERMANY": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "GET": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "GHOST": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "GIFT": {
+      "train": 16,
+      "val": 4,
+      "test": 4
+    },
+    "GIRL": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "GIVE": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "GO": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "GOAL": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "GOD": {
+      "train": 16,
+      "val": 2,
+      "test": 4
+    },
+    "GOLD": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "GOLF": {
+      "train": 13,
+      "val": 5,
+      "test": 4
+    },
+    "GONE": {
+      "train": 15,
+      "val": 5,
+      "test": 4
+    },
+    "GOOD": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "GOVERNMENT": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "GRAB": {
+      "train": 16,
+      "val": 4,
+      "test": 4
+    },
+    "GRADE": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "GRADUATE": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "GRASS": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "GRAY": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "GREAT": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "GREEN": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "GROUP": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "GROW": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "GUIDE": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "GUILTY": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "GUITAR": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "GYM": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "HAHA": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "HALF": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "HALL": {
+      "train": 16,
+      "val": 4,
+      "test": 4
+    },
+    "HANDS": {
+      "train": 16,
+      "val": 5,
+      "test": 4
+    },
+    "HANG": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "HAPPEN": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "HAPPY": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "HARD": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "HATE": {
+      "train": 16,
+      "val": 4,
+      "test": 4
+    },
+    "HAVE": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "HE": {
+      "train": 14,
+      "val": 4,
+      "test": 3
+    },
+    "HEAD": {
+      "train": 16,
+      "val": 4,
+      "test": 4
+    },
+    "HEALTH": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "HEARING": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "HEART": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "HEAVEN": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "HEAVY": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "HELL": {
+      "train": 13,
+      "val": 5,
+      "test": 4
+    },
+    "HELLO": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "HELP": {
+      "train": 13,
+      "val": 5,
+      "test": 4
+    },
+    "HERE": {
+      "train": 14,
+      "val": 3,
+      "test": 4
+    },
+    "HIDE": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "HIGH": {
+      "train": 12,
+      "val": 4,
+      "test": 4
+    },
+    "HIS": {
+      "train": 16,
+      "val": 4,
+      "test": 4
+    },
+    "HISTORY": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "HOCKEY": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "HOLIDAY": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "HOLY": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "HOME": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "HONEST": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "HONOR": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "HOP": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "HOPE": {
+      "train": 17,
+      "val": 4,
+      "test": 4
+    },
+    "HORRIBLE": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "HORSE": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "HOT": {
+      "train": 16,
+      "val": 4,
+      "test": 4
+    },
+    "HOTEL": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "HOUR": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "HOUSE": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "HUNDRED": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "HUNGRY": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "HUNT": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "HURT": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "HUSBAND": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "ICE": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "IDEA": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "IDENTITY": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "IF": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "IGNORE": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "IMPACT": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "IMPORTANT": {
+      "train": 14,
+      "val": 3,
+      "test": 4
+    },
+    "IMPOSSIBLE": {
+      "train": 17,
+      "val": 3,
+      "test": 4
+    },
+    "IMPROVE": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "IN": {
+      "train": 15,
+      "val": 5,
+      "test": 4
+    },
+    "INCH": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "INCREDIBLE": {
+      "train": 14,
+      "val": 3,
+      "test": 4
+    },
+    "INDEPENDENT": {
+      "train": 16,
+      "val": 5,
+      "test": 4
+    },
+    "INDIAN": {
+      "train": 14,
+      "val": 3,
+      "test": 4
+    },
+    "INFLUENCE": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "INNOCENT": {
+      "train": 13,
+      "val": 5,
+      "test": 4
+    },
+    "INSIDE": {
+      "train": 13,
+      "val": 5,
+      "test": 4
+    },
+    "INSTEAD": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "INSTITUTE": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "INSURANCE": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "INTEREST": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "INTERESTED": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "INTERNET": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "INTERVIEW": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "INTRODUCE": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "IPHONE": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "ISLAND": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "ISRAEL": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "ITALY": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "JAPAN": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "JEWISH": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "JOIN": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "JOKE": {
+      "train": 17,
+      "val": 3,
+      "test": 4
+    },
+    "JOURNEY": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "JUDGE": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "JUMP": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "JUNIOR": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "KEEP": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "KEY": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "KID": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "KILL": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "KING": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "KITCHEN": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "KNOCK": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "KNOW": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "LABEL": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "LAND": {
+      "train": 16,
+      "val": 5,
+      "test": 4
+    },
+    "LANGUAGE": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "LAST": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "LATE": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "LATER": {
+      "train": 16,
+      "val": 4,
+      "test": 4
+    },
+    "LAUGH": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "LAW": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "LAWYER": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "LEAD": {
+      "train": 14,
+      "val": 5,
+      "test": 4
+    },
+    "LEAGUE": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "LEARN": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "LEATHER": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "LEAVE": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "LEFT": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "LESS": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "LESSON": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "LIBRARY": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "LICENSE": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "LIE": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "LIGHT": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "LIKE": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "LIMITED": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "LINE": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "LIPS": {
+      "train": 14,
+      "val": 4,
+      "test": 3
+    },
+    "LIST": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "LISTEN": {
+      "train": 12,
+      "val": 6,
+      "test": 4
+    },
+    "LONG": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "LOSE": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "LOST": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "LOUD": {
+      "train": 13,
+      "val": 5,
+      "test": 4
+    },
+    "LOVE": {
+      "train": 12,
+      "val": 5,
+      "test": 4
+    },
+    "LUCK": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "LUCKY": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "MACHINE": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "MAD": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "MAGAZINE": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "MAGIC": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "MAJOR": {
+      "train": 13,
+      "val": 5,
+      "test": 4
+    },
+    "MAKE": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "MAN": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "MANAGE": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "MANY": {
+      "train": 13,
+      "val": 6,
+      "test": 4
+    },
+    "MARCH": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "MARRY": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "MATCH": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "MATH": {
+      "train": 13,
+      "val": 6,
+      "test": 4
+    },
+    "MAYBE": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "ME": {
+      "train": 11,
+      "val": 4,
+      "test": 4
+    },
+    "MEDICINE": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "MEET": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "MEETING": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "MEMBER": {
+      "train": 14,
+      "val": 3,
+      "test": 4
+    },
+    "MENTION": {
+      "train": 14,
+      "val": 5,
+      "test": 4
+    },
+    "MESS": {
+      "train": 16,
+      "val": 5,
+      "test": 4
+    },
+    "METAL": {
+      "train": 17,
+      "val": 3,
+      "test": 4
+    },
+    "MIDDLE": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "MIND": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "MINE": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "MINUTE": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "MIRROR": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "MISS": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "MISSING": {
+      "train": 14,
+      "val": 5,
+      "test": 4
+    },
+    "MONDAY": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "MONSTER": {
+      "train": 13,
+      "val": 3,
+      "test": 4
+    },
+    "MONTH": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "MOON": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "MORE": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "MORNING": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "MOST": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "MOTHER": {
+      "train": 14,
+      "val": 3,
+      "test": 4
+    },
+    "MOUTH": {
+      "train": 17,
+      "val": 3,
+      "test": 4
+    },
+    "MOVE": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "MUCH": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "MURDER": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "MUSCLE": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "MUSEUM": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "MUSIC": {
+      "train": 12,
+      "val": 5,
+      "test": 4
+    },
+    "MUST": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "MY": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "MYSELF": {
+      "train": 17,
+      "val": 3,
+      "test": 4
+    },
+    "NAKED": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "NAME": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "NAVY": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "NEAR": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "NECK": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "NEED": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "NEGATIVE": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "NET": {
+      "train": 14,
+      "val": 5,
+      "test": 4
+    },
+    "NETWORK": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "NEVER": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "NEW": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "NEWSPAPER": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "NEXT": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "NICE": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "NINE": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "NO": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "NOISE": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "NONE": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "NORMAL": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "NORTH": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "NOSE": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "NOT": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "NOW": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "NUMBERS": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "NURSE": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "OBVIOUS": {
+      "train": 14,
+      "val": 5,
+      "test": 4
+    },
+    "OCEAN": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "OFF": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "OFFICE": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "OFTEN": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "OK": {
+      "train": 16,
+      "val": 5,
+      "test": 4
+    },
+    "OLD": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "ON": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "ONCE": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "ONE": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "OPEN": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "OPPORTUNITY": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "OPTION": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "OR": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "ORANGE": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "ORGANIZATION": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "OTHER": {
+      "train": 17,
+      "val": 4,
+      "test": 4
+    },
+    "OUR": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "OUT": {
+      "train": 12,
+      "val": 4,
+      "test": 4
+    },
+    "OUTSIDE": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "OVER": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "OWN": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "PACK": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "PAGE": {
+      "train": 16,
+      "val": 5,
+      "test": 4
+    },
+    "PAIN": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "PAINT": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "PAIR": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "PAPER": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "PARENTS": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "PARK": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "PASS": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "PAST": {
+      "train": 12,
+      "val": 4,
+      "test": 4
+    },
+    "PAY": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "PEACE": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "PEN": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "PEOPLE": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "PERCENT": {
+      "train": 12,
+      "val": 5,
+      "test": 4
+    },
+    "PERFECT": {
+      "train": 13,
+      "val": 6,
+      "test": 4
+    },
+    "PERIOD": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "PERMISSION": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "PERSON": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "PERSPECTIVE": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "PHILADELPHIA": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "PHILOSOPHY": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "PHONE": {
+      "train": 11,
+      "val": 5,
+      "test": 3
+    },
+    "PHOTOGRAPHY": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "PHYSICS": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "PICK": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "PICTURE": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "PINK": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "PLACE": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "PLAIN": {
+      "train": 13,
+      "val": 5,
+      "test": 4
+    },
+    "PLAN": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "PLANET": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "PLANT": {
+      "train": 16,
+      "val": 4,
+      "test": 4
+    },
+    "PLATE": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "PLATFORM": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "PLAY": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "PLAYERS": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "PLEASE": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "PLENTY": {
+      "train": 14,
+      "val": 5,
+      "test": 4
+    },
+    "PLUS": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "POINT": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "POLICY": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "POOR": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "POPE": {
+      "train": 15,
+      "val": 5,
+      "test": 4
+    },
+    "POPULAR": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "POSITIVE": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "POSSIBLE": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "POWER": {
+      "train": 13,
+      "val": 5,
+      "test": 4
+    },
+    "PRACTICE": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "PRAYER": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "PREFER": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "PREGNANT": {
+      "train": 14,
+      "val": 5,
+      "test": 4
+    },
+    "PRESIDENT": {
+      "train": 12,
+      "val": 4,
+      "test": 4
+    },
+    "PRESS": {
+      "train": 17,
+      "val": 5,
+      "test": 4
+    },
+    "PRETTY": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "PRICE": {
+      "train": 16,
+      "val": 4,
+      "test": 4
+    },
+    "PRIDE": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "PRINCE": {
+      "train": 13,
+      "val": 2,
+      "test": 3
+    },
+    "PRINCIPAL": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "PRINT": {
+      "train": 14,
+      "val": 3,
+      "test": 4
+    },
+    "PRIORITY": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "PRISON": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "PROCESS": {
+      "train": 14,
+      "val": 5,
+      "test": 4
+    },
+    "PROGRAM": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "PROJECT": {
+      "train": 14,
+      "val": 5,
+      "test": 4
+    },
+    "PROMISE": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "PROMOTE": {
+      "train": 13,
+      "val": 5,
+      "test": 4
+    },
+    "PROOF": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "PROTECTION": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "PROTEST": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "PROVIDE": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "PUBLIC": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "PULL": {
+      "train": 12,
+      "val": 5,
+      "test": 4
+    },
+    "PUSH": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "PUT": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "QUALITY": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "QUARTER": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "QUEEN": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "QUIET": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "QUIT": {
+      "train": 14,
+      "val": 3,
+      "test": 4
+    },
+    "RACE": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "RADIO": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "RAIN": {
+      "train": 14,
+      "val": 3,
+      "test": 4
+    },
+    "RANGE": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "REACH": {
+      "train": 14,
+      "val": 5,
+      "test": 4
+    },
+    "READ": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "READY": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "REALLY": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "REASON": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "RECORD": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "RECORDING": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "RED": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "REDUCE": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "REFLECT": {
+      "train": 14,
+      "val": 5,
+      "test": 4
+    },
+    "REFUSE": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "REGISTER": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "REGULAR": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "RELATIONSHIP": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "RELEASE": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "RELIEF": {
+      "train": 14,
+      "val": 5,
+      "test": 4
+    },
+    "RELIGION": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "REMIND": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "REMOVE": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "REPLACE": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "REQUEST": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "RESCUE": {
+      "train": 14,
+      "val": 5,
+      "test": 4
+    },
+    "RESPECT": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "RESPONSIBILITY": {
+      "train": 13,
+      "val": 5,
+      "test": 4
+    },
+    "REST": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "RESTAURANT": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "RESULT": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "RICH": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "RING": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "RISK": {
+      "train": 14,
+      "val": 3,
+      "test": 4
+    },
+    "ROAD": {
+      "train": 16,
+      "val": 4,
+      "test": 4
+    },
+    "ROB": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "ROCK": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "ROLE": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "ROLL": {
+      "train": 16,
+      "val": 4,
+      "test": 4
+    },
+    "ROOF": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "ROOM": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "ROSE": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "ROUGH": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "ROW": {
+      "train": 15,
+      "val": 5,
+      "test": 4
+    },
+    "RULE": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "RUSH": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "RUSSIA": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "SAD": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "SAFE": {
+      "train": 13,
+      "val": 5,
+      "test": 4
+    },
+    "SALT": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "SANTA": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "SATURDAY": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "SAVE": {
+      "train": 13,
+      "val": 5,
+      "test": 4
+    },
+    "SCARED": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "SCHOOL": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "SCIENCE": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "SCORE": {
+      "train": 14,
+      "val": 3,
+      "test": 4
+    },
+    "SCRIPT": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "SECRET": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "SECRETARY": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "SEE": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "SEEM": {
+      "train": 14,
+      "val": 3,
+      "test": 4
+    },
+    "SELECT": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "SELF": {
+      "train": 14,
+      "val": 4,
+      "test": 3
+    },
+    "SELL": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "SENATE": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "SEND": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "SENSITIVE": {
+      "train": 14,
+      "val": 5,
+      "test": 4
+    },
+    "SEQUENCE": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "SERIOUS": {
+      "train": 14,
+      "val": 3,
+      "test": 4
+    },
+    "SEVEN": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "SEVERAL": {
+      "train": 13,
+      "val": 3,
+      "test": 4
+    },
+    "SHAME": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "SHAPE": {
+      "train": 14,
+      "val": 3,
+      "test": 4
+    },
+    "SHARE": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "SHOES": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "SHOOTING": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "SHOT": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "SHOULD": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "SHOW": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "SHOWER": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "SICK": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "SIDE": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "SIGN": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "SILLY": {
+      "train": 14,
+      "val": 4,
+      "test": 3
+    },
+    "SILVER": {
+      "train": 14,
+      "val": 5,
+      "test": 4
+    },
+    "SINCE": {
+      "train": 17,
+      "val": 3,
+      "test": 4
+    },
+    "SING": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "SINGLE": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "SISTER": {
+      "train": 14,
+      "val": 5,
+      "test": 4
+    },
+    "SIT": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "SITUATION": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "SIX": {
+      "train": 16,
+      "val": 4,
+      "test": 4
+    },
+    "SKILL": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "SKIN": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "SLEEP": {
+      "train": 12,
+      "val": 4,
+      "test": 4
+    },
+    "SLOW": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "SMALL": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "SMART": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "SMELL": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "SMOKE": {
+      "train": 13,
+      "val": 3,
+      "test": 4
+    },
+    "SMOKING": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "SMOOTH": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "SO": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "SOCIAL": {
+      "train": 14,
+      "val": 3,
+      "test": 4
+    },
+    "SOCIETY": {
+      "train": 17,
+      "val": 3,
+      "test": 4
+    },
+    "SOFT": {
+      "train": 14,
+      "val": 5,
+      "test": 4
+    },
+    "SOME": {
+      "train": 14,
+      "val": 3,
+      "test": 4
+    },
+    "SOMETHING": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "SOMETIMES": {
+      "train": 13,
+      "val": 5,
+      "test": 4
+    },
+    "SON": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "SORRY": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "SOUND": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "SOUTH": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "SPACE": {
+      "train": 15,
+      "val": 5,
+      "test": 4
+    },
+    "SPAIN": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "SPECIFIC": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "SPEND": {
+      "train": 15,
+      "val": 4,
+      "test": 3
+    },
+    "SPORTS": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "SPRING": {
+      "train": 14,
+      "val": 5,
+      "test": 4
+    },
+    "SQUARE": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "STADIUM": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "STAFF": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "STAND-UP": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "STAR": {
+      "train": 14,
+      "val": 3,
+      "test": 4
+    },
+    "STARS": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "START": {
+      "train": 13,
+      "val": 5,
+      "test": 4
+    },
+    "STATE": {
+      "train": 16,
+      "val": 4,
+      "test": 4
+    },
+    "STAY": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "STEAL": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "STEAM": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "STEP": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "STILL": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "STOMACH": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "STOP": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "STRAIGHT": {
+      "train": 16,
+      "val": 4,
+      "test": 4
+    },
+    "STRANGE": {
+      "train": 14,
+      "val": 4,
+      "test": 3
+    },
+    "STREET": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "STRESS": {
+      "train": 13,
+      "val": 5,
+      "test": 4
+    },
+    "STRING": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "STRONG": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "STRUCTURE": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "STRUGGLE": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "STUCK": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "STUDENT": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "STUDY": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "SUCK": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "SUIT": {
+      "train": 13,
+      "val": 5,
+      "test": 4
+    },
+    "SUMMER": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "SUN": {
+      "train": 12,
+      "val": 4,
+      "test": 4
+    },
+    "SUNDAY": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "SUPERIOR": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "SURE": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "SURGERY": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "SURPRISE": {
+      "train": 14,
+      "val": 3,
+      "test": 4
+    },
+    "SUSPECT": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "SWEET": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "SWORD": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "SYSTEM": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "TABLE": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "TAKE": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "TAPE": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "TASTE": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "TEA": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "TEACHER": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "TEAM": {
+      "train": 16,
+      "val": 4,
+      "test": 4
+    },
+    "TEAR": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "TECHNOLOGY": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "TEETH": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "TELL": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "TEMPORARY": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "TEST": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "TEXT": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "THAN": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "THANKYOU": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "THAT": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "THEATRE": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "THEN": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "THEORY": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "THERAPY": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "THERE": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "THESE": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "THIN": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "THINGS": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "THINK": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "THIS/IT": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "THREE": {
+      "train": 14,
+      "val": 3,
+      "test": 4
+    },
+    "THURSDAY": {
+      "train": 13,
+      "val": 5,
+      "test": 4
+    },
+    "TICKET": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "TIME": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "TINY": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "TIRED": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "TO": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "TODAY": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "TOGETHER": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "TOMORROW": {
+      "train": 16,
+      "val": 4,
+      "test": 3
+    },
+    "TONGUE": {
+      "train": 16,
+      "val": 4,
+      "test": 4
+    },
+    "TOP": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "TOPIC": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "TOTAL": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "TOUCH": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "TOUGH": {
+      "train": 14,
+      "val": 5,
+      "test": 4
+    },
+    "TOURNAMENT": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "TRADITION": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "TRAFFIC": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "TRAIN": {
+      "train": 14,
+      "val": 3,
+      "test": 4
+    },
+    "TRANSFER": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "TRASH": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "TRAVEL": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "TREE": {
+      "train": 12,
+      "val": 4,
+      "test": 3
+    },
+    "TROUBLE": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "TRUE": {
+      "train": 13,
+      "val": 6,
+      "test": 4
+    },
+    "TRUTH": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "TRY": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "TUBE": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "TUESDAY": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "TURN": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "TV": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "TWO": {
+      "train": 14,
+      "val": 4,
+      "test": 3
+    },
+    "UGLY": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "UNCLE": {
+      "train": 17,
+      "val": 3,
+      "test": 4
+    },
+    "UNDER": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "UNDERSTAND": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "UNIQUE": {
+      "train": 13,
+      "val": 5,
+      "test": 4
+    },
+    "UNIVERSE": {
+      "train": 13,
+      "val": 5,
+      "test": 4
+    },
+    "UNIVERSITY": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "UNTIL": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "UP": {
+      "train": 14,
+      "val": 5,
+      "test": 4
+    },
+    "US": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "USE": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "VACATION": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "VALLEY": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "VALUE": {
+      "train": 15,
+      "val": 5,
+      "test": 4
+    },
+    "VERY": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "VIEW": {
+      "train": 16,
+      "val": 4,
+      "test": 4
+    },
+    "VILLAGE": {
+      "train": 14,
+      "val": 3,
+      "test": 4
+    },
+    "VISION": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "VISIT": {
+      "train": 14,
+      "val": 5,
+      "test": 4
+    },
+    "VOICE": {
+      "train": 17,
+      "val": 3,
+      "test": 4
+    },
+    "VOTE": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "WAIT": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "WALL": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "WAR": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "WARM": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "WASTE": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "WATCH": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "WATER": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "WAVE": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "WAY": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "WE": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "WEAK": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "WEAR": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "WEATHER": {
+      "train": 12,
+      "val": 4,
+      "test": 4
+    },
+    "WEDDING": {
+      "train": 13,
+      "val": 6,
+      "test": 4
+    },
+    "WEDNESDAY": {
+      "train": 13,
+      "val": 5,
+      "test": 4
+    },
+    "WEEK": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "WEEKEND": {
+      "train": 14,
+      "val": 3,
+      "test": 4
+    },
+    "WEIGHT": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "WEIRD": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "WELL": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "WEST": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "WET": {
+      "train": 13,
+      "val": 4,
+      "test": 4
+    },
+    "WHATEVER": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "WHEEL": {
+      "train": 15,
+      "val": 5,
+      "test": 4
+    },
+    "WHEN": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "WHERE": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "WHICH": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "WHILE": {
+      "train": 16,
+      "val": 2,
+      "test": 4
+    },
+    "WHITE": {
+      "train": 14,
+      "val": 5,
+      "test": 4
+    },
+    "WHO": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "WHOLE": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "WHY": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "WIDE": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "WIFE": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "WILL": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "WIN": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "WIND": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "WINDOW": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "WINE": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "WINTER": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "WISE": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "WISH": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "WITH": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "WITHOUT": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "WONDER": {
+      "train": 14,
+      "val": 4,
+      "test": 4
+    },
+    "WOOD": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "WORD": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "WORK": {
+      "train": 14,
+      "val": 3,
+      "test": 4
+    },
+    "WORLD": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "WORRY": {
+      "train": 12,
+      "val": 5,
+      "test": 4
+    },
+    "WORSE": {
+      "train": 14,
+      "val": 5,
+      "test": 4
+    },
+    "WOW": {
+      "train": 16,
+      "val": 4,
+      "test": 4
+    },
+    "WRITE": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "WRONG": {
+      "train": 13,
+      "val": 5,
+      "test": 4
+    },
+    "YEAH": {
+      "train": 15,
+      "val": 3,
+      "test": 4
+    },
+    "YEAR": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "YELLOW": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "YES": {
+      "train": 15,
+      "val": 5,
+      "test": 4
+    },
+    "YESTERDAY": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    },
+    "YOU": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "YOUNG": {
+      "train": 15,
+      "val": 4,
+      "test": 4
+    },
+    "YOUR": {
+      "train": 16,
+      "val": 4,
+      "test": 4
+    },
+    "YOURSELF": {
+      "train": 16,
+      "val": 4,
+      "test": 4
+    },
+    "ZERO": {
+      "train": 16,
+      "val": 3,
+      "test": 4
+    }
+  },
+  "workers": 8,
+  "stride": 1,
+  "wall_seconds": 1.9,
+  "mean_seconds_per_clip_in_worker": null,
+  "mean_pose_frames_per_clip": 81.7
+}

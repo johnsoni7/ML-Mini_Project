@@ -244,7 +244,7 @@ const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAl
 
 const S = { samples: [], words: [], model: null, labels: [], report: null, tab: 'play',
   recording: false, recFrames: null, buffer: [], lastHandT: 0, hist: [], stable: 0, lastTop: null,
-  locked: false, shown: null, slots: { dataset: null, dataset1000: null, custom: null }, source: null, sentence: [], thr: .7, muted: false, training: false, predBusy: false, camOn: false, ch: null };
+  locked: false, shown: null, slots: { dataset1000: null, dataset: null, custom: null }, source: null, sentence: [], thr: .7, muted: false, training: false, predBusy: false, camOn: false, ch: null };
 
 /* ====== tiny storage layer (IndexedDB with in-memory fallback) ====== */
 const DB = (() => {
@@ -474,8 +474,8 @@ async function record(w) {
 }
 
 /* ====== model slots: the dataset model and the Teach model live side by side, so neither replaces the other ====== */
-const SOURCE_NAME = { dataset: '📚 Dataset model', dataset1000: '📚 Dataset model', custom: '🎓 My Teach model' };
-const DATASET_DIRS = { dataset: './app_model', dataset1000: './app_model_1000' };
+const SOURCE_NAME = { dataset1000: '📚 Large ASL model', dataset: '📚 Small ASL model', custom: '🎓 My Teach model' };
+const DATASET_DIRS = { dataset1000: './app_model_1000', dataset: './app_model' };
 function renderModelPick() {
   const sel = $('#modelSel'), have = Object.keys(S.slots).filter(k => S.slots[k]);
   sel.innerHTML = '';
@@ -602,7 +602,7 @@ function showPred(label, conf, top, status) {
 async function predictTick() {
   if (!S.model || !S.camOn || S.predBusy || S.recording || S.training) return;
   const now = performance.now();
-  if (now - S.lastHandT > 600) { S.hist = []; S.stable = 0; S.lastTop = null; S.shown = null; if (now - S.lastHandT > 800) S.locked = false; showPred(null, 0, [], '🙌 No hands in view'); if (S.tab === 'play' && $('#buddy').dataset.mood !== 'sleep') mood('idle'); return; }
+  if (now - S.lastHandT > 600) { S.hist = []; S.stable = 0; S.lastTop = null; if (now - S.lastHandT > 800) S.locked = false; if (S.shown && now - S.shown.t < 2000) { showPred(S.shown.lab, S.shown.conf, S.shown.top); return; } S.shown = null; showPred(null, 0, [], '🙌 No hands in view'); if (S.tab === 'play' && $('#buddy').dataset.mood !== 'sleep') mood('idle'); return; }
   const tr = trim(S.buffer.filter(x => now - x.t < 2200)); if (!tr) return;
   S.predBusy = true;
   try {
@@ -614,7 +614,7 @@ async function predictTick() {
     const isNothing = lab === NOTHING;
     if (!isNothing && conf >= S.thr) {
       S.stable = lab === S.lastTop ? S.stable + 1 : 1; S.lastTop = lab;
-      if (S.stable >= 2) S.shown = { lab, conf, t: now };
+      if (S.stable >= 2) S.shown = { lab, conf, t: now, top: order.slice(0, 3) };
       if (S.stable >= 2 && (!S.locked || lab !== S.committed)) { S.locked = true; S.committed = lab; commit(lab, conf); }
     } else { S.stable = 0; S.lastTop = null; }
     // A word appears only once it has stayed on top and above the threshold, and is held briefly so it cannot flicker.
@@ -723,7 +723,7 @@ $('#wipe').onclick = async () => {
   if (!confirm('Delete ALL recordings and the trained brain from this browser?')) return;
   await DB.wipe(); try { await tf.io.removeModel('indexeddb://signo-model'); } catch (e) { }
   if (S.slots.custom) S.slots.custom.model.dispose();
-  S.samples = []; S.words = []; S.slots.custom = null; useModel(S.slots.dataset ? 'dataset' : 'dataset1000'); renderWords(); mood('idle', 'Fresh start!');
+  S.samples = []; S.words = []; S.slots.custom = null; useModel(S.slots.dataset1000 ? 'dataset1000' : 'dataset'); renderWords(); mood('idle', 'Fresh start!');
 };
 
 /* ====== boot ====== */
@@ -737,7 +737,7 @@ $('#wipe').onclick = async () => {
   renderWords(); renderSentence();
   for (const key of Object.keys(DATASET_DIRS)) await loadDatasetModel(key);
   const pref = await DB.getMeta('activeModel');
-  useModel(S.slots[pref] ? pref : S.slots.dataset ? 'dataset' : S.slots.dataset1000 ? 'dataset1000' : 'custom');
+  useModel(S.slots[pref] ? pref : S.slots.dataset1000 ? 'dataset1000' : S.slots.dataset ? 'dataset' : 'custom');
   if (S.model) say('Welcome back! I remember ' + S.labels.length + ' words. Wake me up!');
 })();
 </script>
