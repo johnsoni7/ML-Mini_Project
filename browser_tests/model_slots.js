@@ -33,7 +33,6 @@ const state = p => p.evaluate(() => ({ source: S.source, labels: S.labels.length
     return (performance.now() - t) / 20;
   });
   console.log('mean prediction time, ms:', Math.round(tick));
-  await p.evaluate(() => S.labels.includes('hello') && showPred('hello', .91, [['hello', .91], ['sorry', .05], ['please', .02]]));
   if (shots) await p.screenshot({ path: shots + '/ui_1000.png' });
   console.log('page errors:', errors);
   await c.close();

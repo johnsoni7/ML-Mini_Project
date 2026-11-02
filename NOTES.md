@@ -123,5 +123,5 @@ The word was replaced by "No hands in view" as soon as hands left, sometimes aft
 ## Not done
 Real webcam test of the 1,000-sign model, more seeds, GRU comparison, `demo_webcam.py`.
 
-## Citation to check
-The ASL Citizen citation in the docs was written from memory, not from a downloaded file. Check it against the project page before submission.
+## Citation checked
+The ASL Citizen citation was checked against arXiv:2304.05934 and the NeurIPS 2023 proceedings. Title, first author and year are correct.

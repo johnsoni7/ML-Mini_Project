@@ -86,7 +86,6 @@ More seeds, the GRU comparison and `demo_webcam.py`. These were optional.
 ## Before you submit
 
 - Tell your guide about the change from WLASL to ASL Citizen, and that face features aren't used.
-- Check the ASL Citizen citation against the project page. It was written from memory.
 - **Put no dataset video frames in your report or slides.** The charts are fine.
 - Ask your guide before pushing `app_model/` or `app_model_1000/` to GitHub, because the licence doesn't clearly cover trained models.
 - Delete `~/signo_data` and any backups when the project is finished. The licence requires this.
