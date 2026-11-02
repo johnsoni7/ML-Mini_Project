@@ -34,5 +34,7 @@
   "val_macro_f1_mirror_avg": 0.7745,
   "val_top1_left_mirror_avg": 0.7382,
   "params": 396392,
-  "model_mb": 4.81
+  "model_mb": 4.81,
+  "browser_ms_mean": 63,
+  "browser_ms_p95": 66
 }

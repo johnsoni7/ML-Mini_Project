@@ -123,6 +123,42 @@ The word was replaced by "No hands in view" as soon as hands left, sometimes aft
 ## Not done
 Real webcam test of the 1,000-sign model, more seeds, GRU comparison, `demo_webcam.py`.
 
+## 08:21-08:39 Audit and screening
+Baseline on validation: left-dominant signers 46.7%, right-dominant 73.1%. Left-dominant share of clips: 17.0% train, 13.5% validation, 35.3% test. Reweighting validation to the test's mix gives 63.8%. No duplicates. Imbalance about 1.5 to 1. Details in `results/error_analysis.md`. Screening: `plus_plain128` 77.3%, `plus_deep64` 60.1%, `plus_deep128` 47.9%.
+
+## 08:07 TF.js error caught early
+A trial model using `Cropping1D` failed to load in TF.js, so the layer was replaced with convolution before any long training.
+
+## 08:39-09:12 Controlled rounds, and a flaw
+Mirroring: left-dominant 48.2% to 69.9%, right-dominant 74.3% to 72.5%, overall 70.8% to 72.2%. Wrist-relative hands 70.6%. **Flaw:** a fixed time budget let slow neighbouring jobs cost a run epochs (smoothing got 45 epochs, 256 units got 19, graph got 3). Later comparisons used fixed epochs.
+
+## 09:18-10:00 Fixed-epoch rounds
+No warping 70.1%. Half data 65.7%. Weight decay 70.7%. Smoothing 73.3%. `f_long_s0` (180 epochs, 38 minutes) 78.0%.
+
+## 10:00-10:23 Selection and second test look, 1,000 signs
+A timing command hung for about 15 minutes, so timeouts were added. `final_v2` = `f_long_s0` + `plus_plain128`: validation 79.4% / 95.0%, chosen before test. An earlier note rejected ensembles, based on a weaker partner and 4 passes, and this was reversed on the new evidence. **Test, logged second look: 73.4% / 92.0%**, n=3,983. Macro precision 75.4%, recall 73.4%, F1 72.5%.
+
+## 10:43 User asked for above 80%, 45 more minutes, up to 10 GB
+Decided against downloading. About 45 minutes allows roughly 2,000 to 2,700 new clips, with no time to retrain, for an estimated 1 to 2 points. Trained two more 1,000-sign models and retrained the 50-sign model.
+
+## 11:01 50-sign model
+`final50_v2` = `s50_u128_s0` + `s50_u64_s1`: validation 95.2% / 98.4% (186 clips, several combinations within one clip). **Test, logged second look: 91.2% / 97.6%**, n=614. Macro precision 91.7%, recall 91.3%, F1 91.1%. Browser: TF.js matched Keras on 50 of 50, and 50 videos scored 90% top-1 (Python 86%), agreeing on 46.
+
+## 11:20 Three-model 1,000-sign option rejected
+Validation 80.3% / 95.5%, but about 291 ms mean, over the 220 ms limit. No third test look. Validation at 80% wouldn't have meant test at 80%.
+
+## 10:37-11:30 Browser checks and fixes
+- Fake webcam run 1 failed: camera wasn't ready within 30 seconds. The app waited for all models to load, taking 34 seconds on a busy machine. It now starts on the first model that loads (about 7 seconds idle, plus about 4 for the camera).
+- MediaPipe and the model share the main thread: 4 to 11 camera frames per second on 1,000 signs, 12.5 on 50 signs. Prediction gaps had a median of 225 to 266 ms.
+- Model timing varied from 107 to 132 ms between sessions on 1,000 signs. One 50-sign reading of 207 ms was taken on a busy machine.
+- All 23 tests pass. The 2 console 404s in the Teach check are unexplained, although a plain app load showed no failed requests.
+
+## Storage used
+About 1 GB of the 10 GB budget. No new videos.
+
+## Not done
+Real webcam measurement of version 2, multiple-seed statistics, separate ablations of geometry, jitter and hand dropout, GRU, Transformer, and fair training of larger or graph models.
+
 ## Citation checked
 The ASL Citizen citation was checked against arXiv:2304.05934 and the NeurIPS 2023 proceedings. Title, first author and year are correct.
 

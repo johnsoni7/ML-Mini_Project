@@ -229,3 +229,28 @@ These numbers come from fluent signers in dataset videos. Your own webcam accura
 - **What does the falling learning rate do?** The learning rate is the size of each weight nudge. Big nudges learn fast but can't settle, so the rate is halved whenever validation loss stops improving for 3 epochs.
 - **Why be careful with single-sign scores?** Most signs have only 4 test clips, so one clip moves that sign's recall by 25%. Trust the overall score more than "family got 100%".
 - **The threshold trade-off.** On validation clips, a 70% threshold shows a word for 75% of clips, and 81% of those are correct. At 90% it shows a word for 56% of clips, and 89% are correct. A pickier setting gives fewer words, but more of them are right.
+
+## Version 2: why the model got better
+
+| Model | Test top-1 before | Test top-1 after | Test top-5 before | Test top-5 after |
+|---|---:|---:|---:|---:|
+| 1,000 signs | 61.4% | **73.4%** | 84.4% | **92.0%** |
+| 50 signs | 76.7% | **91.2%** | 95.9% | **97.6%** |
+
+We didn't get better results by building a bigger network. We looked at the mistakes first.
+
+**Problem 1: left-handed signers.** Most people sign with their right hand leading, and the model had mostly seen that. Left-dominant signers scored 46.7% and right-dominant signers 73.1%. It's like learning to read only one person's handwriting. **The fix is mirroring:** we flip half the training clips left to right, so the model also sees what left-handed signing looks like. Left-dominant signers now score 76.6%.
+
+**Problem 2: memorising.** Version 1 made 4 fixed changed copies of each clip, and it saw them over and over. Imagine practising with the same 5 flashcards until you know their stains and creases rather than the words. **The fix is new random changes every epoch:** slightly different size, angle, position and speed each time. The model can't memorise a clip it never sees twice, so it has to learn the sign.
+
+**Why is training accuracy lower now, if the model is better?** Training clips are now deliberately harder, because they change each time. Version 1 scored 92.3% on training clips and 69.5% on new people. One final member scores 83.9% and 78.0%. A smaller gap means less memorising, and the score on new people is the one that counts.
+
+**More epochs.** With changing clips, the model keeps improving for longer: 72.2% at about 60 epochs and 78.0% at 180. The learning rate also slowly falls, like taking big steps towards a destination and then small careful ones.
+
+**Averaging two models.** Two separately trained models make somewhat different mistakes. Averaging their probabilities cancels out some of those mistakes, taking validation from 78.0% to 79.4%. A third model reached 80.3%, but each prediction then took about 291 ms, over our 220 ms limit, so the app would lag. That's why we didn't use it.
+
+**Why not 80% or more on 1,000 signs?** The model has only 11 to 17 real clips per sign, and some signs look very alike. Training on half the clips scored about 6.5 points lower, so more real clips should help most. The 50-sign model is easier: it has 20 times fewer signs to confuse, so it scores 91.2%.
+
+**What does "second look" mean?** Each test set has now been scored twice, once per version. An exam is most trustworthy the first time you sit it, so these scores could be very slightly optimistic. We chose everything using validation data and changed nothing after seeing the scores, which keeps the effect small.
+
+**What the 70% threshold does.** On validation clips, the 1,000-sign model shows a word for 69% of clips, and 93% of those are correct. For the rest it says "Not sure yet". This doesn't mean 93% accuracy overall. It means the app stays quiet when it's unsure.

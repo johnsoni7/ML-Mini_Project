@@ -1,0 +1,16 @@
+[
+  {
+    "run": "bilstm_seed0",
+    "at": "2026-11-01 23:44:47",
+    "split_fingerprint": "3ec8e73bce162f7f",
+    "test_top1": 0.7671009771986971,
+    "test_top5": 0.9592833876221498
+  },
+  {
+    "run": "final50_v2",
+    "at": "2026-11-02 11:01:55",
+    "split_fingerprint": "3ec8e73bce162f7f",
+    "test_top1": 0.9120521172638436,
+    "test_top5": 0.9755700325732899
+  }
+]

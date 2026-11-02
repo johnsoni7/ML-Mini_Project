@@ -100,3 +100,12 @@ Random guessing would score 0.1% top-1 and 0.5% top-5. Mean per-sign precision 6
 | w1000_u128 | 128 | 0.3 | 3 of 11 | 56.3% | 83.9% | 1.808 | 69.7% | 396,392 |
 
 Runs ending in `_acc` kept the epoch with the best validation accuracy and lowered the learning rate as training stalled. The others kept the epoch with the lowest validation loss. The 128-unit and 256-unit `_acc` runs were stopped by a 25-minute limit.
+
+## Version 2
+
+Both models were improved after this report was first written. See [`optimization_report.md`](optimization_report.md).
+
+| Model | Test top-1 | Test top-5 | Details |
+|---|---:|---:|---|
+| 1,000 signs, version 2 | 73.4% | 92.0% | [`results_1000_v2/results.md`](../results_1000_v2/results.md) |
+| 50 signs, version 2 | 91.2% | 97.6% | [`results_50_v2/results.md`](../results_50_v2/results.md) |

@@ -1,6 +1,6 @@
-# Signo: final status
+# Signo: final status (version 2)
 
-**Ready to demo, with one gap: the 1,000-sign model hasn't been tried on a real person's webcam.** Do that first, and allow 10 minutes for it.
+**Ready to demo. The 50-sign model is above your 80% target at 91.2%. The 1,000-sign model improved to 73.4% but did not reach 80%. Neither has been measured on a real webcam, so try them for 10 minutes first.**
 
 ## Start it
 
@@ -9,34 +9,30 @@ cd ~/Desktop/signo
 .venv/bin/python -m http.server 8000 --bind 127.0.0.1
 ```
 
-If it says the address is already in use, the server is already running, so carry on. Then open http://localhost:8000 in Chrome and press **Cmd+Shift+R** once to load the newest page. You need internet, because TensorFlow.js and MediaPipe load from a CDN.
+If it says the address is already in use, the server is already running, so carry on. Open http://localhost:8000 in Chrome and press **Cmd+Shift+R** once. You need internet, because TensorFlow.js and MediaPipe load from a CDN. It takes about 10 seconds to become ready.
 
 ## Demonstrate it
 
-1. Check that the top bar says **Large ASL model (1000 signs)**. If it doesn't, pick it from the dropdown.
+1. Pick your model from the dropdown at the top:
+   - **Accurate ASL model (50 signs):** the most reliable choice, and it runs more smoothly.
+   - **Large ASL model (1000 signs):** the default, to show the wider vocabulary.
 2. Click **Wake up Signo!** and allow the camera.
 3. Keep your head, shoulders and both hands in frame.
-4. Sign one word at normal speed, then lower your hands. Try **family, home, book, water** first.
-5. Read the caption on the video and the top-3 bars.
+4. Sign one word at normal speed, then lower your hands. Try **family, friend, boy, learn, understand** first.
+5. Read the caption and the top-3 bars.
 
-The full five-minute talk and 20 viva answers are in `DEMO_SCRIPT.md`.
+The five-minute talk and 22 viva answers are in `DEMO_SCRIPT.md`.
 
-**If the large model does badly on you:** switch the dropdown to **Small ASL model (50 signs)** and try **more, friend, know, home, big**.
+## Results
 
-## The model
+| Model | Test top-1 | Test top-5 | Validation top-1 | Random guessing (top-1) | Test clips |
+|---|---:|---:|---:|---:|---:|
+| **50 signs, version 2** | **91.2%** | **97.6%** | 95.2% | 2% | 614 |
+| **1,000 signs, version 2** | **73.4%** | **92.0%** | 79.4% | 0.1% | 3,983 |
+| 50 signs, version 1 | 76.7% | 95.9% | 82.3% | 2% | 614 |
+| 1,000 signs, version 1 | 61.4% | 84.4% | 69.5% | 0.1% | 3,983 |
 
-**Selected: `w1000_u48_acc`, a BiLSTM with 48 units, 1,000 signs and 110,872 parameters.** It had the best validation top-1 and top-5 of the six runs, and it's the smallest. Larger models fitted the training clips better without doing better on new people. The test set played no part in the choice.
-
-| Measure | Validation | Test | Random guessing |
-|---|---:|---:|---:|
-| Top-1 | 69.5% | **61.4%** | 0.1% |
-| Top-5 | 90.2% | **84.4%** | 0.5% |
-| Clips | 3,763 | 3,983 | |
-| Signers | 5 | 11 | |
-
-Mean per-sign precision is 65.0% and recall is 61.5%. There are 14,626 training clips from 35 signers, and no signer appears in more than one split. Quote the test numbers in your report.
-
-The 50-sign fallback scored 76.7% top-1 and 95.9% top-5 on its own test set. The two sets differ, so this isn't a direct comparison.
+Test signers never appear in training. **Don't describe 91.2% as the 1,000-sign score, or 92.0% as top-1.** State which model and which measure you mean.
 
 ## What was checked
 
@@ -44,59 +40,56 @@ The 50-sign fallback scored 76.7% top-1 and 95.9% top-5 on its own test set. The
 
 | Task | Result |
 |---|---|
-| Training and selection | 6 runs compared on validation only |
-| Test evaluation | Run once, logged in `results_1000/test_log.json` |
-| TensorFlow.js export | Succeeded: input `[null, 30, 100]`, 1,000 outputs |
-| Python vs TF.js | Same top-1 and top-3 order on 1,000 of 1,000 test sequences |
-| Browser integration | Loads automatically as the default, with labels and output size checked |
-| Fallback | Missing or corrupt large model: the app opens on the 50-sign model |
-| Model switching | Labels and output size stay matched |
-| Held-out videos in the browser | 60 clips: 65% top-1, 85% top-5, agrees with Python on 53 |
-| Tests | All 21 pass |
-| Git | Committed locally, not pushed, no videos or datasets included |
+| Model selection | Validation only, across 19 configurations for 1,000 signs and 4 runs for 50 signs |
+| Test evaluation | Logged. Each split has now been evaluated twice |
+| TensorFlow.js export | Both succeeded, with input `[null, 30, 100]` |
+| Python vs TF.js | Same top-1 and top-3 order on 1,000 of 1,000 and 50 of 50 test sequences |
+| Test videos through the browser | 1,000 signs: 60 clips, 76.7% top-1. 50 signs: 50 clips, 90% top-1 |
+| Switching and fallback | Labels stay matched. A missing or corrupt model falls back to the next one |
+| Teach | A saved Teach model survives a reload |
+| Tests | All 23 pass |
+| Storage | About 1 GB of the 10 GB budget. No new videos |
+| Git | Committed locally. **Not pushed to GitHub** |
 
 ### Partly completed
 
 | Task | Status |
 |---|---|
-| Fake-webcam test of the live app | The live loop, threshold, no-hands state and input size all work. Of 8 dataset clips on a pretend camera, three runs got 5 or 6 right, with 0 or 1 wrong. It uses dataset video, so it isn't a webcam test |
-| Larger models | 128 and 256 units hit the 25-minute limit, so a longer run might beat the selected model |
+| Live speed | Each prediction is about 107 to 132 ms, under the 220 ms limit. In the full live loop, predictions arrive every 225 to 266 ms (median). On 1,000 signs, the camera fell to 4 to 11 frames per second. On 50 signs it was 12.5 |
+| Fake-webcam test | 1,000 signs: 5 to 7 of 8 right over four runs. 50 signs: 8 of 8 in one run, plus one extra wrong word. This uses dataset video, so it isn't a webcam test |
+| Research | Three of the papers you listed couldn't be read, and `results/research_review.md` says so |
+| Experiments | Larger and graph models didn't get fair training on this CPU, so they aren't proven worse |
 
 ### Unverified
 
 | Task | Status |
 |---|---|
-| **Real webcam, 1,000-sign model** | Never tried |
-| Real webcam, 50-sign model | Only your earlier informal try ("some of the words are being recognised") |
-| Live webcam accuracy | Not measured for either model. The test scores come from fluent signers in dataset videos, so yours may well be lower |
-
-### Not done
-
-More seeds, the GRU comparison and `demo_webcam.py`. These were optional.
+| **Real webcam on either version 2 model** | Never tried |
+| Live webcam accuracy | Not measured. Test scores come from fluent signers in dataset videos, so yours may well be lower |
 
 ## Known issues
 
-- **Rude words:** the 1,000-sign list came from word frequency, so it includes "bitch", "suck" and "damn". They can appear in the top-3 bars. If you'd rather avoid that risk with an audience, use the 50-sign model.
-- **Challenge tab:** it wasn't tested with the 1,000-sign model, and it picks random words from the whole active list. That means obscure or rude words could come up, so use the 50-sign model for it.
-- **Saved model choice:** if you pick or train another model in this browser, it stays selected next time, so check the dropdown before you start.
-- **Single-sign scores are rough:** most signs have only 4 test clips, so don't make strong claims about one sign.
-- **Test split:** it was capped at 4 clips per sign. Say so in your report.
-- **"Not sure yet" with a high percentage:** this can happen because a word must also stay on top for 2 checks in a row. It's what stops wrong words flickering up.
+- **Rude words:** the 1,000-sign list includes "bitch", "suck" and "damn", which can appear in the top-3 bars. The 50-sign list doesn't have this problem.
+- **Challenge tab:** it picks random words from the active list, so use the 50-sign model for it.
+- **Saved model choice:** a model you pick or train stays selected, so check the dropdown before you start.
+- **Test split repeated:** each has been evaluated twice, so scores may be slightly optimistic. Say so if asked.
+- **1,000-sign test split:** capped at 4 clips per sign, so single-sign scores are rough.
 
 ## Before you submit
 
-- Tell your guide about the change from WLASL to ASL Citizen, and that face features aren't used.
+- Use `PROJECT_REPORT_v2.pdf`, and check its course and section line, which I took from your sample.
+- Tell your guide about the switch from WLASL to ASL Citizen, and that face features aren't used.
 - **Put no dataset video frames in your report or slides.** The charts are fine.
-- Ask your guide before pushing `app_model/` or `app_model_1000/` to GitHub, because the licence doesn't clearly cover trained models.
+- GitHub isn't updated with version 2. The repo there is public, so ask your guide about the licence before pushing models. To update it: `git push johnsoni7 feature/asl-citizen-model:main`
 - Delete `~/signo_data` and any backups when the project is finished. The licence requires this.
 
-## Figures for your report
+## Where things are
 
 | What | Where |
 |---|---|
-| All results and the model comparison | `results_1000/results.md` |
-| Accuracy and loss curves | `results_1000/accuracy_curve.png`, `results_1000/loss_curve.png` |
-| Confusion matrix (the 60 most-confused signs) | `results_1000/confusion_matrix.png` |
-| Scores for every sign | `results_1000/per_class_metrics.csv` |
-| Project description, architecture and limitations | `README.md` |
-| Plain-language explanations | `BEGINNER_GUIDE.md` |
+| Final report | `PROJECT_REPORT_v2.pdf` |
+| Experiments and decisions | `results/optimization_report.md`, `results/optimization_comparison.csv` |
+| Why the model made mistakes | `results/error_analysis.md` |
+| Papers | `results/research_review.md` |
+| Full results | `results_1000_v2/results.md`, `results_50_v2/results.md` |
+| Plain-language explanation | `BEGINNER_GUIDE.md` |

@@ -244,7 +244,7 @@ const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAl
 
 const S = { samples: [], words: [], model: null, labels: [], report: null, tab: 'play',
   recording: false, recFrames: null, buffer: [], lastHandT: 0, hist: [], stable: 0, lastTop: null,
-  locked: false, shown: null, slots: { dataset1000v2: null, dataset1000: null, dataset: null, custom: null }, source: null, sentence: [], thr: .7, muted: false, training: false, predBusy: false, camOn: false, ch: null };
+  locked: false, shown: null, slots: { dataset1000v2: null, dataset50v2: null, dataset1000: null, dataset: null, custom: null }, source: null, sentence: [], thr: .7, muted: false, training: false, predBusy: false, camOn: false, ch: null };
 
 /* ====== tiny storage layer (IndexedDB with in-memory fallback) ====== */
 const DB = (() => {
@@ -474,8 +474,8 @@ async function record(w) {
 }
 
 /* ====== model slots: the dataset model and the Teach model live side by side, so neither replaces the other ====== */
-const SOURCE_NAME = { dataset1000v2: '📚 Best ASL model', dataset1000: '📚 Previous ASL model', dataset: '📚 Small ASL model', custom: '🎓 My Teach model' };
-const DATASET_DIRS = { dataset1000v2: './app_model_1000_v2', dataset1000: './app_model_1000', dataset: './app_model' };
+const SOURCE_NAME = { dataset1000v2: '📚 Large ASL model', dataset50v2: '📚 Accurate ASL model', dataset1000: '📚 Old large ASL model', dataset: '📚 Old small ASL model', custom: '🎓 My Teach model' };
+const DATASET_DIRS = { dataset1000v2: './app_model_1000_v2', dataset50v2: './app_model_v2', dataset1000: './app_model_1000', dataset: './app_model' };
 function renderModelPick() {
   const sel = $('#modelSel'), have = Object.keys(S.slots).filter(k => S.slots[k]);
   sel.innerHTML = '';
@@ -723,7 +723,7 @@ $('#wipe').onclick = async () => {
   if (!confirm('Delete ALL recordings and the trained brain from this browser?')) return;
   await DB.wipe(); try { await tf.io.removeModel('indexeddb://signo-model'); } catch (e) { }
   if (S.slots.custom) S.slots.custom.model.dispose();
-  S.samples = []; S.words = []; S.slots.custom = null; useModel(S.slots.dataset1000v2 ? 'dataset1000v2' : S.slots.dataset1000 ? 'dataset1000' : 'dataset'); renderWords(); mood('idle', 'Fresh start!');
+  S.samples = []; S.words = []; S.slots.custom = null; useModel(Object.keys(DATASET_DIRS).find(k => S.slots[k])); renderWords(); mood('idle', 'Fresh start!');
 };
 
 /* ====== boot ====== */
@@ -735,10 +735,16 @@ $('#wipe').onclick = async () => {
   S.report = (await DB.getMeta('report')) || null; const best = await DB.getMeta('best'); if (best) $('#bestScore').textContent = 'Best: ' + best;
   try { const lab = await DB.getMeta('labels'); if (lab && typeof tf !== 'undefined') S.slots.custom = { model: await tf.loadLayersModel('indexeddb://signo-model'), labels: lab, report: S.report }; } catch (e) { S.slots.custom = null; }
   renderWords(); renderSentence();
-  for (const key of Object.keys(DATASET_DIRS)) await loadDatasetModel(key);
   const pref = await DB.getMeta('activeModel');
-  useModel(S.slots[pref] ? pref : S.slots.dataset1000v2 ? 'dataset1000v2' : S.slots.dataset1000 ? 'dataset1000' : S.slots.dataset ? 'dataset' : 'custom');
-  if (S.model) say('Welcome back! I remember ' + S.labels.length + ' words. Wake me up!');
+  const start = key => { useModel(key); if (S.model) say('Welcome back! I remember ' + S.labels.length + ' words. Wake me up!'); };
+  if (S.slots[pref]) start(pref);
+  // The first model that loads starts the app, so the page never waits for all of them.
+  for (const key of Object.keys(DATASET_DIRS)) {
+    await loadDatasetModel(key);
+    if (S.slots[key] && (!S.model || (key === pref && !S.camOn))) start(key);
+    renderModelPick();
+  }
+  if (!S.model) useModel('custom');
 })();
 </script>
 </body>

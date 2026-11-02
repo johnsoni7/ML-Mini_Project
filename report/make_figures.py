@@ -192,6 +192,7 @@ def matrix():
     save(fig, "matrix.png")
 
 
-for f in (splits, clips_per_sign, pipeline, runs, recall, threshold, curves, matrix):
-    f()
-print(sorted(os.listdir(OUT)))
+if __name__ == "__main__":
+    for f in (splits, clips_per_sign, pipeline, runs, recall, threshold, curves, matrix):
+        f()
+    print(sorted(os.listdir(OUT)))

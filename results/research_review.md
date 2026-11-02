@@ -21,20 +21,20 @@ We make no claims about the three unread papers.
 
 | Technique | Why it might help | Feasibility here | What we measured |
 |---|---|---|---|
-| Fresh augmentation every epoch | Stops the model memorising fixed copies | Easy | Largest gain: see `optimization_report.md` |
+| Fresh augmentation every epoch | Stops the model memorising fixed copies | Easy | Largest gain: 69.5% to 77.3% with a larger model and mirroring |
 | Mirroring | Left-dominant signers look like flipped right-dominant signers | Easy. Used in published ASL work | Large gain for left-dominant signers |
 | Time warping | Signers differ in speed | Easy | About 2 points |
-| Label smoothing | Reduces overconfidence | Easy | See `optimization_report.md` |
-| AdamW weight decay | Limits large weights | Easy | See `optimization_report.md` |
+| Label smoothing | Reduces overconfidence | Easy | About 1 point, within noise, so not adopted |
+| AdamW weight decay | Limits large weights | Easy | No gain, so rejected |
 | Stacked BiLSTM and CNN + BiLSTM | More capacity | Easy, and it loads in TensorFlow.js | Far behind within the time budget, because it trains slowly on CPU |
 | GRU, temporal convolution only | Lighter alternatives | Easy, but not run | Not tested, because the evidence pointed elsewhere first |
 | Lightweight ST-GCN | Uses the real skeleton | Built from layers TensorFlow.js supports, and fast in the browser | **Inconclusive.** About 5.5 minutes per epoch on this CPU, so it never really trained |
 | Transformer | Long-range timing | Would need a substantial rewrite for TensorFlow.js | Not tested |
 | Wrist-relative hands | Hand shape separated from position | Works inside the model, with the 30 x 100 input unchanged | No gain within the budget |
 | Class weights, focal loss, balanced sampling | Help when classes are imbalanced | Easy | Not run: imbalance is only 11 to 17 clips per sign (1.5 to 1), and errors don't follow clip counts closely |
-| Ensembles | Models make different mistakes | Possible as one TensorFlow.js model | Rejected: almost no gain, and over the 220 ms limit |
+| Ensembles | Models make different mistakes | Possible as one TensorFlow.js model | Two models deployed (+1.4 points). Three rejected at about 291 ms |
 | More data | More signers and examples | WLASL is the realistic source. Academic-use licence (C-UDA), and about 12,000 videos over 2,000 words | Not downloaded. See below |
 
 ## Additional data
 
-Training on half the clips scored about 6.5 points lower, so more real clips should help. WLASL ([repository](https://github.com/dxli94/wlasl), [Hugging Face copy](https://huggingface.co/datasets/Voxel51/WLASL)) averages about 6 videos per word, and fewer would match our list. Extraction would take about an hour on the CPU used for training, and labels and possible signer overlap would need checking. A rough estimate of the gain is 2 to 3 points at best, so we left it as the top future step.
+Training on half the clips scored about 6.5 points lower, so more real clips should help. WLASL ([repository](https://github.com/dxli94/wlasl), [Hugging Face copy](https://huggingface.co/datasets/Voxel51/WLASL)) averages about 6 videos per word, and fewer would match our list. Extraction would take about an hour on the CPU used for training, and labels and possible signer overlap would need checking. A rough estimate of the gain is 1 to 3 points, so we left it as the top future step.
