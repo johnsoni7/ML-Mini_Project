@@ -1,0 +1,132 @@
+{
+ "rule": "Choose the final model from finished experiments, using validation clips only, and write research/final_choice.json.\n\nRule, written before seeing the outcome: rank single runs by validation top-1, then grow an ensemble greedily, by averaging calibrated predictions.\nStop when another member adds less than 0.3 points, or at 4 members. Temperature is fitted per member on validation by lowest log loss.\n",
+ "members": [
+  {
+   "id": "exp_022",
+   "name": "full_tcn_fair",
+   "dir": "experiments/exp_022",
+   "temperature": 0.9000000000000006,
+   "solo_top1": 0.8432102046239702,
+   "config": {
+    "units": 64,
+    "head": 256,
+    "dropout": 0.2,
+    "prenorm": true,
+    "lr": 0.001,
+    "warmup": 5,
+    "batch": 64,
+    "epochs": 180,
+    "seed": 0,
+    "mirror": true,
+    "warp": true,
+    "drop": true,
+    "geometry": true,
+    "features": "base",
+    "mixup": 0.5,
+    "arch": "tcn",
+    "threads": 2,
+    "max_minutes": 140.45845609903336
+   }
+  },
+  {
+   "id": "exp_026",
+   "name": "always_velocity",
+   "dir": "experiments/exp_026",
+   "temperature": 0.8400000000000005,
+   "solo_top1": 0.812649481796439,
+   "config": {
+    "arch": "bilstm",
+    "units": 128,
+    "dropout": 0.4,
+    "lr": 0.002,
+    "batch": 64,
+    "epochs": 180,
+    "seed": 0,
+    "mirror": true,
+    "warp": true,
+    "drop": true,
+    "geometry": true,
+    "features": "base",
+    "mixup": 1.0,
+    "velocity": true,
+    "threads": 2,
+    "max_minutes": 99.28121918439865
+   }
+  }
+ ],
+ "trace": [
+  {
+   "added": "exp_022",
+   "top1": 0.8432102046239702
+  },
+  {
+   "added": "exp_026",
+   "top1": 0.8533085304278502
+  },
+  {
+   "tried": "exp_017",
+   "top1": 0.8562317300026575,
+   "stopped": "gain +0.0029 is below 0.003"
+  }
+ ],
+ "val": {
+  "top1": 0.8533085304278502,
+  "top5": 0.9731597129949509,
+  "macro_precision": 0.8722833333333333,
+  "macro_recall": 0.8569833333333333,
+  "macro_f1": 0.848729403929404,
+  "ece": 0.05168283604820008,
+  "shown_at_0_7": 0.7100717512622907,
+  "correct_when_shown_at_0_7": 0.968937125748503
+ },
+ "candidates": [
+  {
+   "id": "exp_022",
+   "name": "full_tcn_fair",
+   "top1": 0.8432102046239702,
+   "t": 0.9000000000000006
+  },
+  {
+   "id": "exp_028",
+   "name": "tcn_always_s1",
+   "top1": 0.8384267871379218,
+   "t": 0.7600000000000005
+  },
+  {
+   "id": "exp_029",
+   "name": "tcn_always_s2",
+   "top1": 0.8360350783948977,
+   "t": 0.7500000000000004
+  },
+  {
+   "id": "exp_025",
+   "name": "full_mixup_always+moretime",
+   "top1": 0.8315174063247409,
+   "t": 0.8100000000000005
+  },
+  {
+   "id": "exp_017",
+   "name": "full_mixup_always",
+   "top1": 0.8211533351049695,
+   "t": 0.7900000000000005
+  },
+  {
+   "id": "exp_024",
+   "name": "full_mixup_always+seed1",
+   "top1": 0.8203560988572947,
+   "t": 0.8300000000000005
+  },
+  {
+   "id": "exp_019",
+   "name": "full_mixup_u192",
+   "top1": 0.8134467180441137,
+   "t": 1.2400000000000009
+  },
+  {
+   "id": "exp_026",
+   "name": "always_velocity",
+   "top1": 0.812649481796439,
+   "t": 0.8400000000000005
+  }
+ ]
+}

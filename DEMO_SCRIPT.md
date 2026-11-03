@@ -1,5 +1,7 @@
 # Signo: five-minute demo script
 
+> **Update, version 4 (3 November 2026).** The default 1,000-sign model is now version 4: **83.2% top-1 and 96.4% top-5** on 8,134 official test clips never used before, against 74.1% and 92.6% for version 2 on the same clips. On the earlier 3,983 test clips it scored 83.8% and 96.6%, against 73.4% and 92.0%. It is one temporal convolution network plus one BiLSTM, with the same 30 x 100 input, and takes 68 ms per prediction in the browser against 116 ms. Real webcam accuracy still has not been measured. See `results/FINAL_RESULTS.md`. Older numbers below describe earlier versions.
+
 **Before you start:** plug in, close heavy apps, start the server, open Chrome and press Cmd+Shift+R once. Choose your model from the top bar (see below), wake the camera, and try 2 signs. Keep `results/optimization_report.md` open in a tab. **Show no dataset video frames**, because the licence forbids it. The charts are fine.
 
 ## Which signs to use
@@ -52,7 +54,7 @@ Check each sign against a video dictionary beforehand, then rehearse on your own
 
 **7. What does bidirectional mean?** Two LSTMs read the sequence, one forwards and one backwards, and their results are combined. So the model can use both how a sign starts and how it ends.
 
-**8. What is overfitting?** Memorising training data instead of learning general patterns. Version 1 scored 92.3% on training and 69.5% on validation. New random changes every epoch cut that gap to about 6 points on our long-trained model (83.9% and 78.0%).
+**8. What is overfitting?** Memorising training data instead of learning general patterns. Version 1 scored 92.3% on training and 69.5% on validation. Version 4's convolution model scores 99.97% on clean training clips and 84.3% on validation, a gap of 15.7 points, so it still memorises to a degree. Earlier we quoted a gap of about 6 points, but that compared changed training clips with clean validation clips, so it was too generous. Measured the same way, the version 2 gap was about 18 points.
 
 **9. What is data augmentation?** Slightly changing training clips so the model sees more variety. We apply new changes every epoch: mirroring, time warping, scale, rotation, position, jitter and brief hand dropout. It's applied to training data only, and works on the landmark numbers, not the video.
 

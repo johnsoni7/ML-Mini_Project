@@ -19,7 +19,7 @@ Each test split has been evaluated twice, once per version. Both evaluations are
 
 ## Why the final model is better
 
-1. **It stopped memorising.** New random changes every epoch mean it almost never sees the same input twice. The train-to-validation gap fell from about 23 points to about 6 for the long-trained member.
+1. **It memorised less.** New random changes every epoch mean it almost never sees the same input twice. **Correction:** this report first said the gap fell to about 6 points, but that compared changed training clips with clean validation clips. On clean training clips the long-trained member scores 97.5% against 78.0% on validation, a gap of about 19 points, and the deployed pair's gap is about 18.
 2. **It handles left-dominant signers.** Validation accuracy for them rose from 46.7% to 76.6%.
 3. **It trained for longer, with a falling learning rate,** which let it keep improving instead of overfitting.
 4. **Two models average out some of each other's mistakes.**

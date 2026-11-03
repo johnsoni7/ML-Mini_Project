@@ -244,7 +244,7 @@ const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAl
 
 const S = { samples: [], words: [], model: null, labels: [], report: null, tab: 'play',
   recording: false, recFrames: null, buffer: [], lastHandT: 0, hist: [], stable: 0, lastTop: null,
-  locked: false, shown: null, slots: { dataset1000v2: null, dataset50v2: null, dataset1000: null, dataset: null, custom: null }, source: null, sentence: [], thr: .7, muted: false, training: false, predBusy: false, camOn: false, ch: null };
+  locked: false, shown: null, slots: { dataset1000v4: null, dataset1000v2: null, dataset50v2: null, dataset1000: null, dataset: null, custom: null }, source: null, sentence: [], thr: .7, muted: false, training: false, predBusy: false, camOn: false, ch: null };
 
 /* ====== tiny storage layer (IndexedDB with in-memory fallback) ====== */
 const DB = (() => {
@@ -330,11 +330,13 @@ $('#muteBtn').onclick = () => { S.muted = !S.muted; $('#muteBtn').textContent = 
 /* ====== landmarks -> features (mirrors python/common.py) ====== */
 function extract(res) {
   const p = res.poseLandmarks; if (!p) return null;
-  const a = p[11], b = p[12]; const sc = Math.hypot(a.x - b.x, a.y - b.y); if (sc < .03) return null;
+  // MediaPipe's x and y are shares of width and height. This keeps true shapes on any camera, using 4:3 as the reference, so 4:3 video is unchanged (python/final_eval.py fix_aspect).
+  const ax = video.videoWidth && video.videoHeight ? (video.videoWidth / video.videoHeight) / (4 / 3) : 1;
+  const a = p[11], b = p[12]; const sc = Math.hypot((a.x - b.x) * ax, a.y - b.y); if (sc < .03) return null;
   const cx = (a.x + b.x) / 2, cy = (a.y + b.y) / 2; const f = new Float32Array(D); let k = 0;
-  for (const i of POSE_IDX) { f[k++] = (p[i].x - cx) / sc; f[k++] = (p[i].y - cy) / sc; }
+  for (const i of POSE_IDX) { f[k++] = (p[i].x - cx) * ax / sc; f[k++] = (p[i].y - cy) / sc; }
   const L = res.leftHandLandmarks, R = res.rightHandLandmarks;
-  for (const h of [L, R]) for (let i = 0; i < 21; i++) { if (h) { f[k++] = (h[i].x - cx) / sc; f[k++] = (h[i].y - cy) / sc; } else k += 2; }
+  for (const h of [L, R]) for (let i = 0; i < 21; i++) { if (h) { f[k++] = (h[i].x - cx) * ax / sc; f[k++] = (h[i].y - cy) / sc; } else k += 2; }
   f[k++] = L ? 1 : 0; f[k++] = R ? 1 : 0;
   return { f, hands: !!(L || R) };
 }
@@ -474,8 +476,8 @@ async function record(w) {
 }
 
 /* ====== model slots: the dataset model and the Teach model live side by side, so neither replaces the other ====== */
-const SOURCE_NAME = { dataset1000v2: '📚 Large ASL model', dataset50v2: '📚 Accurate ASL model', dataset1000: '📚 Old large ASL model', dataset: '📚 Old small ASL model', custom: '🎓 My Teach model' };
-const DATASET_DIRS = { dataset1000v2: './app_model_1000_v2', dataset50v2: './app_model_v2', dataset1000: './app_model_1000', dataset: './app_model' };
+const SOURCE_NAME = { dataset1000v4: '📚 Large ASL model', dataset1000v2: '📚 Previous large ASL model', dataset50v2: '📚 Accurate ASL model', dataset1000: '📚 Old large ASL model', dataset: '📚 Old small ASL model', custom: '🎓 My Teach model' };
+const DATASET_DIRS = { dataset1000v4: './app_model_1000_v4', dataset1000v2: './app_model_1000_v2', dataset50v2: './app_model_v2', dataset1000: './app_model_1000', dataset: './app_model' };
 function renderModelPick() {
   const sel = $('#modelSel'), have = Object.keys(S.slots).filter(k => S.slots[k]);
   sel.innerHTML = '';

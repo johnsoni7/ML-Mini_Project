@@ -32,3 +32,12 @@ logs/
 nohup.out
 .venv-tfjs/
 node_modules/
+
+# Experiment output and anything derived from dataset landmarks
+experiments/*
+!experiments/leaderboard.csv
+!experiments/BEST_MODEL.json
+!experiments/queue.json
+*.npy
+research/local_only/
+research/clock.json

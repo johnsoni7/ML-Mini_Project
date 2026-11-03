@@ -10,7 +10,7 @@ const fx = JSON.parse(fs.readFileSync(fixturePath));
   const errors = [];
   p.on('pageerror', e => errors.push(e.message));
   await p.route('**/__clip/**', r => r.fulfill({ path: path.join(videosDir, decodeURIComponent(r.request().url().split('/__clip/')[1])), contentType: 'video/mp4' }));
-  await p.goto(url, { waitUntil: 'networkidle' });
+  await p.goto(url, { waitUntil: 'load', timeout: 120000 });
   await p.waitForFunction(k => S.slots[k], process.env.SLOT || 'dataset', { timeout: 180000 });
   await p.evaluate(k => useModel(k), process.env.SLOT || 'dataset');
   const info = await p.evaluate(() => ({ tfjs: tf.version.tfjs, backend: tf.getBackend(), webgl2: !!document.createElement('canvas').getContext('webgl2'), source: S.source, input: S.model.inputs[0].shape, output: S.model.outputs[0].shape, labels: S.labels }));

@@ -1,0 +1,11 @@
+[
+ {
+  "at": "2026-11-03 06:27:54",
+  "models": [
+   "final",
+   "final_train_only",
+   "baseline"
+  ],
+  "note": "one-time final evaluation"
+ }
+]

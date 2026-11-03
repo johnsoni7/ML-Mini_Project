@@ -4,7 +4,7 @@ const [path, repeats = '40'] = process.argv.slice(2);
 (async () => {
   const b = await chromium.launch({ channel: 'chrome', headless: true, args: ['--headless=new', '--use-angle=metal', '--enable-webgl', '--ignore-gpu-blocklist'] });
   const p = await b.newPage(); const errors = []; p.on('pageerror', e => errors.push(e.message));
-  await p.goto('http://127.0.0.1:8000/', { waitUntil: 'networkidle' }); await p.waitForFunction(() => S.source, { timeout: 60000 });
+  await p.goto('http://127.0.0.1:8000/', { waitUntil: 'load', timeout: 120000 }); await p.waitForFunction(() => S.source, { timeout: 150000 });
   const r = await p.evaluate(async ({ path, repeats }) => {
     const m = await tf.loadLayersModel(path), times = [];
     const once = async () => { const o = tf.tidy(() => m.predict(tf.randomNormal([1, T, D]))); const a = await o.data(); o.dispose(); return a; };

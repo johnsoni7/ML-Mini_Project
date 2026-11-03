@@ -1,0 +1,83 @@
+{
+ "id": "exp_022",
+ "name": "full_tcn_fair",
+ "dir": "experiments/exp_022",
+ "metrics": {
+  "top1": 0.8432102046239702,
+  "top5": 0.9662503321817698,
+  "macro_precision": 0.8659269841269842,
+  "macro_recall": 0.8480999999999999,
+  "macro_f1": 0.8394394216894218,
+  "weighted_f1": 0.8379827852190329,
+  "ece": 0.02714685687447303,
+  "classes_recall_le_50": 126,
+  "classes_recall_0": 7,
+  "n_val": 3763,
+  "n_train": 14626,
+  "train_top1_clean": 0.9996666666666667,
+  "gap": 0.15645646204269648,
+  "best_epoch": 148,
+  "epochs_run": 158,
+  "best_val_loss": 0.5959309339523315,
+  "train_seconds": 8458,
+  "params": 1322344,
+  "T": 30,
+  "D": 100,
+  "model_mb": 5.43,
+  "by_signer": {
+   "P12": 0.8682432432432432,
+   "P21": 0.8912639405204461,
+   "P26": 0.7795059469350412,
+   "P39": 0.8802946593001841,
+   "P5": 0.7028301886792453
+  }
+ },
+ "config": {
+  "units": 64,
+  "head": 256,
+  "dropout": 0.2,
+  "prenorm": true,
+  "lr": 0.001,
+  "warmup": 5,
+  "batch": 64,
+  "epochs": 180,
+  "seed": 0,
+  "mirror": true,
+  "warp": true,
+  "drop": true,
+  "geometry": true,
+  "features": "base",
+  "mixup": 0.5,
+  "arch": "tcn",
+  "threads": 2,
+  "max_minutes": 140.45845609903336
+ },
+ "selected_at": "2026-11-03 04:46:08",
+ "why": "validation top-1 0.8432 and macro F1 0.8394 beat exp_025 (0.8315, 0.8249)",
+ "previous": "exp_025",
+ "selected_on": "validation only",
+ "final_ensemble": {
+  "members": [
+   "exp_022",
+   "exp_026"
+  ],
+  "temperatures": [
+   0.9,
+   0.84
+  ],
+  "val": {
+   "top1": 0.8533085304278502,
+   "top5": 0.9731597129949509,
+   "macro_precision": 0.8722833333333333,
+   "macro_recall": 0.8569833333333333,
+   "macro_f1": 0.848729403929404,
+   "ece": 0.05168283604820008,
+   "shown_at_0_7": 0.7100717512622907,
+   "correct_when_shown_at_0_7": 0.968937125748503
+  },
+  "train_only_model": "model_out/final_v4_val",
+  "deployed_model": "model_out/final_v4",
+  "browser_folder": "app_model_1000_v4",
+  "note": "The best single run is above. The deployed model is this ensemble, chosen by research/final_choice.json on validation only, retrained on training plus validation clips."
+ }
+}

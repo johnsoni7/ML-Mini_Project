@@ -8,7 +8,7 @@ async function open(b, routes = {}) {
   const c = await b.newContext({ viewport: { width: 1512, height: 860 }, permissions: ['camera'] }), p = await c.newPage(), errors = [];
   p.on('pageerror', e => errors.push(e.message));
   for (const [pattern, handler] of Object.entries(routes)) await p.route(pattern, handler);
-  await p.goto(url, { waitUntil: 'networkidle' });
+  await p.goto(url, { waitUntil: 'load', timeout: 120000 });
   await p.waitForFunction(() => S.source, { timeout: 60000 });
   return { c, p, errors };
 }
@@ -19,7 +19,7 @@ const state = p => p.evaluate(() => ({ source: S.source, labels: S.labels.length
 
   let { c, p, errors } = await open(b);
   console.log('start:', await state(p));
-  for (const k of ['dataset', 'dataset1000', 'dataset50v2', 'dataset1000v2']) {
+  for (const k of ['dataset', 'dataset1000', 'dataset50v2', 'dataset1000v2', 'dataset1000v4']) {
     await p.selectOption('#modelSel', k);
     console.log('switched to', k, await state(p));
   }
@@ -38,7 +38,7 @@ const state = p => p.evaluate(() => ({ source: S.source, labels: S.labels.length
   await c.close();
 
   const gone = r => r.fulfill({ status: 404, body: '' }), corrupt = r => r.request().url().endsWith('labels.json') ? r.fallback() : r.fulfill({ status: 200, contentType: 'application/json', body: '{"broken":true}' });
-  for (const [name, routes] of [['large model missing', { '**/app_model_1000_v2/**': gone }], ['large model corrupt', { '**/app_model_1000_v2/**': corrupt }], ['only the old small model left', { '**/app_model_1000_v2/**': gone, '**/app_model_v2/**': gone, '**/app_model_1000/**': gone }]]) {
+  for (const [name, routes] of [['large model missing', { '**/app_model_1000_v4/**': gone }], ['large model corrupt', { '**/app_model_1000_v4/**': corrupt }], ['only the old small model left', { '**/app_model_1000_v4/**': gone, '**/app_model_1000_v2/**': gone, '**/app_model_v2/**': gone, '**/app_model_1000/**': gone }]]) {
     ({ c, p, errors } = await open(b, routes));
     console.log(name, '->', await state(p), 'page errors:', errors);
     await c.close();

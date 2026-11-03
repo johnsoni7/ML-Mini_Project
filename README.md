@@ -1,5 +1,7 @@
 # Signo: word-level sign recognition from hands and upper-body pose
 
+> **Update, version 4 (3 November 2026).** The default 1,000-sign model is now version 4: **83.2% top-1 and 96.4% top-5** on 8,134 official test clips never used before, against 74.1% and 92.6% for version 2 on the same clips. On the earlier 3,983 test clips it scored 83.8% and 96.6%, against 73.4% and 92.0%. It is one temporal convolution network plus one BiLSTM, with the same 30 x 100 input, and takes 68 ms per prediction in the browser against 116 ms. Real webcam accuracy still has not been measured. See `results/FINAL_RESULTS.md`. Older numbers below describe earlier versions.
+
 Signo recognises isolated American Sign Language (ASL) words from a webcam, live in the browser. It ships with two main trained models: **1,000 signs (73.4% top-1 on unseen signers, the default)** and **50 signs (91.2% top-1 on unseen signers)**. The earlier version 1 models remain as fallbacks. MediaPipe Holistic finds hand and upper-body landmarks, and a BiLSTM classifies how they move over time. All processing happens on your device, and no video is uploaded.
 
 **This is isolated sign recognition, not continuous sign-language translation.** It recognises one word at a time from a fixed vocabulary. It doesn't follow natural signing or produce grammatical sentences.

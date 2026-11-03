@@ -1,5 +1,7 @@
 # Signo: a beginner's guide
 
+> **Update, version 4 (3 November 2026).** The default 1,000-sign model is now version 4: **83.2% top-1 and 96.4% top-5** on 8,134 official test clips never used before, against 74.1% and 92.6% for version 2 on the same clips. On the earlier 3,983 test clips it scored 83.8% and 96.6%, against 73.4% and 92.0%. It is one temporal convolution network plus one BiLSTM, with the same 30 x 100 input, and takes 68 ms per prediction in the browser against 116 ms. Real webcam accuracy still has not been measured. See `results/FINAL_RESULTS.md`. Older numbers below describe earlier versions.
+
 This guide explains how Signo works using its real code, so you can explain and defend it in your viva. Read it from top to bottom once, then use the numbered sections for revision.
 
 ## The whole system in one picture
@@ -212,7 +214,7 @@ All of this happens on your laptop. No video leaves the browser.
 - **Top-5 is much higher than top-1.** When the model is wrong, the right sign is usually close behind.
 - **It overfits.** Training accuracy reached about 99% while validation levelled off near 80%. That's why the model from epoch 27 was kept (lowest validation loss, 0.839) rather than the last one, where validation loss had risen to 1.401.
 - **The browser matches Python.** On 50 held-out clips, the browser's prediction agreed with Python's on 48.
-- **Confusions make sense.** The most common errors include stop read as school, and yes read as no. See `results/confusion_matrix.png`.
+- **Confusions make sense.** The most common errors include stop read as school, and yes read as no. See `results/v1_50_signs/confusion_matrix.png`.
 
 These numbers come from fluent signers in dataset videos. Your own webcam accuracy may be lower.
 

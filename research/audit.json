@@ -1,0 +1,958 @@
+{
+ "clips": {
+  "val": 3763,
+  "train": 14626,
+  "test": 3983
+ },
+ "classes": 1000,
+ "signers": {
+  "train": [
+   "P1",
+   "P10",
+   "P11",
+   "P14",
+   "P16",
+   "P19",
+   "P2",
+   "P20",
+   "P23",
+   "P24",
+   "P25",
+   "P27",
+   "P28",
+   "P29",
+   "P3",
+   "P30",
+   "P31",
+   "P32",
+   "P33",
+   "P34",
+   "P36",
+   "P37",
+   "P38",
+   "P4",
+   "P40",
+   "P41",
+   "P43",
+   "P44",
+   "P45",
+   "P46",
+   "P50",
+   "P51",
+   "P52",
+   "P7",
+   "P8"
+  ],
+  "val": [
+   "P12",
+   "P21",
+   "P26",
+   "P39",
+   "P5"
+  ],
+  "test": [
+   "P15",
+   "P17",
+   "P18",
+   "P22",
+   "P35",
+   "P42",
+   "P47",
+   "P48",
+   "P49",
+   "P6",
+   "P9"
+  ]
+ },
+ "signer_overlap": {
+  "train-val": [],
+  "train-test": [],
+  "val-test": []
+ },
+ "duplicate_video_ids": 0,
+ "video_in_two_splits": 0,
+ "identical_feature_clips": 0,
+ "per_class": {
+  "train": {
+   "min": 11,
+   "median": 15.0,
+   "max": 17,
+   "classes": 1000
+  },
+  "val": {
+   "min": 2,
+   "median": 4.0,
+   "max": 6,
+   "classes": 1000
+  },
+  "test": {
+   "min": 3,
+   "median": 4.0,
+   "max": 4,
+   "classes": 1000
+  }
+ },
+ "imbalance_train_max_over_min": 1.5454545454545454,
+ "manifest_rows": 22421,
+ "dropped_no_hands": {
+  "total": 49,
+  "by_split": {
+   "train": 18,
+   "val": 14,
+   "test": 17
+  },
+  "by_signer": [
+   [
+    "P26",
+    13
+   ],
+   [
+    "P18",
+    7
+   ],
+   [
+    "P14",
+    4
+   ],
+   [
+    "P6",
+    4
+   ],
+   [
+    "P49",
+    3
+   ],
+   [
+    "P2",
+    2
+   ],
+   [
+    "P29",
+    2
+   ],
+   [
+    "P36",
+    1
+   ]
+  ]
+ },
+ "glosses_with_variant_number": [],
+ "gloss_groups_with_variants": [],
+ "non_finite_values": 0,
+ "hand_presence": {
+  "train": {
+   "left_frames": 0.535404986553626,
+   "right_frames": 0.7293450020511418,
+   "both_frames": 0.4243721227038607,
+   "neither_frames": 0.15962213409909293,
+   "clips_never_seen_dominant_hand_flip": 0.3143716668945713
+  },
+  "val": {
+   "left_frames": 0.5250597927185756,
+   "right_frames": 0.6928514483125167,
+   "both_frames": 0.39085835769332977,
+   "neither_frames": 0.17294711666223758,
+   "clips_never_seen_dominant_hand_flip": 0.29816635663034813
+  },
+  "test": {
+   "left_frames": 0.5735459034228806,
+   "right_frames": 0.6634530086199681,
+   "both_frames": 0.41170809272742487,
+   "neither_frames": 0.1747091806845761,
+   "clips_never_seen_dominant_hand_flip": 0.38890283705749434
+  }
+ },
+ "hand_dropouts_per_hand_track_mean": 0.8856962258684716,
+ "coordinate_range": {
+  "p1": -1.0254000425338745,
+  "p99": 1.1928999423980713,
+  "max_abs": 2.7990000247955322
+ },
+ "repeated_frames_fraction": 0.046400364988255026,
+ "signer_table": {
+  "P12": {
+   "split": "val",
+   "clips": 296,
+   "left_more_than_right": 0.7195945945945946,
+   "shoulder_span_check": 1.0000017881393433
+  },
+  "P21": {
+   "split": "val",
+   "clips": 1076,
+   "left_more_than_right": 0.44052044609665425,
+   "shoulder_span_check": 1.0000026226043701
+  },
+  "P26": {
+   "split": "val",
+   "clips": 1093,
+   "left_more_than_right": 0.21866422689844464,
+   "shoulder_span_check": 1.000003695487976
+  },
+  "P39": {
+   "split": "val",
+   "clips": 1086,
+   "left_more_than_right": 0.07826887661141804,
+   "shoulder_span_check": 1.0000026226043701
+  },
+  "P5": {
+   "split": "val",
+   "clips": 212,
+   "left_more_than_right": 0.5235849056603774,
+   "shoulder_span_check": 1.0000038146972656
+  },
+  "P15": {
+   "split": "test",
+   "clips": 356,
+   "left_more_than_right": 0.28651685393258425,
+   "shoulder_span_check": 1.0000028610229492
+  },
+  "P17": {
+   "split": "test",
+   "clips": 385,
+   "left_more_than_right": 0.5974025974025974,
+   "shoulder_span_check": 1.0000032186508179
+  },
+  "P18": {
+   "split": "test",
+   "clips": 376,
+   "left_more_than_right": 0.3191489361702128,
+   "shoulder_span_check": 1.0000026226043701
+  },
+  "P22": {
+   "split": "test",
+   "clips": 343,
+   "left_more_than_right": 0.3848396501457726,
+   "shoulder_span_check": 1.000003695487976
+  },
+  "P35": {
+   "split": "test",
+   "clips": 371,
+   "left_more_than_right": 0.18598382749326145,
+   "shoulder_span_check": 1.0000020265579224
+  },
+  "P42": {
+   "split": "test",
+   "clips": 390,
+   "left_more_than_right": 0.23076923076923078,
+   "shoulder_span_check": 1.0000042915344238
+  },
+  "P47": {
+   "split": "test",
+   "clips": 374,
+   "left_more_than_right": 0.20588235294117646,
+   "shoulder_span_check": 1.0000038146972656
+  },
+  "P48": {
+   "split": "test",
+   "clips": 366,
+   "left_more_than_right": 0.5546448087431693,
+   "shoulder_span_check": 1.0000033378601074
+  },
+  "P49": {
+   "split": "test",
+   "clips": 331,
+   "left_more_than_right": 0.6283987915407855,
+   "shoulder_span_check": 1.0000025033950806
+  },
+  "P6": {
+   "split": "test",
+   "clips": 324,
+   "left_more_than_right": 0.5864197530864198,
+   "shoulder_span_check": 1.0000026226043701
+  },
+  "P9": {
+   "split": "test",
+   "clips": 367,
+   "left_more_than_right": 0.34877384196185285,
+   "shoulder_span_check": 1.000001072883606
+  },
+  "P1": {
+   "split": "train",
+   "clips": 41,
+   "left_more_than_right": 0.34146341463414637,
+   "shoulder_span_check": 1.0000056028366089
+  },
+  "P10": {
+   "split": "train",
+   "clips": 48,
+   "left_more_than_right": 0.20833333333333334,
+   "shoulder_span_check": 1.0000040531158447
+  },
+  "P11": {
+   "split": "train",
+   "clips": 1072,
+   "left_more_than_right": 0.45242537313432835,
+   "shoulder_span_check": 1.0000038146972656
+  },
+  "P14": {
+   "split": "train",
+   "clips": 634,
+   "left_more_than_right": 0.21451104100946372,
+   "shoulder_span_check": 1.0000026226043701
+  },
+  "P16": {
+   "split": "train",
+   "clips": 816,
+   "left_more_than_right": 0.6262254901960784,
+   "shoulder_span_check": 1.0000009536743164
+  },
+  "P19": {
+   "split": "train",
+   "clips": 2,
+   "left_more_than_right": 0.0,
+   "shoulder_span_check": 1.0000046491622925
+  },
+  "P2": {
+   "split": "train",
+   "clips": 99,
+   "left_more_than_right": 0.16161616161616163,
+   "shoulder_span_check": 1.0000026226043701
+  },
+  "P20": {
+   "split": "train",
+   "clips": 132,
+   "left_more_than_right": 0.21212121212121213,
+   "shoulder_span_check": 1.0000042915344238
+  },
+  "P23": {
+   "split": "train",
+   "clips": 303,
+   "left_more_than_right": 0.27722772277227725,
+   "shoulder_span_check": 1.0000027418136597
+  },
+  "P24": {
+   "split": "train",
+   "clips": 46,
+   "left_more_than_right": 0.08695652173913043,
+   "shoulder_span_check": 0.9999988675117493
+  },
+  "P25": {
+   "split": "train",
+   "clips": 39,
+   "left_more_than_right": 0.28205128205128205,
+   "shoulder_span_check": 1.0000026226043701
+  },
+  "P27": {
+   "split": "train",
+   "clips": 1081,
+   "left_more_than_right": 0.1702127659574468,
+   "shoulder_span_check": 1.000002384185791
+  },
+  "P28": {
+   "split": "train",
+   "clips": 101,
+   "left_more_than_right": 0.21782178217821782,
+   "shoulder_span_check": 1.0000038146972656
+  },
+  "P29": {
+   "split": "train",
+   "clips": 1064,
+   "left_more_than_right": 0.43045112781954886,
+   "shoulder_span_check": 1.0000028610229492
+  },
+  "P3": {
+   "split": "train",
+   "clips": 32,
+   "left_more_than_right": 0.09375,
+   "shoulder_span_check": 1.0000056028366089
+  },
+  "P30": {
+   "split": "train",
+   "clips": 609,
+   "left_more_than_right": 0.180623973727422,
+   "shoulder_span_check": 1.0000022649765015
+  },
+  "P31": {
+   "split": "train",
+   "clips": 1070,
+   "left_more_than_right": 0.30093457943925234,
+   "shoulder_span_check": 1.0000020265579224
+  },
+  "P32": {
+   "split": "train",
+   "clips": 28,
+   "left_more_than_right": 0.25,
+   "shoulder_span_check": 0.9999979734420776
+  },
+  "P33": {
+   "split": "train",
+   "clips": 1092,
+   "left_more_than_right": 0.2976190476190476,
+   "shoulder_span_check": 1.000002384185791
+  },
+  "P34": {
+   "split": "train",
+   "clips": 129,
+   "left_more_than_right": 0.17829457364341086,
+   "shoulder_span_check": 1.000003457069397
+  },
+  "P36": {
+   "split": "train",
+   "clips": 154,
+   "left_more_than_right": 0.19480519480519481,
+   "shoulder_span_check": 1.0000027418136597
+  },
+  "P37": {
+   "split": "train",
+   "clips": 1093,
+   "left_more_than_right": 0.14821591948764867,
+   "shoulder_span_check": 1.0000029802322388
+  },
+  "P38": {
+   "split": "train",
+   "clips": 35,
+   "left_more_than_right": 0.2571428571428571,
+   "shoulder_span_check": 1.0000032186508179
+  },
+  "P4": {
+   "split": "train",
+   "clips": 203,
+   "left_more_than_right": 0.3891625615763547,
+   "shoulder_span_check": 1.0000019073486328
+  },
+  "P40": {
+   "split": "train",
+   "clips": 1127,
+   "left_more_than_right": 0.5749778172138421,
+   "shoulder_span_check": 1.0000030994415283
+  },
+  "P41": {
+   "split": "train",
+   "clips": 3,
+   "left_more_than_right": 0.6666666666666666,
+   "shoulder_span_check": 1.0000004768371582
+  },
+  "P43": {
+   "split": "train",
+   "clips": 308,
+   "left_more_than_right": 0.6785714285714286,
+   "shoulder_span_check": 1.0000027418136597
+  },
+  "P44": {
+   "split": "train",
+   "clips": 13,
+   "left_more_than_right": 0.7692307692307693,
+   "shoulder_span_check": 1.0000050067901611
+  },
+  "P45": {
+   "split": "train",
+   "clips": 11,
+   "left_more_than_right": 0.0,
+   "shoulder_span_check": 1.000006914138794
+  },
+  "P46": {
+   "split": "train",
+   "clips": 79,
+   "left_more_than_right": 0.4050632911392405,
+   "shoulder_span_check": 1.0000014305114746
+  },
+  "P50": {
+   "split": "train",
+   "clips": 1064,
+   "left_more_than_right": 0.16729323308270677,
+   "shoulder_span_check": 1.000003695487976
+  },
+  "P51": {
+   "split": "train",
+   "clips": 595,
+   "left_more_than_right": 0.24705882352941178,
+   "shoulder_span_check": 1.000003457069397
+  },
+  "P52": {
+   "split": "train",
+   "clips": 998,
+   "left_more_than_right": 0.22144288577154309,
+   "shoulder_span_check": 1.0000042915344238
+  },
+  "P7": {
+   "split": "train",
+   "clips": 482,
+   "left_more_than_right": 0.22199170124481327,
+   "shoulder_span_check": 1.0000029802322388
+  },
+  "P8": {
+   "split": "train",
+   "clips": 23,
+   "left_more_than_right": 0.4782608695652174,
+   "shoulder_span_check": 1.0000026226043701
+  }
+ },
+ "baseline_val": {
+  "top1": 0.7937815572681372,
+  "top5": 0.9500398618123838,
+  "n": 3763,
+  "macro_precision": 0.8226587301587301,
+  "macro_recall": 0.7988833333333332,
+  "macro_f1": 0.7886794372294372,
+  "classes_recall_0": 16,
+  "classes_recall_le_50": 188,
+  "classes_recall_100": 512,
+  "by_signer": {
+   "P12": {
+    "top1": 0.8412162162162162,
+    "n": 296
+   },
+   "P21": {
+    "top1": 0.8345724907063197,
+    "n": 1076
+   },
+   "P26": {
+    "top1": 0.7227813357731016,
+    "n": 1093
+   },
+   "P39": {
+    "top1": 0.8379373848987108,
+    "n": 1086
+   },
+   "P5": {
+    "top1": 0.660377358490566,
+    "n": 212
+   }
+  },
+  "confidence": {
+   "correct_median": 0.9599403142929077,
+   "wrong_median": 0.5278311967849731,
+   "wrong_over_0_8": 0.12886597938144329
+  },
+  "ece": 0.018804267361669024,
+  "top_confusions": [
+   [
+    [
+     "assist",
+     "assistant"
+    ],
+    5
+   ],
+   [
+    [
+     "create",
+     "make"
+    ],
+    4
+   ],
+   [
+    [
+     "safe",
+     "rescue"
+    ],
+    4
+   ],
+   [
+    [
+     "true",
+     "really"
+    ],
+    3
+   ],
+   [
+    [
+     "star",
+     "stars"
+    ],
+    3
+   ],
+   [
+    [
+     "accept",
+     "own"
+    ],
+    3
+   ],
+   [
+    [
+     "holiday",
+     "vacation"
+    ],
+    3
+   ],
+   [
+    [
+     "spring",
+     "plant"
+    ],
+    3
+   ],
+   [
+    [
+     "rule",
+     "register"
+    ],
+    3
+   ],
+   [
+    [
+     "obvious",
+     "clear"
+    ],
+    3
+   ],
+   [
+    [
+     "average",
+     "between"
+    ],
+    3
+   ],
+   [
+    [
+     "charge",
+     "price"
+    ],
+    3
+   ],
+   [
+    [
+     "thankyou",
+     "good"
+    ],
+    2
+   ],
+   [
+    [
+     "stuck",
+     "myself"
+    ],
+    2
+   ],
+   [
+    [
+     "blind",
+     "doubt"
+    ],
+    2
+   ],
+   [
+    [
+     "need",
+     "should"
+    ],
+    2
+   ],
+   [
+    [
+     "monday",
+     "saturday"
+    ],
+    2
+   ],
+   [
+    [
+     "art",
+     "draw"
+    ],
+    2
+   ],
+   [
+    [
+     "temporary",
+     "weight"
+    ],
+    2
+   ],
+   [
+    [
+     "tough",
+     "roll"
+    ],
+    2
+   ],
+   [
+    [
+     "hell",
+     "prince"
+    ],
+    2
+   ],
+   [
+    [
+     "theatre",
+     "act"
+    ],
+    2
+   ],
+   [
+    [
+     "planet",
+     "earth"
+    ],
+    2
+   ],
+   [
+    [
+     "happy",
+     "please"
+    ],
+    2
+   ],
+   [
+    [
+     "silver",
+     "south"
+    ],
+    2
+   ],
+   [
+    [
+     "truth",
+     "honest"
+    ],
+    2
+   ],
+   [
+    [
+     "salt",
+     "chair"
+    ],
+    2
+   ],
+   [
+    [
+     "pass",
+     "sports"
+    ],
+    2
+   ],
+   [
+    [
+     "shot",
+     "watch"
+    ],
+    2
+   ],
+   [
+    [
+     "release",
+     "rescue"
+    ],
+    2
+   ]
+  ],
+  "errors_total": 776,
+  "errors_in_top_100_pairs": 246,
+  "errors_within_same_base_gloss": 0,
+  "recall_by_train_count": {
+   "11": {
+    "classes": 2,
+    "recall": 0.775
+   },
+   "12": {
+    "classes": 20,
+    "recall": 0.7266666666666667
+   },
+   "13": {
+    "classes": 101,
+    "recall": 0.7363036303630364
+   },
+   "14": {
+    "classes": 311,
+    "recall": 0.8048767416934619
+   },
+   "15": {
+    "classes": 379,
+    "recall": 0.8030343007915568
+   },
+   "16": {
+    "classes": 167,
+    "recall": 0.8184630738522954
+   },
+   "17": {
+    "classes": 20,
+    "recall": 0.8541666666666666
+   }
+  },
+  "top1_by_hand_visible_fraction": {
+   "0.0-0.6": {
+    "n": 210,
+    "top1": 0.6047619047619047
+   },
+   "0.6-0.8": {
+    "n": 517,
+    "top1": 0.7292069632495164
+   },
+   "0.8-0.9": {
+    "n": 3032,
+    "top1": 0.8182717678100264
+   },
+   "0.9-1.0": {
+    "n": 4,
+    "top1": 0.5
+   }
+  },
+  "worst_classes": [
+   [
+    "assist",
+    0.0,
+    0.0
+   ],
+   [
+    "best",
+    0.0,
+    0.0
+   ],
+   [
+    "bother",
+    0.0,
+    0.0
+   ],
+   [
+    "bright",
+    0.0,
+    0.0
+   ],
+   [
+    "cost",
+    0.0,
+    0.0
+   ],
+   [
+    "create",
+    0.0,
+    0.0
+   ],
+   [
+    "power",
+    0.0,
+    0.0
+   ],
+   [
+    "print",
+    0.0,
+    0.0
+   ],
+   [
+    "safe",
+    0.0,
+    0.0
+   ],
+   [
+    "school",
+    0.0,
+    0.0
+   ],
+   [
+    "script",
+    0.0,
+    0.0
+   ],
+   [
+    "shot",
+    0.0,
+    0.0
+   ],
+   [
+    "specific",
+    0.0,
+    0.0
+   ],
+   [
+    "star",
+    0.0,
+    0.0
+   ],
+   [
+    "sure",
+    0.0,
+    0.0
+   ],
+   [
+    "truth",
+    0.0,
+    0.0
+   ],
+   [
+    "equal",
+    0.2,
+    0.3333333333333333
+   ],
+   [
+    "danger",
+    0.2,
+    0.5
+   ],
+   [
+    "pull",
+    0.2,
+    0.5
+   ],
+   [
+    "make",
+    0.25,
+    0.125
+   ],
+   [
+    "hungry",
+    0.25,
+    0.25
+   ],
+   [
+    "monday",
+    0.25,
+    0.25
+   ],
+   [
+    "charge",
+    0.25,
+    0.5
+   ],
+   [
+    "cheap",
+    0.25,
+    0.5
+   ],
+   [
+    "evidence",
+    0.25,
+    0.5
+   ],
+   [
+    "negative",
+    0.25,
+    0.5
+   ],
+   [
+    "quality",
+    0.25,
+    0.5
+   ],
+   [
+    "quiet",
+    0.25,
+    0.5
+   ],
+   [
+    "rule",
+    0.25,
+    0.5
+   ],
+   [
+    "traffic",
+    0.25,
+    0.5
+   ]
+  ]
+ },
+ "aspect_by_split": {
+  "test": {
+   "1.33": 3610,
+   "1.78": 390
+  },
+  "train": {
+   "1.33": 14593,
+   "1.78": 51
+  },
+  "val": {
+   "1.33": 3777
+  }
+ },
+ "aspect_by_signer": {
+  "P42": {
+   "1.78": 390
+  },
+  "P8": {
+   "1.78": 23
+  },
+  "P32": {
+   "1.78": 28
+  }
+ }
+}
